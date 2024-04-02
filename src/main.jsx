@@ -8,13 +8,8 @@ import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Products from "./routes/Products.jsx";
 import { Provider } from "react-redux";
-<<<<<<< HEAD
 import store from './store/store.js'
 import ProductItem from './routes/ProductItem.jsx'
-=======
-import store from "./store/store.js";
-
->>>>>>> main
 const router = createBrowserRouter([
   {
     path: "/",
@@ -30,7 +25,6 @@ const router = createBrowserRouter([
     element: <AboutUs />,
   },
   {
-<<<<<<< HEAD
     path:'/products/:productName',
     element:<Items/>
   },
@@ -39,12 +33,6 @@ const router = createBrowserRouter([
     element:<ProductItem/>
   }
 ])
-=======
-    path: "/products/:productName",
-    element: <Items />,
-  },
-]);
->>>>>>> main
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
