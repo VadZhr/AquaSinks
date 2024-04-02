@@ -8,7 +8,10 @@ export default function Product({ category }) {
       <div className="category-content">
         <div className="link">
           <p className="category-text">{category.type}</p>
-          <Link to={`/products/${category.path}`}>{category.desc}</Link>
+          
+          <Link to={`/products/${category.path}`} className=''>{category.desc}</Link>
+          
+          
         </div>
       </div>
     </div>

@@ -29,14 +29,33 @@
 }
 .category-text{
     transition: opacity .2s ease-in ;
+    font-size: 20px;
 }
 .category:hover .category-text{
   opacity: 0;
 }
+
 .category-content{
     
     padding: 32px;
 }
 .category .link a{
-    padding-bottom: 10px;
+    padding-bottom: 2px;
+    transition: .2s ease-in;
+    padding: 10px 0;
+    text-decoration: underline;
+    
 }
+
+.category .link a::after{
+    content: none;
+  }
+  .category .link a:hover{
+    text-decoration: none;
+  }
+.category:hover .link a{
+    background-color: white;
+    padding-left: 10px;
+    padding-right: 10px;
+    
+  }
