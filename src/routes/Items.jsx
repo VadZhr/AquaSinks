@@ -5,7 +5,7 @@ import { useParams } from 'react-router-dom'
 import {useSelector} from 'react-redux'
 export default function Sinks() {
   const {productName} =useParams()
-  const data = useSelector((state)=>state.categories.list).filter(el=>el.type==productName);
+  const data = useSelector((state)=>state.categories.list).filter(el=>el.path==productName);
  
   console.log(data);
   return (

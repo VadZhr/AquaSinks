@@ -6,6 +6,7 @@ export const categoriesSlice = createSlice({
     list: [
       {
         type: "Bath",
+        path:'bath',
         desc: "Read more",
         mainImage: "/src/assets/images/bath/главное фото.jpg",
         products: [
@@ -38,6 +39,7 @@ export const categoriesSlice = createSlice({
       {
         type: "Sinks",
         desc: "Read more",
+        path:'sinks',
         mainImage: "/src/assets/images/sinks/главное фото.jpg",
         products: [
           {
@@ -81,6 +83,7 @@ export const categoriesSlice = createSlice({
       {
         type: "Shower",
         desc: "Read more",
+        path:'shower',
         mainImage: "/src/assets/images/shower/главное фото.jpg",
         products: [
           {
@@ -106,6 +109,7 @@ export const categoriesSlice = createSlice({
       {
         type: "Floar sink",
         desc: "Read more",
+        path:'floar sink',
         mainImage: "/src/assets/images/floar sink/главное фото.jpg",
         products: [
           {
@@ -131,6 +135,7 @@ export const categoriesSlice = createSlice({
       {
         type: "Wall sink",
         desc: "Read more",
+        path:'wall sink',
         mainImage: "/src/assets/images/wall sink/главное фото.jpg",
         products: [
           {
@@ -169,6 +174,7 @@ export const categoriesSlice = createSlice({
       {
         type: "Counter",
         desc: "Read more",
+        path:'counter',
         mainImage: "/src/assets/images/counter/главное фото.jpg",
         products: [
           {
