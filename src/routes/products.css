@@ -1,0 +1,10 @@
+.categories{
+   
+}
+
+.categories-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 50px;
+    width: 100%;
+}

@@ -1,0 +1,42 @@
+.category{
+    position: relative;
+    min-height: 200px;
+    width: calc(25% - 32px);
+    padding: 0;
+    margin: 0 32px 32px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+   
+    /* background-image: url('../assets/images/sink_1.jpg'); */
+    background-size:cover;
+    
+    z-index: 1;
+   
+}
+.category-filter{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: .6;
+    background: white;
+    z-index: -2;
+    transition: opacity 0.1s ease-in;
+}
+.category:hover > .category-filter{
+    opacity: .0;
+    z-index: -2;
+}
+.category-text{
+    transition: opacity .2s ease-in ;
+}
+.category:hover .category-text{
+  opacity: 0;
+}
+.category-content{
+    
+    padding: 32px;
+}
+.category .link a{
+    padding-bottom: 10px;
+}

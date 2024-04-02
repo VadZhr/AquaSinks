@@ -1,0 +1,111 @@
+.home{
+    height: 100%;
+}
+
+.home-wrapper{
+    height: inherit;
+    display: flex;
+}
+
+.home-left, .home-right{
+    height: inherit;
+    flex: 1 1 50%;
+}
+
+/* >-------------- ЛЕВАЯ СТОРОНА СТРАНИЦЫ "HOME" -----------< */
+
+.home-left{
+    padding-top: 2%;
+    position: relative;
+}
+
+.home-left img{
+    display: block;
+    width: 600px;
+    position: absolute;
+    top: 0;
+    left: 17%;
+    height: 100%;
+    z-index: -1000;
+    object-fit: cover;
+    object-position: 45% 0;
+}
+
+.home-left__title{
+    width: 600px;
+    text-align: center;
+}
+
+.home-left h2{
+    font-size: 10rem;
+    text-transform: uppercase;
+    line-height: 1.2;
+    font-weight: 500;
+}
+
+
+
+/* >-------------- ПРАВАЯ СТОРОНА СТРАНИЦЫ "HOME" -----------< */
+
+.home-link{
+    display: grid;
+    grid-template-columns: 40% 40%;
+    place-content: center;
+    justify-content: start;
+    place-items: center;
+    height: inherit;
+    gap: 15%;
+    text-align: center;
+}
+
+
+.link > a{
+    display: inline-block;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 25px;
+    font-size: 2.1rem;
+}
+
+.link > a::after{
+    position: absolute;
+    content: "";
+
+    width: 60px;
+    height: 3px;
+    background: #000;
+
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all ease-out .2s;
+}
+
+.link > a:hover::after{
+    width: 90px;
+ 
+}
+
+.home-link .link .link-description{
+    line-height: 1.7;
+    font-size: 22px;
+    font-weight: 300;
+}
+
+@media (max-width: 1623px) {
+    .home-left img{
+        width: 400px;
+    }
+
+    .home-left__title{width: 350px;}
+
+    .home-left h2{font-size: 6rem;}
+
+    .home-link{gap: 9%;  grid-template-columns: 26% 26%; justify-content: center;}
+
+    .link > a{font-size: 1.2rem;}
+
+    .home-link .link .link-description{font-size: 14px;}
+}
