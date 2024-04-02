@@ -1,5 +1,4 @@
 import { useState } from "react";
-import sink from "../assets/images/sink_1.jpg";
 import Category from "../components/Category";
 import "./products.css";
 import { Link } from "react-router-dom";

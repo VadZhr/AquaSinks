@@ -1,29 +1,36 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
-import Home from './routes/Home.jsx'
-import Items from './routes/Items.jsx'
-import AboutUs from './routes/AboutUs.jsx'
-import './index.css'
-import {createBrowserRouter, RouterProvider} from 'react-router-dom' 
-import Products from './routes/Products.jsx'
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App.jsx";
+import Home from "./routes/Home.jsx";
+import Items from "./routes/Items.jsx";
+import AboutUs from "./routes/AboutUs.jsx";
+import "./index.css";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Products from "./routes/Products.jsx";
 import { Provider } from "react-redux";
+<<<<<<< HEAD
 import store from './store/store.js'
 import ProductItem from './routes/ProductItem.jsx'
+=======
+import store from "./store/store.js";
+
+>>>>>>> main
 const router = createBrowserRouter([
   {
-    path: '/',
-    element: <Home/>
+    path: "/",
+    element: <Home />,
+   
   },
   {
-    path: '/products',
-    element: <Products/>
+    path: "/products",
+    element: <Products />,
   },
   {
-    path: '/about',
-    element: <AboutUs/>
+    path: "/about",
+    element: <AboutUs />,
   },
   {
+<<<<<<< HEAD
     path:'/products/:productName',
     element:<Items/>
   },
@@ -32,12 +39,17 @@ const router = createBrowserRouter([
     element:<ProductItem/>
   }
 ])
+=======
+    path: "/products/:productName",
+    element: <Items />,
+  },
+]);
+>>>>>>> main
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <Provider store={store}>
-    <RouterProvider router={router}/>
+      <RouterProvider router={router} />
     </Provider>
-    
-  </React.StrictMode>,
-)
+  </React.StrictMode>
+);
