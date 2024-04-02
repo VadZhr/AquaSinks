@@ -1,2 +1,1 @@
-ВАДИМ ЭТО НЕ РАБОТАЕТ
-asdfas
+Это single-product branch
