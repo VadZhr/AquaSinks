@@ -1,6 +1,6 @@
 {
   "name": "sinks",
-  "private": true,
+  "private": false,
   "version": "0.0.0",
   "homepage": "https://VadZhr.github.io/AquaSinks",
   "type": "module",
