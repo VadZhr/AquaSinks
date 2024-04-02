@@ -1,0 +1,28 @@
+.product-item{
+}
+
+.product-item-img img{
+    position: relative;
+    height: calc(100vh - 4rem);
+    width: 100%;
+    object-fit: cover;    
+    margin-bottom: 20px;
+}
+
+.product-item-name{
+    position: absolute;
+    bottom: 8%;
+    left: 5%;
+    font-size: 70px;
+    color: #b3bab2;
+    font-family: "Arapey", serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.product-item-wrapper{
+}
+
+.product-item-wrapper button{
+    
+}

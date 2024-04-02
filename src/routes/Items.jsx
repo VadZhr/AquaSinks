@@ -7,14 +7,13 @@ export default function Sinks() {
   const {productName} =useParams()
   const data = useSelector((state)=>state.categories.list).filter(el=>el.path==productName);
  
-  console.log(data);
+  console.log(data[0]);
   return (
     <section className="sinks">
         <div className="container">
             <Link to={"/"}>Home</Link>
             <div className="sinks-wrapper">
-                {data[0].products.map(el=><Item key={el.id}  image={el.product} name={el.name}/>)}
-
+                {data[0].products.map(el=><Item key={el.id}  image={el.product} name={el.name} id={el.id}/>)}
             </div>
         </div>
     </section>
