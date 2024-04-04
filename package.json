@@ -2,7 +2,7 @@
   "name": "sinks",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://vadzhr.github.io/Fratelli/",
+  "homepage": "https://vadzhr.github.io/Fratelli",
   "type": "module",
   "scripts": {
     "predeploy": "npm run build",
