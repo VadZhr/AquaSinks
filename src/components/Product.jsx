@@ -1,8 +1,15 @@
+import { useEffect, useState } from 'react'
 import './product.css'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 
 
-export default function Product({name, image}) {
+export default function Product({name, image, id}) {
+  let location = useLocation()
+  let [loc, setLoc] = useState()
+  useEffect(() => {
+    setLoc(location)
+  }, [])
+  console.log(location)
   return (
     <div className="sink">
         <div className="sink-image">
@@ -10,7 +17,7 @@ export default function Product({name, image}) {
         </div>
         <div className="sink-image_link">
             <p>-{name}</p>
-            <Link to={"/Fratelli/sinks/ceramic"}>Узнать больше</Link>
+            <Link to={"/sinks/ceramic"}>Узнать больше</Link>
         </div>
     </div>
   )

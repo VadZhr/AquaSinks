@@ -8,8 +8,8 @@ import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Products from "./routes/Products.jsx";
 import { Provider } from "react-redux";
-import store from "./store/store.js";
-
+import store from './store/store.js'
+import ProductItem from './routes/ProductItem.jsx'
 const router = createBrowserRouter([
   {
     path: "/Fratelli",
@@ -25,10 +25,14 @@ const router = createBrowserRouter([
     element: <AboutUs />,
   },
   {
-    path: "/Fratelli/products/:productName",
+    path: "/products/:productName",
     element: <Items />,
   },
-]);
+  {
+    path:'/products/:productName/:id',
+    element:<ProductItem/>
+  }
+])
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
