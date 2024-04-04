@@ -9,7 +9,7 @@ export default function Product({ category }) {
         <div className="link">
           <p className="category-text">{category.type}</p>
           
-          <Link to={`/products/${category.path}`} className=''>{category.desc}</Link>
+          <Link to={`/Fratelli/products/${category.path}`} className=''>{category.desc}</Link>
           
           
         </div>

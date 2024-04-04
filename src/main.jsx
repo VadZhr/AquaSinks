@@ -12,20 +12,20 @@ import store from "./store/store.js";
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/Fratelli",
     element: <Home />,
    
   },
   {
-    path: "/products",
+    path: "/Fratelli/products",
     element: <Products />,
   },
   {
-    path: "/about",
+    path: "/Fratelli/about",
     element: <AboutUs />,
   },
   {
-    path: "/products/:productName",
+    path: "/Fratelli/products/:productName",
     element: <Items />,
   },
 ]);

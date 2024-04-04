@@ -10,7 +10,7 @@ export default function Product({name, image}) {
         </div>
         <div className="sink-image_link">
             <p>-{name}</p>
-            <Link to={"/sinks/ceramic"}>Узнать больше</Link>
+            <Link to={"/Fratelli/sinks/ceramic"}>Узнать больше</Link>
         </div>
     </div>
   )
