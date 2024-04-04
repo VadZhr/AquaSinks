@@ -24,5 +24,35 @@
 }
 
 .product-item-wrapper button{
-    
+    margin-bottom: 20px;
+    background: url(../assets/images/arrow.png) center/contain no-repeat;
+    width: 30px;
+    height: 30px;
+    border: none;
+    cursor: pointer;
+    rotate: 180deg;
 }
+
+.product-item-decription {
+    max-width: 80%;
+    margin: 0 auto;
+    display: flex;
+    text-align: justify;
+    gap: 100px;
+}
+
+.product-item-decription p{
+    justify-content: center;
+    font-size: 24px;
+    flex-basis: 80%;
+}
+
+@media (max-width: 1623px) {
+ 
+    .product-item-name{bottom: 10%;}
+    .product-item-decription {max-width: 1200px;}
+
+    .product-item-decription p{}
+}
+
+

@@ -1,7 +1,8 @@
 import React from 'react'
 import {useSelector} from 'react-redux'
-import {useParams, useNavigate} from 'react-router-dom'
+import {useParams, useNavigate, Link, ScrollRestoration } from 'react-router-dom'
 import './productItem.css'
+
 
 export default function ProductItem() {
     const {productName, id} = useParams()
@@ -10,6 +11,7 @@ export default function ProductItem() {
     console.log(item)
   return (
     <section className='product-item'>
+      <ScrollRestoration />
         <div className="product-item-img">
           <img src={item.product} alt="" />
           <span className='product-item-name'>{item.name}</span>
@@ -17,7 +19,12 @@ export default function ProductItem() {
         </div>
         <div className="container">
             <div className="product-item-wrapper">
-                <button className='product-item-btn' onClick={() => navigate(-1)}>back</button>
+                <button className='product-item-btn' onClick={() => navigate(-1)}></button>
+
+                <div className="product-item-decription">
+                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere laboriosam dignissimos nemo quod explicabo repudiandae, praesentium aperiam labore, nulla a architecto. Assumenda molestias dolor facilis, explicabo laudantium illum, culpa repellendus repellat aliquam enim, aut quae voluptatibus tempore. Quia est, reiciendis repellendus numquam iste ab rerum ratione corporis inventore exercitationem incidunt ullam tempora, provident, pariatur eius et voluptas quae eaque magni ad officiis error maiores mollitia. Officia id ipsum quibusdam, illum atque ab, minima sed magnam quod distinctio sapiente velit cum, tempora quasi molestiae eveniet repellendus necessitatibus assumenda nostrum? Adipisci deleniti earum nesciunt eius quaerat temporibus voluptatibus est consequuntur voluptatem illo?</p>
+                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere laboriosam dignissimos nemo quod explicabo repudiandae, praesentium aperiam labore, nulla a architecto. Assumenda molestias dolor facilis, explicabo laudantium illum, culpa repellendus repellat aliquam enim, aut quae voluptatibus tempore. Quia est, reiciendis repellendus numquam iste ab rerum ratione corporis inventore exercitationem incidunt ullam tempora, provident, pariatur eius et voluptas quae eaque magni ad officiis error maiores mollitia. Officia id ipsum quibusdam, illum atque ab, minima sed magnam quod distinctio sapiente velit cum, tempora quasi molestiae eveniet repellendus necessitatibus assumenda nostrum? Adipisci deleniti earum nesciunt eius quaerat temporibus voluptatibus est consequuntur voluptatem illo?</p>
+                </div>
             </div>
         </div>
     </section>

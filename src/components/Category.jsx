@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link , ScrollRestoration } from "react-router-dom";
 import "./category.css";
 
 export default function Product({ category }) {
@@ -8,7 +8,7 @@ export default function Product({ category }) {
       <div className="category-content">
         <div className="link">
           <p className="category-text">{category.type}</p>
-          
+          <ScrollRestoration/>
           <Link to={`/products/${category.path}`} className=''>{category.desc}</Link>
           
           
