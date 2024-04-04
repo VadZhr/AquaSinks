@@ -17,19 +17,19 @@ export default function Home() {
                 <div className="home-right">
                     <div className="home-link">
                         <div className="link">
-                            <Link to={"/"}>Домашняя</Link>
+                            <Link to={"/Fratelli"}>Домашняя</Link>
                             <p className="link-description">
                                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque, voluptas! Lorem ipsum dolor sit amet.
                             </p>
                         </div>
                         <div className="link">
-                            <Link to={"/products"}>Продукты</Link>
+                            <Link to={"/Fratelli/products"}>Продукты</Link>
                             <p className="link-description">
                                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque, voluptas! Lorem ipsum dolor sit amet.
                             </p>
                         </div>
                         <div className="link">
-                            <Link to={"/about"}>О Нас</Link>
+                            <Link to={"/Fratelli/about"}>О Нас</Link>
                             <p className="link-description">
                                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque, voluptas! Lorem ipsum dolor sit amet.
                             </p>

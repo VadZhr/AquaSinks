@@ -11,7 +11,7 @@ export default function Sinks() {
   return (
     <section className="sinks">
         <div className="container">
-            <Link to={"/"}>Home</Link>
+            <Link to={"/Fratelli"}>Home</Link>
             <div className="sinks-wrapper">
                 {data[0].products.map(el=><Item key={el.id}  image={el.product} name={el.name} id={el.id}/>)}
             </div>
