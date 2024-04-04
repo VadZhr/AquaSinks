@@ -14,7 +14,7 @@ export default function AboutUs() {
                 <div className="about-left">
                     <div className="about-background">
                         <div className='about-bg_1' src="" alt="backround 1" />
-                        <img className='about-bg_2' src={aboutBg} alt="backround 2" />
+                        <img className='about-bg_2' src={'Fratelli/assets/images/aboutus_1.jpg'} alt="backround 2" />
                     </div>
                 </div>
                 <div className="about-right">
