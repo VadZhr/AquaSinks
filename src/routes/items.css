@@ -1,4 +1,11 @@
-.sinks-wrapper{
+.sinks-wrapper.wall{
     display: flex;
     flex-direction: column;
+}
+
+.sinks-wrapper.tile{
+    display: flex;
+    flex-wrap: wrap;
+    /* margin: 50px; */
+    width: 100%;
 }

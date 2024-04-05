@@ -5,11 +5,7 @@ import { Link, useLocation } from 'react-router-dom'
 
 export default function Product({name, image, id}) {
   let location = useLocation()
-  let [loc, setLoc] = useState()
-  useEffect(() => {
-    setLoc(location)
-  }, [])
-  console.log(location)
+
   return (
     <div className="sink">
         <div className="sink-image">

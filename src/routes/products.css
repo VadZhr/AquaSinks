@@ -2,10 +2,10 @@
    
 }
 
-.categories-wrapper{
+.tile{
     display: flex;
     flex-wrap: wrap;
-    margin: 50px;
-    width: 100%;
+    max-width: 100%;
+    padding-left: 3%;
 }
 
