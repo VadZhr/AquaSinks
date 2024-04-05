@@ -1,5 +1,6 @@
 .sink{
  display: flex; 
+ /* flex-wrap: wrap; */
 }
 
 .sink:nth-child(odd) .sink-image{
@@ -7,13 +8,15 @@
 }
 
 .sink-image img{
-    height: 500px;
+    max-height: 420px;
+    max-width: 100%;
 }
 
 .sink-image_link{
     
+    max-width: 300px;
     width: 300px;
-    height: 300px;
+    max-height: 300px;
     background: rgb(221,221,221);
     display: flex;
     justify-content: end;

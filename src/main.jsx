@@ -12,24 +12,24 @@ import store from './store/store.js'
 import ProductItem from './routes/ProductItem.jsx'
 const router = createBrowserRouter([
   {
-    path: "/Fratelli",
+    path: "/",
     element: <Home />,
    
   },
   {
-    path: "/Fratelli/products",
+    path: "/products",
     element: <Products />,
   },
   {
-    path: "/Fratelli/about",
+    path: "/about",
     element: <AboutUs />,
   },
   {
-    path: "/Fratelli/products/:productName",
+    path: "/products/:productName",
     element: <Items />,
   },
   {
-    path:'/Fratelli/products/:productName/:id',
+    path:'/products/:productName/:id',
     element:<ProductItem/>
   }
 ])
