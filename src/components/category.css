@@ -60,3 +60,29 @@
     padding-right: 10px;
     
   }
+
+
+  @media screen and (max-width: 1550px) {
+    .category{
+      width: calc(33.333% - 32px);
+    }    
+  }
+  @media screen and (max-width: 1000px) {
+    .category{
+      width: calc(50% - 16px);
+      margin: 0 16px 32px 0;
+    }    
+  }
+  @media screen and (max-width: 768px) {
+    .category{
+      width: 100%;
+      margin: 0 0 32px;
+      font-size: 1rem;
+    }    
+    .category-content a{
+      font-size: 1.6rem;
+    }
+  }
+  @media screen and (max-width: 500px) {
+    .category-content a{font-size: 1rem;}
+  }

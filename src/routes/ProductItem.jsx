@@ -14,7 +14,7 @@ export default function ProductItem() {
     const phoneNumber = "77714604710"
     const text = "Мы бы хотели купить у вас это"
     const watsAppText = text.replaceAll(" ", '%20')//если не заменить пробелы на %20 то рабоать не будет
-    
+    console.log(watsAppText)
 
   return (
     <section className='product-item'>

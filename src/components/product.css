@@ -1,6 +1,7 @@
 .sink{
  display: flex; 
  /* flex-wrap: wrap; */
+ justify-content: center;
 }
 
 .sink:nth-child(odd) .sink-image{
@@ -36,4 +37,16 @@
 
 .sink-image_link a:hover{
     text-decoration: none;
+}
+
+
+
+@media screen and (max-width: 750px) {
+    .sink{flex-wrap: wrap;  margin-bottom: 20px;} 
+    .sink:nth-child(odd) .sink-image{order: 0;}
+    .sink-image_link{max-width: 80%;}
+    .sink-image_link a, .sink-image_link p{font-size: 1rem;}
+    .sink:nth-child(odd) .sink-image_link{margin-left: auto;}  
+    .sink:nth-child(even) .sink-image_link{margin-right: auto;}  
+
 }
