@@ -16,6 +16,10 @@ const router = createBrowserRouter([
     element: <Home />,
     children: [
       {
+        index: true,
+        element: <AboutUs/>
+      },
+      {
         path: "/Fratelli/",
         element: <AboutUs />,
       },

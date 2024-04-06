@@ -17,8 +17,15 @@
 
 .header-right {
     display: flex;
+    gap: 16px;
 }
 
-.header-right>* {
-    margin: 0 16px;
+
+
+@media screen and (max-width: 500px) {
+    .header-right .link-about,
+    .header-right .link-contact{
+        display: none;
+    }
+    
 }

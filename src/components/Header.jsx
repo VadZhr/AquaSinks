@@ -15,9 +15,9 @@ export default function Header() {
               </div>
             </div>
             <div className="header-right">
-            <Link to={'/Fratelli/products/'}>Products</Link>
-            <Link to={'/Fratelli/'}>Contact</Link>
-            <Link to={'/Fratelli/'}>About Us</Link>
+            <Link className="link-products" to={'/Fratelli/products/'}>Products</Link>
+            <Link className="link-contact" to={'/Fratelli/'}>Contact</Link>
+            <Link className="link-about" to={'/Fratelli/'}>About Us</Link>
             </div>
           </div>
         </div>
