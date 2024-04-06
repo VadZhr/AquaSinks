@@ -15,6 +15,7 @@ export default function ProductItem() {
 
 
   return (
+    <>
     <section className='product-item'>
       <ScrollRestoration />
         <div className="product-item-img">
@@ -37,5 +38,7 @@ export default function ProductItem() {
             </div>
         </div>
     </section>
+    
+    </>
   )
 }

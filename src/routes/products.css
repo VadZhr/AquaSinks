@@ -1,16 +1,12 @@
-
-=======
 .categories{
     padding-top: var(--top-pad); 
 }
 
-
 .tile{
     display: flex;
-    flex-wrap: wrap;   
-    width: 100%
+    flex-wrap: wrap;
+    /* justify-content: center; */
+   
+    width: 100%;
 }
-
-
-
 
