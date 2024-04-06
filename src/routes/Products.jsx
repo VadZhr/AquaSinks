@@ -3,6 +3,8 @@ import Category from "../components/Category";
 import "./products.css";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
+import HomeLink from "../components/HomeLink";
+
 export default function Products() {
   const data = useSelector((state) => state.categories.list);
 
@@ -10,7 +12,7 @@ export default function Products() {
     <>
       <section className="categories">
         <div className="container">
-          <Link to={"/"}>Home</Link>
+          <HomeLink/>
           <div className="categories-wrapper tile">
             {data.map((el) => (
               <Category key={el.type} category={el} />

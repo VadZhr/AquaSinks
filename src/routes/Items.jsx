@@ -5,6 +5,8 @@ import { useParams } from 'react-router-dom'
 import {useSelector} from 'react-redux'
 import { useState } from 'react'
 import Category from '../components/Category'
+import HomeLink from '../components/HomeLink'
+
 
 export default function Sinks() {
   const {productName} =useParams()
@@ -17,9 +19,20 @@ export default function Sinks() {
   return (
     <section className="sinks">
         <div className="container">
-            <Link to={"/"}>Home</Link>
-            <button onClick={() => setTile(true)}>tile</button>
-            <button onClick={() => setTile(false)}>wall</button>
+            <HomeLink/>
+            <div className="category-buttons">
+            <button className='tile-pic' style={tile ? {opacity: 1} : {opacity: 0.3}} onClick={() => setTile(true)}>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </button>
+            <button className='wall-pic' style={!tile ? {opacity: 1} : {opacity: 0.3}} onClick={() => setTile(false)}>
+              <div></div>
+              <div></div>
+            </button>
+            </div>
+           
 
             {/* ПЛИТКА */}
             {tile && <div className="sinks-wrapper tile">

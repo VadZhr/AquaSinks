@@ -40,7 +40,7 @@
 .product-item-wrapper{
 }
 
-.product-item-wrapper button{
+.back-btn{
     margin-bottom: 20px;
     background: url(../assets/images/arrow.png) center/contain no-repeat;
     width: 30px;

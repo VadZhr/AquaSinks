@@ -28,7 +28,7 @@ export default function ProductItem() {
         </div>
         <div className="container">
             <div className="product-item-wrapper">
-                <button className='product-item-btn' onClick={() => navigate(-1)}></button>
+                <button className='product-item-btn back-btn' onClick={() => navigate(-1)}></button>
 
                 <div className="product-item-decription">
                   <h3 className='product-item-decription-title'>{item.name}</h3>

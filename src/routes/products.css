@@ -1,11 +1,7 @@
-.categories{
-   
-}
-
 .tile{
     display: flex;
     flex-wrap: wrap;
     max-width: 100%;
-    padding-left: 3%;
+    /* padding-left: 3%; */
 }
 
