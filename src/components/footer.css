@@ -6,7 +6,7 @@
 
 .media {
     display: flex;
-    gap: 20px
+    gap: 20px    
 }
 
 .footer-wrapper {
@@ -21,4 +21,27 @@
     background-position: center;
     width: 48px;
     height: 48px;
+}
+
+.footer .adress{
+    text-align: center;
+}
+
+@media screen and (max-width: 450px) {
+    .media-link {
+        width: 36px;
+        height: 36px;
+    }    
+}
+@media screen and (max-width: 350px) {
+    .media-link {
+        width: 30px;
+        height: 30px;
+    }    
+}
+@media screen and (max-width: 280px) {
+    .media-link {
+        width: 23px;
+        height: 23px;
+    }    
 }
