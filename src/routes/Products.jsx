@@ -10,7 +10,7 @@ export default function Products() {
     <>
       <section className="categories">
         <div className="container">
-          <Link to={"/Fratelli"}>Home</Link>
+          
           <div className="categories-wrapper">
             {data.map((el) => (
               <Category key={el.type} category={el} />

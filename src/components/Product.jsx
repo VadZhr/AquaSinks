@@ -1,11 +1,15 @@
+
 import { useEffect, useState } from 'react'
 import './product.css'
 import { Link, useLocation } from 'react-router-dom'
+import { useSelector } from 'react-redux'
 
 
 export default function Product({name, image, id}) {
   let location = useLocation()
   let [loc, setLoc] = useState()
+  const link = useSelector(state=>state.path.pathForImagesPC)
+  console.log(link);
   useEffect(() => {
     setLoc(location)
   }, [])
@@ -13,15 +17,11 @@ export default function Product({name, image, id}) {
   return (
     <div className="sink">
         <div className="sink-image">
-            <img src={image} alt="image of a sink" />
+            <img src={link+image} alt="image of a sink" />
         </div>
         <div className="sink-image_link">
             <p>-{name}</p>
-<<<<<<< HEAD
             <Link preventScrollReset={false} to={location.pathname+`/${id}` }>Узнать больше</Link>
-=======
-            <Link to={"/sinks/ceramic"}>Узнать больше</Link>
->>>>>>> main
         </div>
     </div>
   )

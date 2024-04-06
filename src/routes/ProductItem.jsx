@@ -7,13 +7,13 @@ import './productItem.css'
 export default function ProductItem() {
     const {productName, id} = useParams()
     const navigate = useNavigate()
-    const item = useSelector(state => state.categories.list).filter(el => el.path == productName)[0].products.filter(product => product.id == id)[0]
-    console.log(item)
+    const item = useSelector(state => state.categories.list).filter(el => el.path == productName)[0].products.filter(product => product.id == id)[0];
+    const link = useSelector(state=>state.path.pathForImagesPC)
   return (
     <section className='product-item'>
       <ScrollRestoration />
         <div className="product-item-img">
-          <img src={item.product} alt="" />
+          <img src={link+item.product} alt="" />
           <span className='product-item-name'>{item.name}</span>
 
         </div>

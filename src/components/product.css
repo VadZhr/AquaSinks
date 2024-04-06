@@ -1,5 +1,6 @@
 .sink{
  display: flex; 
+
 }
 
 .sink:nth-child(odd) .sink-image{

@@ -47,6 +47,7 @@
     flex-basis: 80%;
 }
 
+
 @media (max-width: 1623px) {
  
     .product-item-name{bottom: 10%;}
