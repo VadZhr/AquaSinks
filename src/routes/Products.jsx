@@ -10,13 +10,8 @@ export default function Products() {
     <>
       <section className="categories">
         <div className="container">
-<<<<<<< HEAD
           
           <div className="categories-wrapper">
-=======
-          <Link to={"/"}>Home</Link>
-          <div className="categories-wrapper tile">
->>>>>>> eabb619ea69664f9d5aeb48555e6759d5de61cff
             {data.map((el) => (
               <Category key={el.type} category={el} />
             ))}

@@ -7,7 +7,6 @@ import { useSelector } from 'react-redux'
 
 export default function Product({name, image, id}) {
   let location = useLocation()
-<<<<<<< HEAD
   let [loc, setLoc] = useState()
   const link = useSelector(state=>state.path.pathForImagesPC)
   console.log(link);
@@ -15,9 +14,6 @@ export default function Product({name, image, id}) {
     setLoc(location)
   }, [])
   console.log(location)
-=======
-
->>>>>>> eabb619ea69664f9d5aeb48555e6759d5de61cff
   return (
     <div className="sink">
         <div className="sink-image">

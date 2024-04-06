@@ -1,16 +1,6 @@
 .sinks-wrapper.wall{
     display: flex;
     flex-direction: column;
-<<<<<<< HEAD
     align-items: center;
     padding-top: var(--top-pad); 
-=======
-}
-
-.sinks-wrapper.tile{
-    display: flex;
-    flex-wrap: wrap;
-    /* margin: 50px; */
-    width: 100%;
->>>>>>> eabb619ea69664f9d5aeb48555e6759d5de61cff
 }

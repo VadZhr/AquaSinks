@@ -1,11 +1,5 @@
 .sink{
  display: flex; 
-<<<<<<< HEAD
-
-=======
- /* flex-wrap: wrap; */
- justify-content: center;
->>>>>>> eabb619ea69664f9d5aeb48555e6759d5de61cff
 }
 
 .sink:nth-child(odd) .sink-image{
