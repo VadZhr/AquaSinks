@@ -70,11 +70,19 @@
     flex-basis: 80%;
 }
 
+<<<<<<< HEAD
+
+@media (max-width: 1623px) {
+ 
+    .product-item-name{bottom: 10%;}
+    .product-item-decription {max-width: 1200px;}
+=======
 .whatsapp-link img{
     display: block;
     max-width: 80%;
     margin: 0 auto;   
     margin-bottom: 50px;
+>>>>>>> eabb619ea69664f9d5aeb48555e6759d5de61cff
 
 }
 

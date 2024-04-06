@@ -1,7 +1,16 @@
+
+=======
+.categories{
+    padding-top: var(--top-pad); 
+}
+
+
 .tile{
     display: flex;
-    flex-wrap: wrap;
-    max-width: 100%;
-    /* padding-left: 3%; */
+    flex-wrap: wrap;   
+    width: 100%
 }
+
+
+
 

@@ -1,6 +1,7 @@
 .sinks-wrapper.wall{
     display: flex;
     flex-direction: column;
+
 }
 
 .sinks-wrapper.tile{
@@ -42,4 +43,8 @@
 
 .category-buttons{
     display: flex;
+
+    align-items: center;
+    padding-top: var(--top-pad); 
+
 }

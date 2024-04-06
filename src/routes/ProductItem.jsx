@@ -7,6 +7,10 @@ import './productItem.css'
 export default function ProductItem() {
     const {productName, id} = useParams()
     const navigate = useNavigate()
+<<<<<<< HEAD
+    const item = useSelector(state => state.categories.list).filter(el => el.path == productName)[0].products.filter(product => product.id == id)[0];
+    const link = useSelector(state=>state.path.pathForImagesPC)
+=======
     const item = useSelector(state => state.categories.list).filter(el => el.path == productName)[0].products.filter(product => product.id == id)[0]
 
 
@@ -16,14 +20,20 @@ export default function ProductItem() {
     const watsAppText = text.replaceAll(" ", '%20')//если не заменить пробелы на %20 то рабоать не будет
     console.log(watsAppText)
 
+>>>>>>> eabb619ea69664f9d5aeb48555e6759d5de61cff
   return (
     <section className='product-item'>
       <ScrollRestoration />
         <div className="product-item-img">
+<<<<<<< HEAD
+          <img src={link+item.product} alt="" />
+          <span className='product-item-name'>{item.name}</span>
+=======
           <img src={item.product} alt="" />
           <div className="product-item-name">
             <span className=''>{item.name}</span>
           </div>
+>>>>>>> eabb619ea69664f9d5aeb48555e6759d5de61cff
 
         </div>
         <div className="container">

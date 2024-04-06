@@ -1,18 +1,21 @@
+import { useSelector } from 'react-redux'
 import './home.css'
-import bgImage from '../assets/images/bg.webp'
-import { Link } from 'react-router-dom'
-
+import { Link, Outlet } from 'react-router-dom'
+import Header from '../components/Header'
+import Footer from '../components/Footer'
 
 export default function Home() {
+    const link = useSelector(state=>state.path.pathForImagesPC)
   return (
+
     <section className="home">
-        <div className="container">
+        {/* <div className="container">
             <div className="home-wrapper">
                 <div className="home-left">
                     <div className="home-left__title">
                         <h2>SINK CONTETN</h2>
                     </div>
-                    <img src={bgImage} alt="image of a sink" />
+                    <img src={link+'/assets/images/bg.webp'} alt="image of a sink" />
                 </div>
                 <div className="home-right">
                     <div className="home-link">
@@ -43,7 +46,10 @@ export default function Home() {
                     </div>
                 </div>
             </div>
-        </div>
+        </div> */}
+        <Header></Header>
+        <Outlet></Outlet>
+        <Footer></Footer>
     </section>
   )
 }

@@ -12,13 +12,11 @@ export default function Sinks() {
   const {productName} =useParams()
   const data = useSelector((state)=>state.categories.list).filter(el=>el.path==productName);
 
-  //нужно сделать глобальной, чтобы при возвращении на страницу сохранялся вид плитки 
-  const [tile, setTile] = useState(false)
- 
   console.log(data[0]);
   return (
     <section className="sinks">
         <div className="container">
+
             <HomeLink/>
             <div className="category-buttons">
             <button className='tile-pic' style={tile ? {opacity: 1} : {opacity: 0.3}} onClick={() => setTile(true)}>
@@ -41,8 +39,11 @@ export default function Sinks() {
 
             {/* СТЕНА */}
             {tile == false && <div className="sinks-wrapper wall">
+
+            <div className="sinks-wrapper">
+
                 {data[0].products.map(el=><Item key={el.id}  image={el.product} name={el.name} id={el.id}/>)}
-            </div>}
+            </div>
         </div>
     </section>
   )

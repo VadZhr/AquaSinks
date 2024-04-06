@@ -1,0 +1,23 @@
+.header{
+    width: 100svw;
+    /* margin-bottom: 40px; */
+    background-color: white;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+}
+.header-wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+.header-wrapper>*{
+  font-size: 25px;
+}
+.header-right{
+    display: flex ;
+    
+    
+}
+.header-right>*{
+    margin: 0 16px;
+}

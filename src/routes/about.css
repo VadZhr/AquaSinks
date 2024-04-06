@@ -1,5 +1,6 @@
 .about{
     height: inherit;
+    padding-top: var(--top-pad);  
 }
 
 .about-wrapper{
