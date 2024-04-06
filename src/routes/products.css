@@ -2,10 +2,17 @@
     padding-top: var(--top-pad); 
 }
 
-.categories-wrapper{
+.tile{
     display: flex;
     flex-wrap: wrap;
+<<<<<<< HEAD
     /* justify-content: center; */
    
     width: 100%;
 }
+=======
+    max-width: 100%;
+    padding-left: 3%;
+}
+
+>>>>>>> eabb619ea69664f9d5aeb48555e6759d5de61cff

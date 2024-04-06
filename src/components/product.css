@@ -1,6 +1,11 @@
 .sink{
  display: flex; 
+<<<<<<< HEAD
 
+=======
+ /* flex-wrap: wrap; */
+ justify-content: center;
+>>>>>>> eabb619ea69664f9d5aeb48555e6759d5de61cff
 }
 
 .sink:nth-child(odd) .sink-image{
@@ -8,13 +13,15 @@
 }
 
 .sink-image img{
-    height: 500px;
+    max-height: 420px;
+    max-width: 100%;
 }
 
 .sink-image_link{
     
+    max-width: 300px;
     width: 300px;
-    height: 300px;
+    max-height: 300px;
     background: rgb(221,221,221);
     display: flex;
     justify-content: end;
@@ -34,4 +41,16 @@
 
 .sink-image_link a:hover{
     text-decoration: none;
+}
+
+
+
+@media screen and (max-width: 750px) {
+    .sink{flex-wrap: wrap;  margin-bottom: 20px;} 
+    .sink:nth-child(odd) .sink-image{order: 0;}
+    .sink-image_link{max-width: 80%;}
+    .sink-image_link a, .sink-image_link p{font-size: 1rem;}
+    .sink:nth-child(odd) .sink-image_link{margin-left: auto;}  
+    .sink:nth-child(even) .sink-image_link{margin-right: auto;}  
+
 }
