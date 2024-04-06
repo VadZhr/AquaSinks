@@ -48,7 +48,9 @@ export default function Home() {
             </div>
         </div> */}
         <Header></Header>
-        <Outlet></Outlet>
+        <main className='main'>
+            <Outlet></Outlet>
+        </main>
         <Footer></Footer>
     </section>
   )

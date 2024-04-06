@@ -4,7 +4,9 @@ import { useParams } from 'react-router-dom'
 import {useSelector} from 'react-redux'
 import { useState } from 'react'
 import Category from '../components/Category'
-import HomeLink from '../components/HomeLink'
+import HomeLink from '../components/BackLink'
+import BackLink from '../components/BackLink'
+
 
 
 export default function Sinks() {
@@ -18,6 +20,7 @@ export default function Sinks() {
         <div className="container">
 
             <HomeLink/>
+            <div className="top-bar">
             <div className="category-buttons">
             <button className='tile-pic' style={tile ? {opacity: 1} : {opacity: 0.3}} onClick={() => setTile(true)}>
               <div></div>
@@ -29,6 +32,9 @@ export default function Sinks() {
               <div></div>
               <div></div>
             </button>
+            </div>
+
+            <BackLink/>
             </div>
            
 

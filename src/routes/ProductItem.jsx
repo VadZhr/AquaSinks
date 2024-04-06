@@ -2,6 +2,8 @@ import React from 'react'
 import {useSelector} from 'react-redux'
 import {useParams, useNavigate, Link, ScrollRestoration } from 'react-router-dom'
 import './productItem.css'
+import BackLink from '../components/BackLink'
+
 
 
 export default function ProductItem() {
@@ -26,7 +28,7 @@ export default function ProductItem() {
         </div>
         <div className="container">
             <div className="product-item-wrapper">
-                <button className='product-item-btn back-btn' onClick={() => navigate(-1)}></button>
+                <BackLink/>
 
                 <div className="product-item-decription">
                   <h3 className='product-item-decription-title'>{item.name}</h3>

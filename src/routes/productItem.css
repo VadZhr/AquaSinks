@@ -40,16 +40,6 @@
 .product-item-wrapper{
 }
 
-.back-btn{
-    margin-bottom: 20px;
-    background: url(../assets/images/arrow.png) center/contain no-repeat;
-    width: 30px;
-    height: 30px;
-    border: none;
-    cursor: pointer;
-    rotate: 180deg;
-}
-
 .product-item-decription {
     max-width: 80%;
     margin: 0 auto;

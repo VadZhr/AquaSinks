@@ -1,20 +1,23 @@
-.footer{
+.footer {
     width: 100svw;
-  margin-top: 40px;
- padding-bottom: 50px;
+    margin-top: 100px;
+    padding-bottom: 50px;
 }
-.media{
+
+.media {
     display: flex;
-    gap:20px
+    gap: 20px
 }
-.footer-wrapper{
+
+.footer-wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 40px;
 }
-.media-link{
-    background-size:cover;
+
+.media-link {
+    background-size: cover;
     background-position: center;
     width: 48px;
     height: 48px;
