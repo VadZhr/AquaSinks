@@ -22,7 +22,6 @@ export const iconsSlice=createSlice({
         {
             path:"/assets/icons/icons8-youtube-48.png"
         }
-        
     ]
 }
 })

@@ -1,16 +1,14 @@
-.categories{
-    padding-top: var(--top-pad); 
+.categories {
+    padding-top: var(--top-pad);
 }
 
-.tile{
+.tile {
     display: flex;
     flex-wrap: wrap;
-    /* justify-content: center; */
-   
     width: 100%;
 }
 
-.categories-back-button{
+.categories-back-button {
     text-align: right;
     padding: 0 40px;
 }

@@ -1,17 +1,12 @@
-
 import { useEffect, useState } from 'react'
 import './product.css'
 import { Link, useLocation } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 
-
 export default function Product({name, image, id}) {
   let location = useLocation()
-  let [loc, setLoc] = useState()
   const link = useSelector(state=>state.path.pathForImagesPC)
-  useEffect(() => {
-    setLoc(location)
-  }, [])
+
   return (
     <div className="sink">
         <div className="sink-image">

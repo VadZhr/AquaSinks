@@ -39,7 +39,6 @@
 }
 
 
-
 @media screen and (max-width: 750px) {
     .sink {
         flex-wrap: wrap;
@@ -66,5 +65,4 @@
     .sink:nth-child(even) .sink-image_link {
         margin-right: auto;
     }
-
 }

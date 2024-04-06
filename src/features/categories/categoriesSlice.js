@@ -1,5 +1,4 @@
-import { createSlice } from "@reduxjs/toolkit";
-
+import { createSlice } from "@reduxjs/toolkit"
 
 export const categoriesSlice = createSlice({
   name: "categories",
@@ -197,9 +196,7 @@ export const categoriesSlice = createSlice({
             id: 27,
           }
         ],
-      },
-      
-     
+      },     
     ],
   },
 });

@@ -1,7 +1,5 @@
-import { useState } from "react";
 import Category from "../components/Category";
 import "./products.css";
-import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import BackLink from "../components/BackLink";
 
@@ -13,7 +11,7 @@ export default function Products() {
       <section className="categories">
         <div className="container">
           <div className="categories-back-button">
-            <BackLink/>
+            <BackLink />
           </div>
           <div className="categories-wrapper tile">
             {data.map((el) => (
@@ -23,5 +21,5 @@ export default function Products() {
         </div>
       </section>
     </>
-  );
+  )
 }

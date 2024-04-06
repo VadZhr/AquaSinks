@@ -1,6 +1,5 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./App.jsx";
 import Home from "./routes/Home.jsx";
 import Items from "./routes/Items.jsx";
 import AboutUs from "./routes/AboutUs.jsx";
@@ -10,6 +9,7 @@ import Products from "./routes/Products.jsx";
 import { Provider } from "react-redux";
 import store from "./store/store.js";
 import ProductItem from "./routes/ProductItem.jsx";
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -34,19 +34,7 @@ const router = createBrowserRouter([
 
     ],
   },
-  // {
-  //   path: "/Fratelli/about",
-  //   element: <AboutUs />,
-  // },
-  // {
-  //   path: "/Fratelli/products/:productName",
-  //   element: <Items />,
-  // },
-  // {
-  //   path: "/Fratelli/products/:productName/:id",
-  //   element: <ProductItem />,
-  // },
-]);
+])
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>

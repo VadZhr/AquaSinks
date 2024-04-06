@@ -1,9 +1,11 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import './footer.css'
+
 export default function Footer() {
   const icons = useSelector((state) => state.icons.iconsPath);
   const link = useSelector((state) => state.path.pathForImagesPC);
+
   return (
     <>
       <footer className="footer">
