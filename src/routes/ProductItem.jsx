@@ -19,9 +19,10 @@ export default function ProductItem() {
     <section className='product-item'>
       <ScrollRestoration />
         <div className="product-item-img">
-          <img src={link+item.product} alt="" />
-          <span className='product-item-name'>{item.name}</span>
-
+          <img src={link+item.mainImage} alt="" />
+          <div className="product-item-name">
+            <span className=''>{item.name}</span>
+          </div>
         </div>
         <div className="container">
             <div className="product-item-wrapper">
