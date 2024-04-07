@@ -4,12 +4,6 @@
 
 }
 
-.sinks-wrapper.tile {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-}
-
 .tile-pic,
 .wall-pic {
     display: flex;
@@ -50,4 +44,9 @@
 .category-buttons {
     display: flex;
     align-items: center;
+}
+
+.top-bar .back-btn{
+    position: relative;
+    top: 0;
 }

@@ -21,15 +21,15 @@
 }
 
 @media screen and (max-width: 1550px) {
-    .categories-wrapper {grid-template-columns: 1fr 1fr 1fr;}
+    .tile {grid-template-columns: 1fr 1fr 1fr;}
 }
 
 @media screen and (max-width: 1000px) {
-    .categories-wrapper {grid-template-columns: 1fr 1fr;}
+    .tile {grid-template-columns: 1fr 1fr;}
 }
 
 @media screen and (max-width: 768px) {
-    .categories-wrapper {
+    .tile {
         grid-template-columns: 1fr;
         font-size: 1rem;
     }
