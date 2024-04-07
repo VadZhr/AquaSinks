@@ -8,7 +8,13 @@
     width: 100%;
 }
 
-.categories-back-button {
-    text-align: right;
-    padding: 0 40px;
+.categories-wrapper {
+    position: relative;
+}
+
+.product-item-btn {
+    position: absolute;
+    right: 0;
+    top: -30px;
+    z-index: 1111;
 }
