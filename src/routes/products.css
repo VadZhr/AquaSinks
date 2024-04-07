@@ -14,7 +14,7 @@
 
 .product-item-btn {
     position: absolute;
-    right: 30px;
+    right: 0;
     top: -30px;
     z-index: 1111;
 }
