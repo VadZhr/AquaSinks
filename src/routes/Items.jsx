@@ -5,6 +5,7 @@ import { useSelector } from 'react-redux'
 import { useState } from 'react'
 import Category from '../components/Category'
 import BackLink from '../components/BackLink'
+import { ScrollRestoration } from 'react-router-dom'
 
 export default function Sinks() {
   const { productName } = useParams()
@@ -15,6 +16,7 @@ export default function Sinks() {
 
   return (
     <section className="sinks">
+      <ScrollRestoration />
       <div className="container">
         <div className="top-bar">
           <div className="category-buttons">
