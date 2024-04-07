@@ -34,6 +34,9 @@
 
 .category-content {
   padding: 22px 32px;
+  height: 200px;
+  display: flex;
+  align-items: end;
 }
 
 .category .link {
