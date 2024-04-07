@@ -37,3 +37,16 @@ img {
 body {
   overflow-x: hidden;
 }
+
+::-webkit-scrollbar {
+  background: transparent;
+  width: 5px;  
+}
+
+::-webkit-scrollbar-thumb {
+  background: black;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
