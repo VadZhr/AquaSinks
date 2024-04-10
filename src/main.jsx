@@ -9,6 +9,7 @@ import Products from "./routes/Products.jsx";
 import { Provider } from "react-redux";
 import store from "./store/store.js";
 import ProductItem from "./routes/ProductItem.jsx";
+import Slider1 from "./components/Slider1.jsx";
 
 const router = createBrowserRouter([
   {
@@ -35,6 +36,10 @@ const router = createBrowserRouter([
         path: "/Fratelli/products/:productName/:id",
         element: <ProductItem />,
       },
+      {
+        path:"/Fratelli/swiper",
+        element:<Slider1/>
+      }
 
     ],
   },
