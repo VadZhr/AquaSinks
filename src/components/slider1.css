@@ -63,3 +63,23 @@
     font-size: 200%;
     color: white;
   }
+@media (max-width:768px){
+  .swiper-button-next{
+    left: calc(80% + 68px);
+    top: calc(100% + 30px - 100px);
+    padding: 50px 28px;
+  }
+  .swiper-button-prev{
+    top: calc(100% + 30px - 70px);
+    padding:35px 28px;
+  }
+
+}
+@media(max-width:480px){
+  .swiper-button-next{
+    display: none;
+  }
+  .swiper-button-prev{
+    display: none;
+  }
+}
