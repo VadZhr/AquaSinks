@@ -44,7 +44,7 @@
     left: 80%;
     top: calc(100% + 30px - 100px);
     padding: 50px 40px;
-    background-color: #a66731;
+    background-color: black;
   }
   .swiper-button-next{
     position:absolute;
@@ -52,7 +52,7 @@
     top: calc(100% + 30px - 140px);
   
     padding: 70px 40px;
-    background-color: #a66731;
+    background-color: black;
     
   }
   .swiper-button-prev::after{
