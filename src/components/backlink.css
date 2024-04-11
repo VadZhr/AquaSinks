@@ -5,4 +5,5 @@
     border: none;
     cursor: pointer;
     rotate: 180deg;
+    mix-blend-mode: multiply;
 }
