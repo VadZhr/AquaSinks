@@ -2,7 +2,7 @@ import { useSelector } from 'react-redux'
 import { useParams, ScrollRestoration } from 'react-router-dom'
 import './productItem.css'
 import BackLink from '../components/BackLink'
-
+import Slider1 from '../components/Slider1'
 export default function ProductItem() {
   const { productName, id } = useParams()
   const item = useSelector(state => state.categories.list).filter(el => el.path == productName)[0].products.filter(product => product.id == id)[0];
@@ -16,10 +16,11 @@ export default function ProductItem() {
       <section className='product-item'>
         <ScrollRestoration />
         <div className="product-item-img">
-          <img src={link + item.mainImage} alt="" />
-          <div className="product-item-name">
+          <Slider1 item={item} link={link}></Slider1>
+          {/* <img src={link + item.mainImage} alt="" /> */}
+          {/* <div className="product-item-name" >
             <span className=''>{item.name}</span>
-          </div>
+          </div> */}
         </div>
         <div className="container">
           <div className="product-item-wrapper">
