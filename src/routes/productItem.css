@@ -32,8 +32,6 @@
 }
 
 .product-item-decription {
-    max-width: 80%;
-    margin: 0 auto;
     display: flex;
     text-align: justify;
     gap: 100px;
@@ -56,6 +54,7 @@
     max-width: 80%;
     margin: 0 auto;
     margin-bottom: 50px;
+    
 }
 /* У img убрал margin */
 .product-item-wrapper{

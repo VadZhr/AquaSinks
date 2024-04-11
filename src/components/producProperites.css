@@ -1,0 +1,55 @@
+.properties{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    margin-bottom: 100px;
+}
+
+.properties-left img{
+    max-width: 100%;
+    width: 600px;
+    flex-shrink: 1;
+    /* flex-basis: auto; */
+}
+
+
+
+.properties-right > div{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    padding: 4px 0;
+    /* max-width: 700px; */
+    min-width: 400px;
+}
+
+.properties-right > div::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    height: 2px;
+    background: #000;
+    width: 30px;
+}
+
+.properties-right > div:nth-child(even):before{width: 50%;}
+.properties-right > div:nth-child(odd):before{width: 30%;}
+.properties-right > div:nth-child(3n):before{width: 15%;}
+.properties-right > div:nth-child(4n):before{width: 35%;}
+
+
+.properties-right{
+    flex-grow: 1;
+} 
+
+.properties-right span{
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+@media screen and (max-width: 500px){
+    .properties-right > div{min-width: 150px;}
+    .properties-right span{font-size: 1.2rem;}
+}
