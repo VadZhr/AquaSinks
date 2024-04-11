@@ -107,9 +107,9 @@ export const categoriesSlice = createSlice({
         ],
       },
       {
-        type: "Floar sink",
+        type: "Floor sink",
         desc: "Read more",
-        path:'floar sink',
+        path:'floor-sink',
         mainImage: "/assets/images/floar sink/главное фото.jpg",
         products: [
           {
@@ -135,7 +135,7 @@ export const categoriesSlice = createSlice({
       {
         type: "Wall sink",
         desc: "Read more",
-        path:'wall sink',
+        path:'wall-sink',
         mainImage: "/assets/images/wall sink/главное фото.jpg",
         products: [
           {
