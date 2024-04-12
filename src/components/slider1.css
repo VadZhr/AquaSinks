@@ -63,7 +63,7 @@
     font-size: 200%;
     color: white;
   }
-@media (max-width:768px){
+@media (max-width:1000px){
   .swiper-button-next{
     left: calc(80% + 68px);
     top: calc(100% + 30px - 100px);
@@ -73,8 +73,35 @@
     top: calc(100% + 30px - 70px);
     padding:35px 28px;
   }
-
 }
+
+@media (max-width:800px){
+  .swiper-button-next{
+    left: calc(77% + 68px);
+    top: calc(100% + 30px - 100px);
+    padding: 50px 28px;
+  }
+  .swiper-button-prev{
+    left: 77%;
+    top: calc(100% + 30px - 70px);
+    padding:35px 28px;
+  }
+}
+
+@media (max-width:622px){
+  .swiper-button-next{
+    left: calc(72% + 68px);
+    top: calc(100% + 30px - 100px);
+    padding: 50px 28px;
+  }
+  .swiper-button-prev{
+    left: 72%;
+    top: calc(100% + 30px - 70px);
+    padding:35px 28px;
+  }
+}
+
+
 @media(max-width:480px){
   .swiper-button-next{
     display: none;
