@@ -1,112 +1,110 @@
-#app {
-    height: 100%;
-  }
-  html,
-  body {
-    position: relative;
-    height: 100%;
-  }
-  
-  body {
-    background: #eee;
-    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-    font-size: 14px;
-    color: #000;
-    margin: 0;
-    padding: 0;
-  }
-  
   .swiper {
     width: 100%;
     height: 100%;
   }
-  
+
   .swiper-slide {
     text-align: center;
     font-size: 18px;
     background: #fff;
-  
+
     /* Center slide text vertically */
     display: flex;
     justify-content: center;
     align-items: center;
   }
-  
+
   .swiper-slide img {
     display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
     margin: 0;
+
+    /* Убирает способность выделять картинки */
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
   }
-  .swiper-button-prev{
+
+  .swiper-button-prev {
     position: absolute;
     left: 80%;
     top: calc(100% + 30px - 100px);
     padding: 50px 40px;
     background-color: black;
   }
-  .swiper-button-next{
-    position:absolute;
+
+  .swiper-button-next {
+    position: absolute;
     left: calc(80% + 100px);
     top: calc(100% + 30px - 140px);
-  
+
     padding: 70px 40px;
     background-color: black;
-    
+
   }
-  .swiper-button-prev::after{
+
+  .swiper-button-prev::after {
     font-size: 200%;
     color: white;
   }
-  .swiper-button-next::after{
+
+  .swiper-button-next::after {
     font-size: 200%;
     color: white;
   }
-@media (max-width:1000px){
-  .swiper-button-next{
-    left: calc(80% + 68px);
-    top: calc(100% + 30px - 100px);
-    padding: 50px 28px;
-  }
-  .swiper-button-prev{
-    top: calc(100% + 30px - 70px);
-    padding:35px 28px;
-  }
-}
 
-@media (max-width:800px){
-  .swiper-button-next{
-    left: calc(77% + 68px);
-    top: calc(100% + 30px - 100px);
-    padding: 50px 28px;
-  }
-  .swiper-button-prev{
-    left: 77%;
-    top: calc(100% + 30px - 70px);
-    padding:35px 28px;
-  }
-}
+  @media (max-width:1000px) {
+    .swiper-button-next {
+      left: calc(80% + 68px);
+      top: calc(100% + 30px - 100px);
+      padding: 50px 28px;
+    }
 
-@media (max-width:622px){
-  .swiper-button-next{
-    left: calc(72% + 68px);
-    top: calc(100% + 30px - 100px);
-    padding: 50px 28px;
+    .swiper-button-prev {
+      top: calc(100% + 30px - 70px);
+      padding: 35px 28px;
+    }
   }
-  .swiper-button-prev{
-    left: 72%;
-    top: calc(100% + 30px - 70px);
-    padding:35px 28px;
-  }
-}
 
+  @media (max-width:800px) {
+    .swiper-button-next {
+      left: calc(77% + 68px);
+      top: calc(100% + 30px - 100px);
+      padding: 50px 28px;
+    }
 
-@media(max-width:480px){
-  .swiper-button-next{
-    display: none;
+    .swiper-button-prev {
+      left: 77%;
+      top: calc(100% + 30px - 70px);
+      padding: 35px 28px;
+    }
   }
-  .swiper-button-prev{
-    display: none;
+
+  @media (max-width:622px) {
+    .swiper-button-next {
+      left: calc(72% + 68px);
+      top: calc(100% + 30px - 100px);
+      padding: 50px 28px;
+    }
+
+    .swiper-button-prev {
+      left: 72%;
+      top: calc(100% + 30px - 70px);
+      padding: 35px 28px;
+    }
+
   }
-}
+
+  @media(max-width:480px) {
+    .swiper-button-next {
+      display: none;
+    }
+
+    .swiper-button-prev {
+      display: none;
+    }
+  }

@@ -34,6 +34,12 @@ img {
   height: inherit;
 }
 
+.inner-container{
+  max-width: 2100px;
+  margin: 0 auto;
+  height: inherit;
+}
+
 body {
   overflow-x: hidden;
 }
