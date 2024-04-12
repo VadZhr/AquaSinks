@@ -18,10 +18,12 @@ export default function Slider1({ item, link }) {
   return (
     <>
       <Swiper
+        loop={true}
         rewind={true}
         navigation={true}
         modules={[Navigation]}
         className="mySwiper"
+        
       >
         {images.map((el,index) => (
           <>
