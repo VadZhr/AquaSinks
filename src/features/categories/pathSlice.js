@@ -4,7 +4,7 @@ export const pathSlice = createSlice({
     name:'path',
     initialState:{
         pathForImagesPC:'/src',
-        pathForImagesGIT:'/Fratelli'
+        pathForImagesGIT:'/'
     }
 })
 

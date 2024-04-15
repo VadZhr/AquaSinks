@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Link } from 'react-router-dom'
 import './header.css'
 import dropdown from '../assets/images/dropdown-removebg-preview.png'
@@ -36,19 +36,19 @@ export default function Header() {
                 </div>
                 <div className="dropdown-right">
                   <div className="right-links">
-                    <Link className="right-nav-title" to={'/Fratelli/products/'}  onClick={() => setActive(prev => !prev)}>Продукты</Link>
-                    <Link className="link-about" to={'/Fratelli/products/bath'} onClick={() => setActive(prev => !prev)}>Ванны</Link>
-                    <Link className="link-about" to={'/Fratelli/products/sinks'} onClick={() => setActive(prev => !prev)}>Раковины</Link>
-                    <Link className="link-about" to={'/Fratelli/products/floor-sink'} onClick={() => setActive(prev => !prev)}>Напольные раковины</Link>
-                    <Link className="link-about" to={'/Fratelli/products/wall-sink'} onClick={() => setActive(prev => !prev)}>Настенные раковины</Link>
-                    <Link className="link-about" to={'/Fratelli/products/shower'} onClick={() => setActive(prev => !prev)}>Душеыве поддоны</Link>
-                    <Link className="link-about" to={'/Fratelli/products/counter'} onClick={() => setActive(prev => !prev)}>Столешницы</Link>
+                    <Link className="right-nav-title" to={'/products/'}  onClick={() => setActive(prev => !prev)}>Продукты</Link>
+                    <Link className="link-about" to={'/products/bath'} onClick={() => setActive(prev => !prev)}>Ванны</Link>
+                    <Link className="link-about" to={'/products/sinks'} onClick={() => setActive(prev => !prev)}>Раковины</Link>
+                    <Link className="link-about" to={'/products/floor-sink'} onClick={() => setActive(prev => !prev)}>Напольные раковины</Link>
+                    <Link className="link-about" to={'/products/wall-sink'} onClick={() => setActive(prev => !prev)}>Настенные раковины</Link>
+                    <Link className="link-about" to={'/products/shower'} onClick={() => setActive(prev => !prev)}>Душеыве поддоны</Link>
+                    <Link className="link-about" to={'/products/counter'} onClick={() => setActive(prev => !prev)}>Столешницы</Link>
                   </div>
 
                   <div className="right-navigation">
                     <p className="right-nav-title">Навигация</p>
-                    <Link className="link-contact" to={'/Fratelli/'} onClick={() => setActive(prev => !prev)}>Контакты</Link>
-                    <Link className="link-about" to={'/Fratelli/'} onClick={() => setActive(prev => !prev)}>О Компании</Link>
+                    <Link className="link-contact" to={'/'} onClick={() => setActive(prev => !prev)}>Контакты</Link>
+                    <Link className="link-about" to={'/'} onClick={() => setActive(prev => !prev)}>О Компании</Link>
                   </div>
                 </div>
               </div>
