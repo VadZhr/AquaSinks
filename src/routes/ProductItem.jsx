@@ -36,11 +36,16 @@ export default function ProductItem() {
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere laboriosam dignissimos nemo quod explicabo repudiandae, praesentium aperiam labore, nulla a architecto. Assumenda molestias dolor facilis, explicabo laudantium illum, culpa repellendus repellat aliquam enim, aut quae voluptatibus tempore. Quia est, reiciendis repellendus numquam iste ab rerum ratione corporis inventore exercitationem incidunt ullam tempora, provident, pariatur eius et voluptas quae eaque magni ad officiis error maiores mollitia. Officia id ipsum quibusdam, illum atque ab, minima sed magnam quod distinctio sapiente velit cum, tempora quasi molestiae eveniet repellendus necessitatibus assumenda nostrum? Adipisci deleniti earum nesciunt eius quaerat temporibus voluptatibus est consequuntur voluptatem illo?</p>
               </div>
             </div>
-            <ProducProperites/>
-            <a className="whatsapp-link" target='_blank' href={`https://wa.me/${phoneNumber}?text=${watsAppText}`}>
-              <img src="/src/assets/images/WhatsAppButtonWhiteMedium.svg" alt="" />
-            </a>
           </div>
+        </div>
+
+          {/* ВОТ СЮДА НУЖНО ВСТАВИТЬ СВАЙПЕР */}
+          
+        <div className="container">
+          <ProducProperites />
+          <a className="whatsapp-link" target='_blank' href={`https://wa.me/${phoneNumber}?text=${watsAppText}`}>
+            <img src="/src/assets/images/WhatsAppButtonWhiteMedium.svg" alt="" />
+          </a>
         </div>
       </section>
 
