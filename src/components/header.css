@@ -215,7 +215,6 @@ body:has(.header-dropdown-lower.active) {
     .header-dropdown-lower {
         flex-direction: column;
         justify-content: start;
-        gap: 50px;
         padding-top: 70px;
     }
 
