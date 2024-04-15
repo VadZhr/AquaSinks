@@ -220,9 +220,11 @@ body:has(.header-dropdown-lower.active) {
 
     .dropdown-left {
         flex-basis: auto;
-        justify-content: center;
-        padding: 0;
-        text-align: center;
+        justify-content: start;
+        padding-left: 20px;
+
+        /* text-align: center; */
+        margin-bottom: 50px;
     }
 
     .dropdown-left img {
@@ -230,7 +232,21 @@ body:has(.header-dropdown-lower.active) {
     }
 
     .dropdown-right {
-        text-align: center;
+        /* text-align: center; */
+        display: flex;
+        flex-direction: column;
+        /* align-items: center; */
+        
+    }
+
+    .right-links, .right-navigation{
+        /* max-width: 220px; */
+        padding-left: 20px;
+    }
+
+    .right-links a:not(:first-child), .right-navigation a{
+        /* margin-left: -20%; */
+        padding-left: 30%;
     }
 
     .dropdown-menu-btn {
@@ -251,6 +267,17 @@ body:has(.header-dropdown-lower.active) {
 
     .dropdown-menu-btn.active {
         padding-left: 20px;
+    }
+}
+
+
+@media screen and (max-width: 340px) {
+    .dropdown-right a:not(.right-nav-title) {
+        font-size: 22px;
+    }
+
+    .dropdown-left .contacts-phone-number {
+        font-size: 30px;
     }
 }
 
