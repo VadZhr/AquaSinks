@@ -4,6 +4,8 @@ import './productItem.css'
 import BackLink from '../components/BackLink'
 import Slider1 from '../components/Slider1'
 import ProducProperites from '../components/producProperites'
+import DocumentationDownload from '../components/documentationDownload'
+
 
 
 
@@ -39,10 +41,24 @@ export default function ProductItem() {
           </div>
         </div>
 
-          {/* ВОТ СЮДА НУЖНО ВСТАВИТЬ СВАЙПЕР */}
-          
+        {/* ВОТ СЮДА НУЖНО ВСТАВИТЬ СВАЙПЕР */}
+
         <div className="container">
           <ProducProperites />
+          <div className="inner-container">
+            <div className="documets-download">
+              <div className="documets-download-description">
+                <p>Материалы для скачивания</p>
+              </div>
+              <div className="documentation">
+              <DocumentationDownload linkToFile={'/'}/>
+              <DocumentationDownload linkToFile={'/'}/>
+              <DocumentationDownload linkToFile={'/'}/>
+              {/* <DocumentationDownload /> */}
+
+              </div>
+            </div>
+          </div>
           <a className="whatsapp-link" target='_blank' href={`https://wa.me/${phoneNumber}?text=${watsAppText}`}>
             <img src="/src/assets/images/WhatsAppButtonWhiteMedium.svg" alt="" />
           </a>

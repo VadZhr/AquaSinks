@@ -15,7 +15,7 @@ export default function Product({ category, productName }) {
           <p className="category-text">{category?.type ?? category?.name}</p>
           <ScrollRestoration/>
           {category.name && <Link to={`${location.pathname}/${category.id}`} className=''>{"Узнать больше"}</Link>}         
-          {category.path && <Link to={`${fratelli}/products/${category.path}`} className=''>{category.desc}</Link>}    
+          {category.path && <Link to={`${fratelli}products/${category.path}`} className=''>{category.desc}</Link>}    
         </div>
       </div>
     </div>
