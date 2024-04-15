@@ -56,7 +56,7 @@ export default function Header() {
               {/* header-dropdown-upper Необходимо сделать ниже в иерархии чем header-dropdown-lower чтобы кнопку не перекрывал dropdown */}
               <div className="header-dropdown-upper">
                 <div className="logo">
-                  <Link style={active ? { visibility: "hidden" } : { visibility: "visible" }} to={'/Fratelli'}><h3>Fratelli</h3></Link>
+                  <Link style={active ? { visibility: "hidden" } : { visibility: "visible" }} to={'/'}><h3>Fratelli</h3></Link>
                 </div>
                   <button className={`dropdown-menu-btn ${active ? "active" : ""}`} onClick={() => setActive(prev => !prev)}>Меню</button>
               </div>
