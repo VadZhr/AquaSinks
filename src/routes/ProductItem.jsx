@@ -38,7 +38,7 @@ export default function ProductItem() {
             </div>
             <ProducProperites/>
             <a className="whatsapp-link" target='_blank' href={`https://wa.me/${phoneNumber}?text=${watsAppText}`}>
-              <img src="/src/assets/images/WhatsAppButtonWhiteMedium.svg" alt="" />
+              <img src={`${link}/assets/images/WhatsAppButtonWhiteMedium.svg`} alt="" />
             </a>
           </div>
         </div>
