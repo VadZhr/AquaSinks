@@ -34,31 +34,10 @@
     width: 30px;
 }
 
-.properties-right > div::after{
-    display: none;
-    content: "";
-    position: absolute;
-    bottom: 0;
-    height: 2px;
-    background: #000;
-    width: 30px;
-    right: 0;
-}
-
-.properties-right > div:hover::after{display: block;}
-
-
 .properties-right > div:nth-child(even):before{width: 50%;}
 .properties-right > div:nth-child(odd):before{width: 30%;}
 .properties-right > div:nth-child(3n):before{width: 15%;}
 .properties-right > div:nth-child(4n):before{width: 35%;}
-
-
-.properties-right > div:nth-child(even):after{width: 47%;}
-.properties-right > div:nth-child(odd):after{width: 62%;}
-.properties-right > div:nth-child(3n):after{width: 79%;}
-.properties-right > div:nth-child(4n):after{width: 55%;}
-
 
 .properties-right{
     flex-grow: 1;

@@ -31,80 +31,30 @@
 
   .swiper-button-prev {
     position: absolute;
-    left: 80%;
-    top: calc(100% + 30px - 100px);
-    padding: 50px 40px;
+    left: 83%;
+    top: calc(100% - 11% + 22px);
     background-color: black;
+    width: 3.5%;
+    height: 11%;
   }
 
   .swiper-button-next {
     position: absolute;
-    left: calc(80% + 100px);
-    top: calc(100% + 30px - 140px);
-
-    padding: 70px 40px;
+    left: 88%;
+    top: calc(100% - 15% + 24px);
     background-color: black;
+    width: 5%;
+    height: 15%;
 
   }
 
   .swiper-button-prev::after {
-    font-size: 200%;
+    font-size: clamp(1px, 2vw, 200%);
     color: white;
   }
 
   .swiper-button-next::after {
-    font-size: 200%;
+    font-size: clamp(1px, 2vw, 200%);
     color: white;
   }
 
-  @media (max-width:1000px) {
-    .swiper-button-next {
-      left: calc(80% + 68px);
-      top: calc(100% + 30px - 100px);
-      padding: 50px 28px;
-    }
-
-    .swiper-button-prev {
-      top: calc(100% + 30px - 70px);
-      padding: 35px 28px;
-    }
-  }
-
-  @media (max-width:800px) {
-    .swiper-button-next {
-      left: calc(77% + 68px);
-      top: calc(100% + 30px - 100px);
-      padding: 50px 28px;
-    }
-
-    .swiper-button-prev {
-      left: 77%;
-      top: calc(100% + 30px - 70px);
-      padding: 35px 28px;
-    }
-  }
-
-  @media (max-width:622px) {
-    .swiper-button-next {
-      left: calc(72% + 68px);
-      top: calc(100% + 30px - 100px);
-      padding: 50px 28px;
-    }
-
-    .swiper-button-prev {
-      left: 72%;
-      top: calc(100% + 30px - 70px);
-      padding: 35px 28px;
-    }
-
-  }
-
-  @media(max-width:480px) {
-    .swiper-button-next {
-      display: none;
-    }
-
-    .swiper-button-prev {
-      display: none;
-    }
-  }

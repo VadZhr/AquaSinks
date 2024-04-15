@@ -170,6 +170,8 @@ body:has(.header-dropdown-lower.active){
 
 .right-nav-title{
     text-decoration: underline;
+    font-family: "Arapey", serif;
+    font-size: 35px;
 }
 
 .right-contacts a{display: block;}
@@ -194,21 +196,36 @@ body:has(.header-dropdown-lower.active){
 
 @media screen and (max-width: 755px) {
     .dropdown-left img{left: -200px;}    
+    .left-contacts .contacts-phone-number{
+        font-size: 40px;
+    }
 }
 
 @media screen and (max-width: 670px) {
     .dropdown-left img{left: -250px;}    
 }
+@media screen and (max-width: 585px) {
+    .left-contacts .contacts-phone-number{
+        font-size: 35px;
+    }
+}
 @media screen and (max-width: 570px) {
-    .dropdown-left img{left: -320px;}    
+    .dropdown-left img{left: -320px;}   
+    /* .dropdown-left .contacts-phone-number{font-size: 43px;}  */
 }
 
 @media screen and (max-width: 500px) {
     .header-right .link-about,
-    .header-right .link-contact{display: none;}      
-    .dropdown-left{display: none;}
-    .right-contacts{display: block;}
-    .header-dropdown-lower{justify-content: center;padding-top: 20px;}
+    .header-right .link-contact{display: none;}
+
+    .header-dropdown-lower{
+        flex-direction: column;
+        justify-content: start;
+        gap: 50px;
+        padding-top: 70px;
+    }    
+    .dropdown-left{flex-basis: auto; justify-content: center; padding: 0; text-align: center;}
+    .dropdown-left img{display: none;}
     .dropdown-right{text-align: center;}    
     .dropdown-menu-btn{font-size: 15px;}
 }

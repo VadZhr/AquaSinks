@@ -5,8 +5,8 @@ import dropdown from '../assets/images/dropdown-removebg-preview.png'
 
 export default function Header() {
   const [active, setActive] = useState(false)
-  const phoneNumber = '+77777777'
-  const phoneNumberText = `+${phoneNumber[1]} ${phoneNumber.substring(1,4)} ${phoneNumber.substring(4,7)} ${phoneNumber.substring(7,9)} ${phoneNumber.substring(9,11)}`
+  const phoneNumber = '+77777777777'
+  const phoneNumberText = `+${phoneNumber[1]} ${phoneNumber.substring(2,5)} ${phoneNumber.substring(5,8)} ${phoneNumber.substring(8,10)} ${phoneNumber.substring(10)}`
   return (
     <>
       <header className="header">
@@ -36,24 +36,19 @@ export default function Header() {
                 </div>
                 <div className="dropdown-right">
                   <div className="right-links">
-                    <p className="right-nav-title">Категории</p>
-                    <Link className="link-about" to={'/Fratelli/products/sinks'} onClick={() => setActive(prev => !prev)}>Sinks</Link>
-                    <Link className="link-about" to={'/Fratelli/products/bath'} onClick={() => setActive(prev => !prev)}>Baths</Link>
-                    <Link className="link-about" to={'/Fratelli/products/shower'} onClick={() => setActive(prev => !prev)}>Showers</Link>
-                    <Link className="link-about" to={'/Fratelli/products/counter'} onClick={() => setActive(prev => !prev)}>Counters</Link>
-                    <Link className="link-about" to={'/Fratelli/products/floor-sink'} onClick={() => setActive(prev => !prev)}>Floor sinks</Link>
-                    <Link className="link-about" to={'/Fratelli/products/wall-sink'} onClick={() => setActive(prev => !prev)}>Wall sinks</Link>
+                    <Link className="right-nav-title" to={'/Fratelli/products/'}  onClick={() => setActive(prev => !prev)}>Продукты</Link>
+                    <Link className="link-about" to={'/Fratelli/products/bath'} onClick={() => setActive(prev => !prev)}>Ванны</Link>
+                    <Link className="link-about" to={'/Fratelli/products/sinks'} onClick={() => setActive(prev => !prev)}>Раковины</Link>
+                    <Link className="link-about" to={'/Fratelli/products/floor-sink'} onClick={() => setActive(prev => !prev)}>Напольные раковины</Link>
+                    <Link className="link-about" to={'/Fratelli/products/wall-sink'} onClick={() => setActive(prev => !prev)}>Настенные раковины</Link>
+                    <Link className="link-about" to={'/Fratelli/products/shower'} onClick={() => setActive(prev => !prev)}>Душеыве поддоны</Link>
+                    <Link className="link-about" to={'/Fratelli/products/counter'} onClick={() => setActive(prev => !prev)}>Столешницы</Link>
                   </div>
 
                   <div className="right-navigation">
                     <p className="right-nav-title">Навигация</p>
-                    <Link className="link-products" to={'/Fratelli/products/'} onClick={() => setActive(prev => !prev)}>Products</Link>
-                    <Link className="link-contact" to={'/Fratelli/'} onClick={() => setActive(prev => !prev)}>Contact</Link>
-                    <Link className="link-about" to={'/Fratelli/'} onClick={() => setActive(prev => !prev)}>About Us</Link>
-                    <div className="right-contacts">
-                    <a className="contacts-phone-number" href={`tel:${phoneNumber}`}>{phoneNumberText}</a>
-                    <a className="contacts-email" href="mailto: fratelli@gmail.com">fratelli@gmail.com</a>
-                    </div>
+                    <Link className="link-contact" to={'/Fratelli/'} onClick={() => setActive(prev => !prev)}>Контакты</Link>
+                    <Link className="link-about" to={'/Fratelli/'} onClick={() => setActive(prev => !prev)}>О Компании</Link>
                   </div>
                 </div>
               </div>
