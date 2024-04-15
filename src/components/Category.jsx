@@ -4,8 +4,8 @@ import { useSelector } from "react-redux";
 
 export default function Product({ category, productName }) {
   const location = useLocation()
-        const link = useSelector(state=>state.path.pathForImagesPC)
-        const fratelli=useSelector(state=>state.path.pathForImagesGIT)
+  const link = useSelector(state=>state.path.pathForImagesPC)
+  const fratelli=useSelector(state=>state.path.pathForImagesGIT)
         
   return (
     <div className="category" style={{backgroundImage:`url('${link}${category.mainImage}')`}}>
@@ -14,9 +14,8 @@ export default function Product({ category, productName }) {
         <div className="link">
           <p className="category-text">{category?.type ?? category?.name}</p>
           <ScrollRestoration/>
-          {category.name && <Link to={`${location.pathname}/${category.id}`} className=''>{"READ MORE"}</Link>}         
-          {category.path && <Link to={`${fratelli}/products/${category.path}`} className=''>{category.desc}</Link>}              
-
+          {category.name && <Link to={`${location.pathname}/${category.id}`} className=''>{"Узнать больше"}</Link>}         
+          {category.path && <Link to={`${fratelli}/products/${category.path}`} className=''>{category.desc}</Link>}    
         </div>
       </div>
     </div>

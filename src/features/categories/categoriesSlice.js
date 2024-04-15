@@ -5,9 +5,9 @@ export const categoriesSlice = createSlice({
   initialState: {
     list: [
       {
-        type: "Bath",
+        type: "Ванны",
         path:'bath',
-        desc: "Read more",
+        desc: "Узнать больше",
         mainImage: "/assets/images/bath/главное фото.jpg",
         products: [
           {
@@ -37,8 +37,8 @@ export const categoriesSlice = createSlice({
         ],
       },
       {
-        type: "Sinks",
-        desc: "Read more",
+        type: "Раковины",
+        desc: "Узнать больше",
         path:'sinks',
         mainImage: "/assets/images/sinks/главное фото.jpg",
         products: [
@@ -81,8 +81,8 @@ export const categoriesSlice = createSlice({
         ],
       },
       {
-        type: "Shower",
-        desc: "Read more",
+        type: "Душевые поддоны",
+        desc: "Узнать больше",
         path:'shower',
         mainImage: "/assets/images/shower/главное фото.jpg",
         products: [
@@ -107,8 +107,8 @@ export const categoriesSlice = createSlice({
         ],
       },
       {
-        type: "Floor sink",
-        desc: "Read more",
+        type: "Напольные раквоины",
+        desc: "Узнать больше",
         path:'floor-sink',
         mainImage: "/assets/images/floar sink/главное фото.jpg",
         products: [
@@ -133,8 +133,8 @@ export const categoriesSlice = createSlice({
         ],
       },
       {
-        type: "Wall sink",
-        desc: "Read more",
+        type: "Настенные раковины",
+        desc: "Узнать больше",
         path:'wall-sink',
         mainImage: "/assets/images/wall sink/главное фото.jpg",
         products: [
@@ -172,8 +172,8 @@ export const categoriesSlice = createSlice({
         ],
       },
       {
-        type: "Counter",
-        desc: "Read more",
+        type: "Столешницы",
+        desc: "Узнать больше",
         path:'counter',
         mainImage: "/assets/images/counter/главное фото.jpg",
         products: [
