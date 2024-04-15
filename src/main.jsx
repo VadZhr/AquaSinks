@@ -21,23 +21,23 @@ const router = createBrowserRouter([
         element: <AboutUs/>
       },
       {
-        path: "/Fratelli/",
+        path: "/",
         element: <AboutUs />,
       },
       { 
-        path: "/Fratelli/products",
+        path: "/products",
         element: <Products />,
       },
       {
-        path: "/Fratelli/products/:productName",
+        path: "/products/:productName",
         element: <Items />,
       },
       {
-        path: "/Fratelli/products/:productName/:id",
+        path: "/products/:productName/:id",
         element: <ProductItem />,
       },
       {
-        path:"/Fratelli/swiper",
+        path:"/swiper",
         element:<Slider1/>
       }
 
