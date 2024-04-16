@@ -55,11 +55,24 @@
     max-width: 80%;
     margin: 0 auto;
     margin-bottom: 50px;
-    
+
 }
+
 /* У img убрал margin */
-.product-item-wrapper{
-    padding-top: 20px;
+.product-item-wrapper {
+    padding-top: 30px;
+}
+
+.product-item-img.slider {
+    margin: 40px 0;
+
+}
+/* Тут сделал */
+.product-item-img.slider.small{
+    margin-bottom: 40px;
+    margin: auto;
+    max-width: calc(100% * 2/3 / 2.2) ;
+    max-height: calc((100vw * 3/2) / 2.2);
 }
 
 @media (max-width: 1623px) {
