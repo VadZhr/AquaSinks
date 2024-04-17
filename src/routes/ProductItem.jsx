@@ -5,7 +5,6 @@ import BackLink from "../components/BackLink";
 import Slider1 from "../components/Slider1";
 import ProducProperites from "../components/producProperites";
 import Slider3 from "../components/Slider3";
-// import App from '../components/sliderTest'
 
 export default function ProductItem() {
   const { productName, id } = useParams();
@@ -22,7 +21,7 @@ export default function ProductItem() {
       <section className="product-item">
         <ScrollRestoration />
         <div className="product-item-img">
-          {/* <Slider1 item={item} link={link}></Slider1> */}
+        {/* Основное фото товара */}
           <img src={link + item.mainImage} alt="" />
           <div className="product-item-name">
             <span className="">{item.name}</span>
@@ -71,13 +70,16 @@ export default function ProductItem() {
           </div>
         </div>
         <div className="product-item-img slider">
+         {/* 1 набор фото на белом фоне */}
           <Slider1 item={item} link={link}></Slider1>
         </div>
         <div className="product-item-img slider">
+            {/* 2 набор фото в интерьере */}
           <Slider1 item={item} link={link}></Slider1>
         </div>
         <div className="container">
           <div className="product-item-img slider small">
+            {/* 3 набор фото в цвете */}
             <Slider3 item={item} link={link}></Slider3>
           </div>
         </div>
