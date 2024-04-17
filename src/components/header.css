@@ -113,7 +113,6 @@ body:has(.header-dropdown-lower.active) {
 .dropdown-left {
     flex-basis: 56%;
     position: relative;
-    overflow: hidden;
     display: flex;
     justify-content: end;
     padding-right: 50px;
@@ -163,6 +162,10 @@ body:has(.header-dropdown-lower.active) {
     display: flex;
     flex-direction: column;
     gap: 5px;
+}
+
+.right-navigation{
+    margin-bottom: 40px;
 }
 
 .right-links a:hover,
@@ -286,13 +289,13 @@ body:has(.header-dropdown-lower.active) {
         padding-top: 50px;
     }
 
-    .dropdown-right a {
+    .dropdown-right a:not(.right-nav-title) {
         font-size: 16px;
     }
 }
 
 @media screen and (max-height: 400px) {
-    .dropdown-right a {
+    .dropdown-right a:not(.right-nav-title) {
         font-size: 10px;
     }
 
