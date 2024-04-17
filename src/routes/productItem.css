@@ -33,8 +33,9 @@
     display: flex;
     text-align: justify;
     gap: 100px;
-    margin-bottom: 50px;
+    
     margin: 0 auto;
+    margin-bottom: 70px;
 }
 
 .product-item-decription-title {
@@ -66,6 +67,24 @@
     align-items: start;
     margin-bottom: 100px;
     gap: 40px 0;
+    padding-top: 30px;
+}
+
+.product-item-img.slider {
+    margin-bottom: 70px;
+
+}
+/* Тут сделал */
+/* .product-item-img.slider.small{
+    margin-bottom: 40px;
+  
+   
+} */
+
+@media (max-width: 1623px) {
+    .product-item-decription {
+        max-width: 1200px;
+    }
 }
 
 .documets-download-description {

@@ -1,60 +1,59 @@
-  .swiper {
-    width: 100%;
-    height: 100%;
-  }
+.swiper {
+  width: 100%;
+  height: 100%;
+}
 
-  .swiper-slide {
-    text-align: center;
-    font-size: 18px;
-    background: #fff;
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
 
-    /* Center slide text vertically */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-  .swiper-slide img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    margin: 0;
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  margin: 0;
 
-    /* Убирает способность выделять картинки */
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -o-user-select: none;
-    user-select: none;
-  }
+  /* Убирает способность выделять картинки */
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
 
-  .swiper-button-prev {
-    position: absolute;
-    left: 83%;
-    top: calc(100% - 11% + 22px);
-    background-color: black;
-    width: 3.5%;
-    height: 11%;
-  }
+.swiper-button-prev {
+  position: absolute;
+  left: 83%;
+  top: calc(100% - 11% + 22px);
+  background-color: black;
+  width: 3.5%;
+  height: 11%;
+}
 
-  .swiper-button-next {
-    position: absolute;
-    left: 88%;
-    top: calc(100% - 15% + 24px);
-    background-color: black;
-    width: 5%;
-    height: 15%;
+.swiper-button-next {
+  position: absolute;
+  left: 88%;
+  top: calc(100% - 15% + 24px);
+  background-color: black;
+  width: 5%;
+  height: 15%;
 
-  }
+}
 
-  .swiper-button-prev::after {
-    font-size: clamp(1px, 2vw, 200%);
-    color: white;
-  }
+.swiper-button-prev::after {
+  font-size: clamp(1px, 2vw, 200%);
+  color: white;
+}
 
-  .swiper-button-next::after {
-    font-size: clamp(1px, 2vw, 200%);
-    color: white;
-  }
-
+.swiper-button-next::after {
+  font-size: clamp(1px, 2vw, 200%);
+  color: white;
+}

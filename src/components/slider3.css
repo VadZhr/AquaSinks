@@ -1,0 +1,33 @@
+.swiper-button-prev::after {
+  font-size: clamp(1px, 2vw, 200%);
+  color: white;
+}
+
+.swiper-button-next::after {
+  font-size: clamp(1px, 2vw, 200%);
+  color: white;
+}
+
+.slider-3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.slider-3 .mySwiper:nth-child(1) {
+  max-width: calc(100% * 2/3 / 2.2);
+  max-height: calc((100vw * 3/2) / 2.2);
+}
+
+.slider-3 .mySwiper:nth-child(2) {
+  width: 100%;
+  height: inherit;
+  align-self: stretch;
+}
+
+.text-slider-3 {
+  font-size: clamp(10px, 3vw, 2.8rem);
+  max-height: 100%;
+  text-wrap: wrap;
+  width: 60%
+}
