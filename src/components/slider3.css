@@ -1,52 +1,5 @@
-.swiper {
-    width: 100%;
-    height: 100%;
-  }
 
-  .swiper-slide {
-    text-align: center;
-    font-size: 18px;
-    background: #fff;
 
-    /* Center slide text vertically */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .swiper-slide img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    margin: 0;
-
-    /* Убирает способность выделять картинки */
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -o-user-select: none;
-    user-select: none;
-  }
-
-  .swiper-button-prev {
-    position: absolute;
-    left: 83%;
-    top: calc(100% - 11% + 22px);
-    background-color: black;
-    width: 3.5%;
-    height: 11%;
-  }
-
-  .swiper-button-next {
-    position: absolute;
-    left: 88%;
-    top: calc(100% - 15% + 24px);
-    background-color: black;
-    width: 5%;
-    height: 15%;
-
-  }
 
   .swiper-button-prev::after {
     font-size: clamp(1px, 2vw, 200%);
@@ -58,4 +11,26 @@
     color: white;
   }
 
+  .slider-3{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .slider-3 .mySwiper:nth-child(1){
+    max-width: calc(100% * 2/3 / 2.2) ;
+    max-height: calc((100vw * 3/2) / 2.2);
+  }
+  .slider-3 .mySwiper:nth-child(2){
+      width: 100%;
+      height: 100%;
+   
+  }
+  .text-slider-3{
+    font-size: 2.8rem !important;
   
+    max-height: 100%;
+    text-wrap: wrap;
+    width: 60%
+  }
+ 

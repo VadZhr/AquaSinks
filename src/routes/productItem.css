@@ -70,9 +70,8 @@
 /* Тут сделал */
 .product-item-img.slider.small{
     margin-bottom: 40px;
-    margin: auto;
-    max-width: calc(100% * 2/3 / 2.2) ;
-    max-height: calc((100vw * 3/2) / 2.2);
+    /* margin: auto; */
+   
 }
 
 @media (max-width: 1623px) {
