@@ -8,7 +8,7 @@ export default function Footer() {
 
   return (
     <>
-      <footer className="footer">
+      <footer className="footer" id="footerAnchor">
         <div className="container">
           <div className="footer-wrapper">
             <div className="media">

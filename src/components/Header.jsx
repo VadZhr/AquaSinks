@@ -7,8 +7,8 @@ export default function Header() {
   const [active, setActive] = useState(false)
   const phoneNumber = '+77777777777'
   const phoneNumberText = `+${phoneNumber[1]} ${phoneNumber.substring(2,5)} ${phoneNumber.substring(5,8)} ${phoneNumber.substring(8,10)} ${phoneNumber.substring(10)}`
+
   return (
-    <>
       <header className="header">
         <div className="container">
           <div className="header-wrapper">
@@ -47,7 +47,7 @@ export default function Header() {
 
                   <div className="right-navigation">
                     <p className="right-nav-title">Навигация</p>
-                    <Link className="link-contact" to={'/'} onClick={() => setActive(prev => !prev)}>Контакты</Link>
+                    <a className="link-contact" href="#footerAnchor" onClick={() => setActive(prev => !prev)}>Контакты</a>
                     <Link className="link-about" to={'/'} onClick={() => setActive(prev => !prev)}>О Компании</Link>
                   </div>
                 </div>
@@ -65,6 +65,5 @@ export default function Header() {
           </div>
         </div>
       </header>
-    </>
   )
 }

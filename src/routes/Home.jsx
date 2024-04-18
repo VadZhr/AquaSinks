@@ -1,6 +1,6 @@
 import { useSelector } from 'react-redux'
 import './home.css'
-import { Outlet } from 'react-router-dom'
+import { Outlet, ScrollRestoration } from 'react-router-dom'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 
@@ -9,6 +9,7 @@ export default function Home() {
 
     return (
         <section className="home">
+            <ScrollRestoration />
             <Header></Header>
             <main className='main'>
                 <Outlet></Outlet>
