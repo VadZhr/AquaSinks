@@ -12,7 +12,7 @@ export default function ProductItem() {
     .filter((el) => el.path == productName)[0]
     .products.filter((product) => product.id == id)[0];
   const link = useSelector((state) => state.path.pathForImagesPC);
-
+  console.log(productName)
   const phoneNumber = "77714604710";
   const watsAppText = "как сделать у вас заказ".replaceAll(" ", "20%");
 
@@ -29,7 +29,7 @@ export default function ProductItem() {
         </div>
         <div className="container">
           <div className="product-item-wrapper">
-            <BackLink />
+            <BackLink prevPage={productName}/>
             <div className="inner-container">
               <div className="product-item-decription">
                 <h3 className="product-item-decription-title">{item.name}</h3>

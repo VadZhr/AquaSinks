@@ -1,4 +1,5 @@
 .back-btn{
+    display: block;
     background: url(../assets/images/arrow.png) center/contain no-repeat;
     width: 30px;
     height: 30px;

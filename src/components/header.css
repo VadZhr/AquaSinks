@@ -104,6 +104,7 @@
     color: snow;
     top: 0;
     visibility: visible;
+    /* overflow: scroll; */
 }
 
 body:has(.header-dropdown-lower.active) {

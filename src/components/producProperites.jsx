@@ -1,4 +1,3 @@
-
 import dummyImage from '../assets/images/wallsink-template.webp'
 import './producProperites.css'
 
