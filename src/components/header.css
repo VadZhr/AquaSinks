@@ -130,12 +130,26 @@ body:has(.header-dropdown-lower.active) {
     display: block;
 }
 
-.dropdown-left img {
-    width: 600px;
+
+
+.dropdown-left-img {
+    width: 400px;
+    max-width: 60%;
     position: absolute;
-    bottom: -100px;
-    left: -100px;
+    height: 300px;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: -1;
 }
+
+.dropdown-left-img img{
+    max-width: 100%;
+    position: absolute;
+    bottom: -20px;
+    left: -50px;
+    /* height: 300px; */
+} 
 
 .dropdown-right {
     display: flex;
@@ -175,37 +189,19 @@ body:has(.header-dropdown-lower.active) {
 }
 
 @media screen and (max-width: 879px) {
-    .dropdown-left img {
-        left: -150px;
-        width: 80%;
+    .dropdown-left-img {
+       display: none;
     }
 }
 
 @media screen and (max-width: 755px) {
-    .dropdown-left img {
-        left: -200px;
-    }
-
-    .left-contacts .contacts-phone-number {
-        font-size: 40px;
-    }
+    .left-contacts .contacts-phone-number {font-size: 40px;}
 }
 
-@media screen and (max-width: 670px) {
-    .dropdown-left img {
-        left: -250px;
-    }
-}
 
 @media screen and (max-width: 585px) {
     .left-contacts .contacts-phone-number {
         font-size: 35px;
-    }
-}
-
-@media screen and (max-width: 570px) {
-    .dropdown-left img {
-        left: -320px;
     }
 }
 
@@ -229,7 +225,7 @@ body:has(.header-dropdown-lower.active) {
         margin-bottom: 50px;
     }
 
-    .dropdown-left img {
+    .dropdown-left-img {
         display: none;
     }
 
@@ -262,48 +258,13 @@ body:has(.header-dropdown-lower.active) {
 }
 
 
-/* @media screen and (max-width: 385px) {
-    .dropdown-menu-btn {
-        font-size: 10px;
-    }
-
-    .dropdown-menu-btn::before {
-        width: 6px;
-        height: 6px;
-    }
-
-    .dropdown-menu-btn.active {
-        padding-left: 20px;
-    }
-} */
-
-/* 
-@media screen and (max-width: 340px) {
-    .dropdown-right a:not(.right-nav-title) {
-        font-size: 22px;
-    }
-
-    .dropdown-left .contacts-phone-number {
-        font-size: 30px;
-    }
-} */
-
-/* @media screen and (max-height: 500px) {
-    .header-dropdown-lower {
-        padding-top: 50px;
+@media screen and (max-width: 376px) {
+    .dropdown-right .right-nav-title {
+        font-size: 24px;
     }
 
     .dropdown-right a:not(.right-nav-title) {
-        font-size: 16px;
+        font-size: 15px;
     }
 }
 
-@media screen and (max-height: 400px) {
-    .dropdown-right a:not(.right-nav-title) {
-        font-size: 16px;
-    }
-
-    .dropdown-left .contacts-phone-number {
-        font-size: 40px;
-    }
-} */

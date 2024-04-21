@@ -31,14 +31,17 @@ export default function Header() {
 
 
             <div className="header-dropdown">
-
+              
               <div className={`header-dropdown-lower ${active ? "active" : ""}`}>
                 <div className="dropdown-left">
                   <div className="left-contacts">
                     <a className="contacts-phone-number" href={`tel:${phoneNumber}`}>{phoneNumberText}</a>
                     <a className="contacts-email" href="mailto: fratelli@gmail.com">fratelli@gmail.com</a>
-                  </div>                  
+                  </div> 
+                  <div className="dropdown-left-img">
                   <img src={dropdown} alt="" />
+
+                    </div>                 
                 </div>
                 <div className="dropdown-right">
                   <div className="right-links">
