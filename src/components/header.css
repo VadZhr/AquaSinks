@@ -251,10 +251,18 @@ body:has(.header-dropdown-lower.active) {
     .dropdown-menu-btn {
         font-size: 15px;
     }
+
+    .dropdown-right .right-nav-title {
+        font-size: 27px;
+    }
+
+    .dropdown-right a:not(.right-nav-title) {
+        font-size: 18px;
+    }
 }
 
 
-@media screen and (max-width: 385px) {
+/* @media screen and (max-width: 385px) {
     .dropdown-menu-btn {
         font-size: 10px;
     }
@@ -267,9 +275,9 @@ body:has(.header-dropdown-lower.active) {
     .dropdown-menu-btn.active {
         padding-left: 20px;
     }
-}
+} */
 
-
+/* 
 @media screen and (max-width: 340px) {
     .dropdown-right a:not(.right-nav-title) {
         font-size: 22px;
@@ -278,9 +286,9 @@ body:has(.header-dropdown-lower.active) {
     .dropdown-left .contacts-phone-number {
         font-size: 30px;
     }
-}
+} */
 
-@media screen and (max-height: 500px) {
+/* @media screen and (max-height: 500px) {
     .header-dropdown-lower {
         padding-top: 50px;
     }
@@ -292,10 +300,10 @@ body:has(.header-dropdown-lower.active) {
 
 @media screen and (max-height: 400px) {
     .dropdown-right a:not(.right-nav-title) {
-        font-size: 10px;
+        font-size: 16px;
     }
 
     .dropdown-left .contacts-phone-number {
         font-size: 40px;
     }
-}
+} */
