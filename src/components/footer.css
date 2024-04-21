@@ -55,17 +55,17 @@
 }
 
 .footer-emails {
-    font-size:calc(1vw + 1.5rem) ;
+    font-size:18px ;
 }
 
 .footer_numbers a {
     color: white;
-    font-size:calc(1vw + 1.5rem) ;
+    font-size:calc(1vw + 1.4rem) ;
 
 }
 
 .footer-address {
-    font-size:calc(1vw + 1.5rem) ;
+    font-size:18px ;
 }
 
 .media-link >div {
