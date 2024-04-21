@@ -1,4 +1,3 @@
-import React from "react";
 import { useSelector } from "react-redux";
 import "./footer.css";
 import { nanoid } from "@reduxjs/toolkit";
@@ -8,7 +7,7 @@ export default function Footer() {
   const link = useSelector((state) => state.path.pathForImagesPC);
   const contacts = useSelector((state) => state.contacts.numbers);
   const emails = useSelector((state) => state.contacts.emails);
-  const address =useSelector((state) => state.contacts.address);
+  const address = useSelector((state) => state.contacts.address);
   return (
     <>
       <footer className="footer" id="footerAnchor">
@@ -18,22 +17,22 @@ export default function Footer() {
               <div className="media">
                 {icons.map((icon) => {
                   return (
-                    <div
+                    <a
                       key={icon.path}
-                      style={{ display: "flex", gap: "10px" }}
+                      href={icon.href}
+                      target="_blank"
+                      className="media-link"
                     >
-                      <a
-                        href={icon.href}
-                        target="_blank"
-                        className="media-link"
-                        style={{
-                          backgroundImage: `url('${link}${icon.path}') `,
-                        }}
-                      >
-                        {" "}
-                      </a>
-                      <span>{icon.name}</span>
-                    </div>
+                      <div>
+                        <div
+                          style={{
+                            backgroundImage: `url('${link}${icon.path}')`,
+                          }}
+                          className="footer-icon"
+                        ></div>{" "}
+                        <span>{icon.name}</span>
+                      </div>
+                    </a>
                   );
                 })}
               </div>
@@ -54,27 +53,8 @@ export default function Footer() {
                   </div>
                 ))}
               </div>
-              <div className="footer-address">
-                  {address}
-              </div>
+              <div className="footer-address">{address}</div>
             </div>
-            {/* <div className="media">
-              {icons.map((icon) => {
-                return (
-                  <a
-                    href={icon.href}
-                    target="_blank"
-                    className="media-link"
-                    key={icon.path}
-                    style={{ backgroundImage: `url('${link}${icon.path}') ` }}
-                  > </a>
-                );
-              })}
-            </div>
-            <div className="adress">
-              Antonio Lupi Design S.p.A - Via Mazzini 73/75, 50050 Stabbia
-              Cerreto Guidi (Firenze) Italy - P.IVA 04980750485
-            </div> */}
           </div>
         </div>
       </footer>
