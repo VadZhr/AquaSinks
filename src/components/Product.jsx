@@ -14,7 +14,7 @@ export default function Product({name, image, id}) {
         </div>
         <div className="sink-image_link">
             <p>-{name}</p>
-            <Link preventScrollReset={false} to={location.pathname+`${id}/` }>Узнать больше</Link>
+            <Link preventScrollReset={false} to={location.pathname+`/${id}` }>Узнать больше</Link>
         </div>
     </div>
   )

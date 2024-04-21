@@ -8,7 +8,12 @@ export default function Header() {
   const phoneNumber = '+77777777777'
   const phoneNumberText = `+${phoneNumber[1]} ${phoneNumber.substring(2,5)} ${phoneNumber.substring(5,8)} ${phoneNumber.substring(8,10)} ${phoneNumber.substring(10)}`
   const location = useLocation()
-  console.log(location)
+  
+  const scrollToContact = () => {
+    setActive(prev => !prev)
+    window.scrollTo(0, document.querySelector('footer').offsetTop)
+  }
+
   return (
       <header className="header">
         <div className="container">
@@ -37,19 +42,18 @@ export default function Header() {
                 </div>
                 <div className="dropdown-right">
                   <div className="right-links">
-                    <Link className="right-nav-title" to={'/products/'}  onClick={() => setActive(prev => !prev)}>Продукты</Link>
-                    <Link className="link-about" to={'/products/bath/'} onClick={() => setActive(prev => !prev)}>Ванны</Link>
-                    <Link className="link-about" to={'/products/sinks/'} onClick={() => setActive(prev => !prev)}>Раковины</Link>
-                    <Link className="link-about" to={'/products/floor-sink/'} onClick={() => setActive(prev => !prev)}>Напольные раковины</Link>
-                    <Link className="link-about" to={'/products/wall-sink/'} onClick={() => setActive(prev => !prev)}>Настенные раковины</Link>
-                    <Link className="link-about" to={'/products/shower/'} onClick={() => setActive(prev => !prev)}>Душеыве поддоны</Link>
-                    <Link className="link-about" to={'/products/counter/'} onClick={() => setActive(prev => !prev)}>Столешницы</Link>
+                    <Link className="right-nav-title" to={'/products'}  onClick={() => setActive(prev => !prev)}>Продукты</Link>
+                    <Link className="link-about" to={'/products/bath'} onClick={() => setActive(prev => !prev)}>Ванны</Link>
+                    <Link className="link-about" to={'/products/sinks'} onClick={() => setActive(prev => !prev)}>Раковины</Link>
+                    <Link className="link-about" to={'/products/floor-sink'} onClick={() => setActive(prev => !prev)}>Напольные раковины</Link>
+                    <Link className="link-about" to={'/products/wall-sink'} onClick={() => setActive(prev => !prev)}>Настенные раковины</Link>
+                    <Link className="link-about" to={'/products/shower'} onClick={() => setActive(prev => !prev)}>Душеыве поддоны</Link>
+                    <Link className="link-about" to={'/products/counter'} onClick={() => setActive(prev => !prev)}>Столешницы</Link>
                   </div>
 
                   <div className="right-navigation">
                     <p className="right-nav-title">Навигация</p>
-                    {/* <a className="link-contact" href={`${location.pathname}#footerAnchor`} onClick={() => setActive(prev => !prev)}>Контакты</a> */}
-                    <a className="link-contact" href="#footerAnchor" onClick={() => setActive(prev => !prev)}>Контакты</a>
+                    <a className="link-contact"  onClick={() => scrollToContact()}>Контакты</a>
                     <Link className="link-about" to={'/'} onClick={() => setActive(prev => !prev)}>О Компании</Link>
                   </div>
                 </div>
