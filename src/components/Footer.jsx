@@ -10,7 +10,7 @@ export default function Footer() {
   const address = useSelector((state) => state.contacts.address);
   return (
     <>
-      <footer className="footer" id="footerAnchor" name="footerAnchor">
+      <footer className="footer" id="footerAnchor">
         <div className="container">
           <div className="footer-wrapper">
             <div className="footer-wrapper-left">

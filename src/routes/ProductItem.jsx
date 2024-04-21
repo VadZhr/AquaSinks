@@ -13,7 +13,7 @@ export default function ProductItem() {
     .products.filter((product) => product.id == id)[0];
   const link = useSelector((state) => state.path.pathForImagesPC);
   const phoneNumber = "77714604710";
-  const watsAppText = "как сделать у вас заказ".replaceAll(" ", "20%");
+  const watsAppText = "как сделать у вас заказ".replaceAll(" ", "%20");
 
   return (
     <>
