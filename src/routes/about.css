@@ -13,8 +13,13 @@
     flex: 1 1 50%;
     position: relative;
     height: inherit;
+    max-width: 100%;
 }
-
+.about-right pre{
+    max-width: 100%;
+    word-break: break-all;
+    text-wrap: wrap;
+}
 .about-bg_1 {
     position: absolute;
     top: 0;
@@ -43,14 +48,14 @@
     width: 100%;
     height: 370px;
     object-fit: cover;
-    opacity: .1;
+    /* opacity: .1; */
     align-self: flex-end;
     position: absolute;
     left: 0;
 }
 
 .about-right h3 {
-    margin-top: 390px;
+    /* margin-top: 390px; */
     font-size: 4rem;
 }
 
@@ -82,7 +87,7 @@
     }
 
     .about-right h3 {
-        margin-top: 220px;
+        margin-top: 20px;
         font-size: 2rem;
     }
 

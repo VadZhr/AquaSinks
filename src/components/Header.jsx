@@ -2,17 +2,17 @@ import { useState } from "react";
 import { Link, useLocation } from 'react-router-dom'
 import './header.css'
 import dropdown from '../assets/images/dropdown-removebg-preview.png'
+import { nanoid } from "@reduxjs/toolkit";
 
-export default function Header() {
+export default function Header({categories, contacts}) {
   const [active, setActive] = useState(false)
   const phoneNumber = '+77777777777'
   const phoneNumberText = `+${phoneNumber[1]} ${phoneNumber.substring(2,5)} ${phoneNumber.substring(5,8)} ${phoneNumber.substring(8,10)} ${phoneNumber.substring(10)}`
-  const location = useLocation()
-  
   const scrollToContact = () => {
     setActive(prev => !prev)
     window.scrollTo(0, document.querySelector('footer').offsetTop)
   }
+  console.log(contacts);
 
   return (
       <header className="header">
@@ -35,8 +35,8 @@ export default function Header() {
               <div className={`header-dropdown-lower ${active ? "active" : ""}`}>
                 <div className="dropdown-left">
                   <div className="left-contacts">
-                    <a className="contacts-phone-number" href={`tel:${phoneNumber}`}>{phoneNumberText}</a>
-                    <a className="contacts-email" href="mailto: fratelli@gmail.com">fratelli@gmail.com</a>
+                    <a className="contacts-phone-number" href={`tel:${contacts?.phoneOne}`}>+{contacts?.phoneOne}</a>
+                    <a className="contacts-email" href={`mailto: ${contacts?.email}`}>{contacts?.email}</a>
                   </div> 
                   <div className="dropdown-left-img">
                   <img src={dropdown} alt="" />
@@ -45,13 +45,15 @@ export default function Header() {
                 </div>
                 <div className="dropdown-right">
                   <div className="right-links">
-                    <Link className="right-nav-title" to={'/products'}  onClick={() => setActive(prev => !prev)}>Продукты</Link>
+                  <Link key={nanoid()} className="right-nav-title" to={'/products'}  onClick={() => setActive(prev => !prev)}>Продукты</Link>
+                    {categories?.length && categories.map(el=><Link key={nanoid()} className="link-about" to={`/products/${el.categoryPath}`}  onClick={() => setActive(prev => !prev)}>{el.categoryName}</Link>)}
+                    {/* <Link className="right-nav-title" to={'/products'}  onClick={() => setActive(prev => !prev)}>Продукты</Link>
                     <Link className="link-about" to={'/products/bath'} onClick={() => setActive(prev => !prev)}>Ванны</Link>
                     <Link className="link-about" to={'/products/sinks'} onClick={() => setActive(prev => !prev)}>Раковины</Link>
                     <Link className="link-about" to={'/products/floor-sink'} onClick={() => setActive(prev => !prev)}>Напольные раковины</Link>
                     <Link className="link-about" to={'/products/wall-sink'} onClick={() => setActive(prev => !prev)}>Настенные раковины</Link>
                     <Link className="link-about" to={'/products/shower'} onClick={() => setActive(prev => !prev)}>Душеыве поддоны</Link>
-                    <Link className="link-about" to={'/products/counter'} onClick={() => setActive(prev => !prev)}>Столешницы</Link>
+                    <Link className="link-about" to={'/products/counter'} onClick={() => setActive(prev => !prev)}>Столешницы</Link> */}
                   </div>
 
                   <div className="right-navigation">
@@ -61,7 +63,6 @@ export default function Header() {
                   </div>
                 </div>
               </div>
-
               {/* header-dropdown-upper Необходимо сделать ниже в иерархии чем header-dropdown-lower чтобы кнопку не перекрывал dropdown */}
               <div className="header-dropdown-upper">
                 <div className="logo">

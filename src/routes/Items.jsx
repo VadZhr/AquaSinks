@@ -1,17 +1,24 @@
 import Item from '../components/Product'
 import './items.css'
-import { useParams } from 'react-router-dom'
+import { useOutletContext, useParams } from 'react-router-dom'
 import { useSelector } from 'react-redux'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Category from '../components/Category'
 import BackLink from '../components/BackLink'
 import { ScrollRestoration } from 'react-router-dom'
+import axios from 'axios'
 
-export default function Sinks() {
-  const { productName } = useParams()
-  const data = useSelector((state) => state.categories.list).filter(el => el.path == productName);
+export default function Sinks({categories}) {
+  const { categoryName} = useParams();
 
-  //нужно сделать глобальной, чтобы при возвращении на страницу сохранялся вид плитки 
+  console.log(useOutletContext(),'useOutletContext()');
+  // const data = useSelector((state) => state.categories.list).filter(el => el.path == productName);
+  // const [allCategoryProducts, setAllCategoryProducts]=useState([])
+  const categoryId= useOutletContext()[0].find(el=>el.categoryPath===categoryName)?.id
+  const allCategoryProducts = useOutletContext()[1].filter(el=>el.categoryNameId===categoryId)
+  console.log(allCategoryProducts);
+  //нужно сделать глобальной, чтобы при возвращении на страницу сохранялся вид плитки
+  console.log(categories,'from props'); 
   const [tile, setTile] = useState(false)
 
   return (
@@ -36,14 +43,14 @@ export default function Sinks() {
 
         {/* ПЛИТКА */}
         {tile && <div className="sinks-wrapper tile">
-          {data[0].products.map(el => <Category key={el.id} category={el} productName={productName} />)}
+          {allCategoryProducts?.map(el => <Category key={el._id} category={el} product={el}/>)}
         </div>}
 
         {/* СТЕНА */}
         {tile == false && <div className="sinks-wrapper wall">
 
           <div className="sinks-wrapper">
-            {data[0].products.map(el => <Item key={el.id} image={el.mainImage} name={el.name} id={el.id} />)}</div>
+            {allCategoryProducts?.map(el => <Item key={el._id} image={el.productMainImage[0].blob} name={el.productName} id={el._id} />)}</div>
         </div>}
       </div>
 

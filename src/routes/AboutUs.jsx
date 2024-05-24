@@ -1,22 +1,27 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './about.css'
 import aboutBg_1 from '../assets/images/aboutus_1.jpg'
+import axios from 'axios'
+import AboutSlider from '../components/AboutSlider'
 
 export default function AboutUs() {
+  const [aboutData,setAboutData]=useState('')
+  
+  useEffect(()=>{
+    axios.get('http://195.49.212.105/api/aboutpage/getimages').then(data=>{
+      setAboutData(data.data)})
+  },[])
+  console.log(aboutData);
   return (
     <section className="about">
         <div className="container">
             <div className="about-wrapper">
                 <div className="about-right">
-                    <img src={aboutBg_1} alt="background right" />
-                    <h3>About us</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi, rerum. Saepe quidem facere rerum doloribus incidunt sequi debitis voluptas omnis laborum delectus! Temporibus, officia sapiente.</p>
-                    <br />
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem nisi laudantium fugit cumque, consequuntur cupiditate doloribus.</p>
-                    <br />
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores dolore iusto velit aut molestias, fuga magnam doloremque sint recusandae, sunt omnis! Doloribus et vel laboriosam. Eius, provident? Obcaecati, dignissimos eaque!</p>
-                    <br />
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam sapiente exercitationem unde enim itaque, dolor molestias at suscipit non maiores excepturi a eaque aut nisi voluptate sunt sint incidunt! Vitae ipsum vel ipsa exercitationem voluptas corrupti, deserunt vero, in perspiciatis saepe numquam dignissimos rem iure similique? Tempore similique aliquid corporis deleniti sequi, optio quod, adipisci dignissimos eum fuga ut natus sint suscipit iusto, molestias nisi corrupti quasi. Perspiciatis, architecto, aliquam animi facere molestiae optio ab dicta quod dolor velit quam non debitis, unde sint sequi omnis sed iste voluptates. Excepturi laboriosam eos vero ab obcaecati corporis dicta atque velit magnam.</p>
+                    {/* <img src={aboutBg_1} alt="background right" /> */}
+               {  aboutData?.aboutImages?.length &&  <AboutSlider aboutImages={aboutData.aboutImages}/>}
+                   { aboutData?.aboutTitle && <h3>{aboutData?.aboutTitle}</h3>}
+                   
+                    {aboutData?.aboutText && <pre>{aboutData?.aboutText}</pre>}
                 </div>
             </div>
         </div>

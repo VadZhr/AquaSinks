@@ -6,7 +6,7 @@ export const categoriesSlice = createSlice({
     list: [
       {
         type: "Ванны",
-        path:'bath',
+        path:'Kafel',
         desc: "Узнать больше",
         mainImage: "/assets/images/bath/главное фото.jpg",
         products: [

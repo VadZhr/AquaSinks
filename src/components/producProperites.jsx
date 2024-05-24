@@ -1,7 +1,8 @@
 import dummyImage from '../assets/images/wallsink-template.webp'
 import './producProperites.css'
 
-export default function producProperites() {
+export default function producProperites({params}) {
+    console.log(params,'params');
     return (
         <div className="inner-container">
             <div className='properties'>
@@ -11,27 +12,31 @@ export default function producProperites() {
                 <div className="properties-right">
                     <div className="product-type">
                         <span>Тип: </span>
-                        <span>Пристенная</span>
+                        <span>{params.productType}</span>
                     </div>
                     <div className="product-length">
                         <span>Длина: </span>
-                        <span>430мм</span>
+                        <span>{params.productLength}мм</span>
                     </div>
                     <div className="product-width">
                         <span>Ширина: </span>
-                        <span>430мм</span>
+                        <span>{params.productWidth}мм</span>
                     </div>
                     <div className="product-weight">
                         <span>Вес: </span>
-                        <span>38кг</span>
+                        <span>{params.productWeight}кг</span>
                     </div>
                     <div className="product-height">
                         <span>Высота: </span>
-                        <span>830мм</span>
+                        <span>{params.productHeight}мм</span>
                     </div>
                     <div className="product-color">
                         <span>Цвет: </span>
-                        <span>Белый</span>
+                        <span>{params.productColor}</span>
+                    </div>
+                    <div className="product-color">
+                        <span>Покрытие: </span>
+                        <span>{params.productCoating}</span>
                     </div>
                 </div>
             </div>

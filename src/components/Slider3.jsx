@@ -11,13 +11,11 @@ import "./slider3.css";
 // import required modules
 import { Navigation} from "swiper/modules";
 import { nanoid } from "@reduxjs/toolkit";
-export default function Slider3({ item, link }) {
+export default function Slider3({ item, link,images }) {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
   const [thumbsSwiperFirst, setThumbsSwiperFirst] = useState(null);
 
-  const images = [1, 2, 4, 5, 6];
-  images.length = 5;
-  images.fill(link + "/assets/images/sink2x3.jpg");
+ 
 
   return (
     <div className="inner-container">
@@ -34,7 +32,7 @@ export default function Slider3({ item, link }) {
         >
           {images.map((el) => (
             <SwiperSlide key={nanoid()}>
-              <img src={el} alt="#" />
+              <img src={el.blob} alt="#" />
             </SwiperSlide>
           ))}
         </Swiper>

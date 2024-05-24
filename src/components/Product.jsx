@@ -10,7 +10,7 @@ export default function Product({name, image, id}) {
   return (
     <div className="sink">
         <div className="sink-image">
-            <img src={link+image} alt="image of a sink" />
+            <img src={image} alt="image of a sink" />
         </div>
         <div className="sink-image_link">
             <p>-{name}</p>
