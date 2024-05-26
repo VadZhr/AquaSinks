@@ -6,6 +6,7 @@ import Slider1 from "../components/Slider1";
 import ProducProperites from "../components/producProperites";
 import Slider3 from "../components/Slider3";
 import DocumentationDownload from '../components/documentationDownload'
+import whatsapp from '../assets/images/WhatsAppButtonWhiteMedium.svg'
 import { nanoid } from "@reduxjs/toolkit";
 export default function ProductItem() {
   const { productName, id } = useParams();
@@ -86,7 +87,7 @@ export default function ProductItem() {
             </div>
           </div>
           <a className="whatsapp-link" target='_blank' href={`https://wa.me/${phoneNumber}?text=${watsAppText}`}>
-            <img src={`${link}/assets/images/WhatsAppButtonWhiteMedium.svg`}alt="" />
+            <img src={whatsapp}alt="" />
           </a>
         </div>
       </section>

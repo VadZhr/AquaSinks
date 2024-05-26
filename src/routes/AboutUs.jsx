@@ -8,7 +8,7 @@ export default function AboutUs() {
   const [aboutData,setAboutData]=useState('')
   
   useEffect(()=>{
-    axios.get('http://195.49.212.105/api/aboutpage/getimages').then(data=>{
+    axios.get('https://fratelli.kz/api/aboutpage/getimages').then(data=>{
       setAboutData(data.data)})
   },[])
   console.log(aboutData);

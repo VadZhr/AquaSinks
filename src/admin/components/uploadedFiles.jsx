@@ -2,7 +2,6 @@ import React from 'react'
 import './uploadedFiles.css'
 import Finished from '../assets/images.png'
 import Loading from '../assets/Loader.gif'
-
 export default function uploadedFiles({isLoading}) {
   return (
     <div className='uploaded'>

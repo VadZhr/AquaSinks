@@ -2,7 +2,12 @@ import { useSelector } from "react-redux";
 import "./footer.css";
 import { nanoid } from "@reduxjs/toolkit";
 import instagram from '../assets/images/icons8-instagram-48.png';
-
+import telegram from '../assets/white-icons/icons8-telegram-app-48.png'
+import whatsapp from '../assets/white-icons/icons8-whatsapp-48.png'
+import satu from '../assets/white-icons/satu.png'
+import kaspi from '../assets/white-icons/kaspi-logo2.png'
+import ozon from '../assets/white-icons/ozon.png'
+import wb from '../assets/white-icons/wildberries.svg'
 export default function Footer({contacts}) {
   const icons = useSelector((state) => state.icons.whiteIcons);
   const link = useSelector((state) => state.path.pathForImagesPC);
@@ -37,7 +42,7 @@ export default function Footer({contacts}) {
                     </a>
                   );
                 })} */}
-             
+           
                    <a
                       href={contacts?.instagramLink}
                       target="_blank"
@@ -63,7 +68,7 @@ export default function Footer({contacts}) {
                       <div>
                         <div
                           style={{
-                            backgroundImage: `url('${'/src/assets/white-icons/ozon.png'}')`,
+                            backgroundImage: `url(${ozon})`,
                           }}
                           className="footer-icon"
                         ></div>{" "}
@@ -78,7 +83,7 @@ export default function Footer({contacts}) {
                       <div>
                         <div
                           style={{
-                            backgroundImage: `url('${'/src/assets/white-icons/kaspi-logo2.png'}')`,
+                            backgroundImage: `url(${kaspi})`,
                           }}
                           className="footer-icon"
                         ></div>{" "}
@@ -93,7 +98,7 @@ export default function Footer({contacts}) {
                       <div>
                         <div
                           style={{
-                            backgroundImage: `url('${'/src/assets/white-icons/satu.png'}')`,
+                            backgroundImage: `url(${satu})`,
                           }}
                           className="footer-icon"
                         ></div>{" "}
@@ -108,7 +113,7 @@ export default function Footer({contacts}) {
                       <div>
                         <div
                           style={{
-                            backgroundImage: `url('${'/src/assets/white-icons/wildberries.svg'}')`,
+                            backgroundImage: `url(${wb})`,
                           }}
                           className="footer-icon"
                         ></div>{" "}

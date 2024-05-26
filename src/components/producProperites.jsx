@@ -1,4 +1,5 @@
-import dummyImage from '../assets/images/wallsink-template.webp'
+// import dummyImage from '../assets/images/wallsink-template.webp'
+import dummyImage from '../assets/images/icons8-instagram-48.png'
 import './producProperites.css'
 
 export default function producProperites({params,productParamsImage}) {

@@ -13,17 +13,17 @@ export default function Home() {
   const [contacts, setContacts] = useState([]);
   useEffect(() => {
     axios
-      .get("http://195.49.212.105/api/categories/getallcategories")
+      .get("https://fratelli.kz/api/categories/getallcategories")
       .then((data) => {
         setCategories(data.data);
       });
     axios
-      .get("http://195.49.212.105/api/products/getallproducts")
+      .get("https://fratelli.kz/api/products/getallproducts")
       .then((data) => {
         setProducts(data.data);
       });
     axios
-      .get("http://195.49.212.105/api/contacts/getcontacts")
+      .get("https://fratelli.kz/api/contacts/getcontacts")
       .then((data) => {
         setContacts(data.data);
       });
