@@ -1,13 +1,13 @@
 import dummyImage from '../assets/images/wallsink-template.webp'
 import './producProperites.css'
 
-export default function producProperites({params}) {
+export default function producProperites({params,productParamsImage}) {
     console.log(params,'params');
     return (
         <div className="inner-container">
             <div className='properties'>
                 <div className="properties-left">
-                    <img src={dummyImage} alt="приставная раковина" />
+                    <img src={productParamsImage.blob} alt="приставная раковина" />
                 </div>
                 <div className="properties-right">
                     <div className="product-type">

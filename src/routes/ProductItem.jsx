@@ -20,6 +20,7 @@ export default function ProductItem() {
   const watsAppText = "как сделать у вас заказ".replaceAll(" ", "%20");
   const centerPositionDot =product?.productDescription.indexOf('.',product?.productDescription.length/2|0)+1
   console.log(centerPositionDot);
+  console.log(product);
 // Сделать, чтобы работало при перезагрузке
   return (
     <>
@@ -71,7 +72,7 @@ export default function ProductItem() {
         {/* ВОТ СЮДА НУЖНО ВСТАВИТЬ СВАЙПЕР */}
 
         <div className="container">
-          <ProducProperites params={product.productParams} />
+          <ProducProperites productParamsImage={product.productParamsImage[0]} params={product.productParams} />
           <div className="inner-container">
             <div className="documets-download">
               <div className="documets-download-description">
