@@ -1,6 +1,7 @@
 import { useSelector } from "react-redux";
 import "./footer.css";
 import { nanoid } from "@reduxjs/toolkit";
+import instagram from '../assets/images/icons8-instagram-48.png';
 
 export default function Footer({contacts}) {
   const icons = useSelector((state) => state.icons.whiteIcons);
@@ -36,6 +37,7 @@ export default function Footer({contacts}) {
                     </a>
                   );
                 })} */}
+             
                    <a
                       href={contacts?.instagramLink}
                       target="_blank"
@@ -44,10 +46,12 @@ export default function Footer({contacts}) {
                       <div>
                         <div
                           style={{
-                            backgroundImage: `url('${'/src/assets/white-icons/icons8-instagram-48.png'}')`,
+                            backgroundImage: `url('${instagram}')`,
                           }}
                           className="footer-icon"
+                          
                         ></div>{" "}
+                   
                         <span>Instagram</span>
                       </div>
                     </a>
