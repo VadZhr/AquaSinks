@@ -1,0 +1,54 @@
+.contact-info input[type=number]{
+    align-self: flex-start;
+    -moz-appearance: textfield;
+
+}
+
+.row.for-numbers{
+    position: relative;
+}
+
+.contact-info input[type=number]::-webkit-outer-spin-button,
+.contact-info input[type=number]::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+    margin: 0;       
+}
+
+.numbers-row{
+    display: flex;
+    width: 500px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    align-content: flex-start;
+    position: absolute;
+    right: 0;
+}
+
+.phone-number{
+    display: inline-block;
+    border: 1px solid #00000020;
+    background: linear-gradient(rgb(241, 241, 255), rgb(215, 215, 255));
+    border-radius: 8px;
+    position: relative;
+
+}
+
+.phone-number span{
+    font-size: 18px;
+}
+
+.phone-number:hover.phone-number button{
+    display: inline-block;
+}
+
+.phone-number button{
+    display: none;
+    width: 20px;
+    height: 20px;
+    background: red;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: none;
+}

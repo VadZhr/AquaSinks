@@ -1,0 +1,33 @@
+.authorization{
+    max-width: 100%;
+    height: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.error-message{
+    color: red;
+    height: 30px;
+    width: 100%;
+}
+
+.authorization-form{
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px
+}
+
+.authorization-form .row{
+    display: flex;
+    flex-direction: column;
+}
+
+.authorization-form .row.buttons{
+    flex-direction: row;
+}
+
+.authorization-form .row.buttons button{
+    flex: 1;
+}

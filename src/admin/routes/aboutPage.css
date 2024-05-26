@@ -1,0 +1,24 @@
+.row-sub-container .add-images{
+    display: none;
+ }
+ 
+ .row-sub-container{
+     display: flex;
+     gap: 30px;
+ }
+ 
+ .row.send-image{
+     margin-top: 30px;
+ }
+ 
+ .row label.about-image{
+     margin-top: 10px;
+     flex-basis: auto;
+     display: block;
+     width: 100px;
+     height: 100px;
+     border: 1px solid #000;
+     border-radius: 8px;
+     cursor: pointer;
+     background: url('https://png.pngtree.com/png-vector/20190411/ourmid/pngtree-vector-add-icon-png-image_925895.jpg') center/cover no-repeat;
+ }

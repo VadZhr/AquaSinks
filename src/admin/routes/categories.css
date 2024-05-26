@@ -1,0 +1,25 @@
+
+.admin-categories, .products{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+
+.category-card, .products-card{
+    max-width: 350px;
+    width: 350px;
+    height: 100px;
+    border: 1px solid #000;
+    -webkit-box-align: center;
+    align-items: center;
+    border-radius: 0.375rem;
+    cursor: pointer;
+    user-select: none;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+

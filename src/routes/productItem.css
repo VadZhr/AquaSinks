@@ -103,6 +103,7 @@
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
+    flex-basis: 50%;
 }
 
 @media (max-width: 1623px) {.product-item-decription {max-width: 1200px;}}

@@ -44,7 +44,7 @@ export default function Footer({contacts}) {
                       <div>
                         <div
                           style={{
-                            backgroundImage: `url('${link}${'/assets/white-icons/icons8-instagram-48.png'}')`,
+                            backgroundImage: `url('${'/src/assets/white-icons/icons8-instagram-48.png'}')`,
                           }}
                           className="footer-icon"
                         ></div>{" "}
@@ -59,7 +59,7 @@ export default function Footer({contacts}) {
                       <div>
                         <div
                           style={{
-                            backgroundImage: `url('${link}${'/assets/white-icons/ozon.png'}')`,
+                            backgroundImage: `url('${'/src/assets/white-icons/ozon.png'}')`,
                           }}
                           className="footer-icon"
                         ></div>{" "}
@@ -74,7 +74,7 @@ export default function Footer({contacts}) {
                       <div>
                         <div
                           style={{
-                            backgroundImage: `url('${link}${'/assets/white-icons/kaspi-logo2.png'}')`,
+                            backgroundImage: `url('${'/src/assets/white-icons/kaspi-logo2.png'}')`,
                           }}
                           className="footer-icon"
                         ></div>{" "}
@@ -89,7 +89,7 @@ export default function Footer({contacts}) {
                       <div>
                         <div
                           style={{
-                            backgroundImage: `url('${link}${'/assets/white-icons/satu.png'}')`,
+                            backgroundImage: `url('${'/src/assets/white-icons/satu.png'}')`,
                           }}
                           className="footer-icon"
                         ></div>{" "}
@@ -104,7 +104,7 @@ export default function Footer({contacts}) {
                       <div>
                         <div
                           style={{
-                            backgroundImage: `url('${link}${'/assets/white-icons/wildberries.svg'}')`,
+                            backgroundImage: `url('${'/src/assets/white-icons/wildberries.svg'}')`,
                           }}
                           className="footer-icon"
                         ></div>{" "}
