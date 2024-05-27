@@ -54,7 +54,7 @@ export default function editSingleProduct() {
 
 
     const onDelete = (e) => {
-        dispatch(deleteProduct(product.productId)).then((data) => { navigate('/fratelli-adminpanel/products'); console.log(data) })
+        dispatch(deleteProduct(product.productId)).then((data) => { navigate('/admin/products'); console.log(data) })
         console.log(product.productId)
     }
 

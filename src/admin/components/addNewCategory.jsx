@@ -67,7 +67,7 @@ export default function AddNewCategory({ addItem }) {
   }
 
   function onDeleteCategory() {
-    dispatch(deleteCategory(category.categoryId)).then(() => navigate('/fratelli-adminpanel/categories'))
+    dispatch(deleteCategory(category.categoryId)).then(() => navigate('/admin/categories'))
   }
 
   return (
