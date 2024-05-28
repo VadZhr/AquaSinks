@@ -5,7 +5,7 @@ export default class AuthService{
         return $api.post('/login',{email,password}).then(response => {
             //ПРИ ДЕПЛОЕ УДАЛИТЬ РЕФРЕШ
             localStorage.setItem('token', response.data.accessToken)
-            localStorage.setItem('refreshToken', response.data.refreshToken)
+            // localStorage.setItem('refreshToken', response.data.refreshToken)
             return response
         })
     }
@@ -14,7 +14,7 @@ export default class AuthService{
             
             //ПРИ ДЕПЛОЕ УДАЛИТЬ РЕФРЕШ
             localStorage.setItem('token', response.data.accessToken)
-            localStorage.setItem('refreshToken', response.data.refreshToken)
+            // localStorage.setItem('refreshToken', response.data.refreshToken)
         })
     }
     static async logout(){

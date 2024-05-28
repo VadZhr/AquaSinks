@@ -70,7 +70,7 @@ export default function addSingleProduct() {
                 productDiscountPrice,
                 categoryNameId
             }))
-        console.log(...formData)
+        // console.log(...formData)
         dispatch(addProducts(formData)).then(data => { console.log(data) })
     }
 

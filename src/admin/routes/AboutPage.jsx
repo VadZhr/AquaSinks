@@ -15,9 +15,7 @@ export default function AboutPage() {
   const aboutTitle = useSelector(state => state.aboutSlice.aboutTitle)
   const aboutText = useSelector(state => state.aboutSlice.aboutText)
   const aboutImages = useSelector(state => state.aboutSlice.aboutImages)
-  const aboutImagePath = useSelector(state => state.aboutSlice.aboutImagePath)
   const serverImages = useSelector(state => state.aboutSlice.serverImages)
-  const images = useSelector(state => state.aboutSlice.aboutImages)
   const isLoading = useSelector(state => state.aboutSlice.isLoading)
 
 //  console.log(fDataImages)
@@ -40,8 +38,8 @@ export default function AboutPage() {
     formData.append('aboutText', aboutText);
     formData.append('aboutImagesToDelete', JSON.stringify(deleteAboutServerImages));
     fDataImages.map(el => formData.append('image', el))
-    console.log(...formData)
-    // dispatch(sendAboutData(formData)).then(data => console.log(data))
+    // console.log(...formData)
+    dispatch(sendAboutData(formData)).then(data => console.log(data))
   };
 
   console.log(aboutImages, 'aboutImages')

@@ -40,13 +40,13 @@ export default function AddNewCategory({ addItem }) {
         [...image].map(el => formData.append('image', el))
       }
       formData.append('categoryData', JSON.stringify({ changedImage: photoChanged, categoryName: category.categoryName, id: category.categoryId }))
-      console.log(...formData)
-      // dispatch(editCategory(formData)).then(data => { console.log(data) })
+      // console.log(...formData)
+      dispatch(editCategory(formData)).then(data => { console.log(data) })
     } else {
       [...image].map(el => formData.append('image', el))
       formData.append('categoryData', JSON.stringify({ categoryName: category.categoryName, id: category.categoryId }))
-      console.log(...formData)
-      // dispatch(addCategory(formData)).then(data => { console.log(data) })
+      // console.log(...formData)
+      dispatch(addCategory(formData)).then(data => { console.log(data) })
     }
     setEdit(false)
     setPhotoChanged(false)

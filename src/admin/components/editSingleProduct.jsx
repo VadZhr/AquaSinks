@@ -75,8 +75,8 @@ export default function editSingleProduct() {
             categoryNameId: product.categoryNameId
         }))
         formData.append('imagesToDelete', JSON.stringify(deleteImageFromServerArray))
-        console.log(...formData)
-        // dispatch(updateProduct({ formData, id: product.productId })).then(data => console.log(data))
+        // console.log(...formData)
+        dispatch(updateProduct({ formData, id: product.productId })).then(data => console.log(data))
     }
 
     function deleteFormDataFile(imageName) {
