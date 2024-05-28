@@ -22,13 +22,13 @@ $api.interceptors.response.use(config => {
                 withCredentials: true,           
                 headers: {
                     //ПРИ ДЕПЛОЕ УДАЛИТЬ РЕФРЕШ
-                    Authorization: `Bearer ${localStorage.getItem('refreshToken')}`
+                    // Authorization: `Bearer ${localStorage.getItem('refreshToken')}`
                 }   
             })
             localStorage.setItem('token', response.data.accessToken)
 
             //ПРИ ДЕПЛОЕ УДАЛИТЬ РЕФРЕШ
-            localStorage.setItem('refreshToken', response.data.refreshToken)
+            // localStorage.setItem('refreshToken', response.data.refreshToken)
             console.log(originalRequest)
             return $api.request(originalRequest)
         } catch (error) {

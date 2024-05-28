@@ -97,7 +97,7 @@ const authSlice = createSlice({
             localStorage.setItem('token', action.payload.accessToken)
             
             // ПРИ ДЕПЛОЕ УДАЛИТЬ РЕФРЕШ
-            localStorage.setItem('refreshToken', action.payload.refreshToken)
+            // localStorage.setItem('refreshToken', action.payload.refreshToken)
     
             state.user = (action.payload.user)
         })
