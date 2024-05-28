@@ -45,7 +45,7 @@ export default function Autorization() {
                     {/* <button onClick={(e) => register(e)}>Регаемся</button> */}
                     <button onClick={(e) => logIn(e)}>Войти</button>
                 </div>
-                <button href="">забыл пароль</button>
+                {/* <button href="">забыл пароль</button> */}
                 {clicked && <div style={{margin: '0 auto'}}><img src={loadingGif} width={100}/></div>}
                 {errorMessage && <p style={{color: 'red', textAlign: 'center'}}>{errorMessage}</p>}
             </form>
