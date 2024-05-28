@@ -59,7 +59,7 @@ const productSlice = createSlice({
             state.productParamsImage = product.productParamsImage ?? []
             state.productRealPrice = product.productRealPrice ?? ''
             state.productDiscountPrice = product.productDiscountPrice ?? ''
-            state.productDocuments = product.productDocuments.map(el => el.blob.includes('application/pdf') ? {...el, doc: el.blob, blob: pdfImage} : el) ?? []
+            state.productDocuments = product.productDocuments ?? []
             state.productId = product._id ?? ''
             state.categoryNameId = product.categoryNameId ?? ''
             
@@ -102,22 +102,23 @@ const productSlice = createSlice({
         },
 
         deleteDocuments: (state, action) => {
-            state.productDocuments = state.productDocuments.filter(el=> el.name != action.payload)
+            console.log(action.payload, 'action')
+            state.productDocuments = state.productDocuments.filter(el => el.blob != action.payload)
         },
         deleteMainImage: (state, action) => {
-            state.productMainImage = state.productMainImage.filter(el=> el.name != action.payload)
+            state.productMainImage = state.productMainImage.filter(el => el.name ? el.name != action.payload : el != action.payload)
         },
         deleteWhiteBGImage: (state, action) => {
-            state.productImagesWhiteBG = state.productImagesWhiteBG.filter(el=> el.name != action.payload)
+            state.productImagesWhiteBG = state.productImagesWhiteBG.filter(el => el.name ? el.name != action.payload : el != action.payload)
         },
         deleteInteriorImage: (state, action) => {
-            state.productImageInterior = state.productImageInterior.filter(el=> el.name != action.payload)
+            state.productImageInterior = state.productImageInterior.filter(el => el.name ? el.name != action.payload : el != action.payload)
         },
         deleteColoredImage: (state, action) => {
-            state.productImageColored = state.productImageColored.filter(el=> el.name != action.payload)
+            state.productImageColored = state.productImageColored.filter(el => el.name ? el.name != action.payload : el != action.payload)
         },
         deleteProductParamsImage: (state, action) => {
-            state.productParamsImage = state.productParamsImage.filter(el=> el.name != action.payload)
+            state.productParamsImage = state.productParamsImage.filter(el => el.name ? el.name != action.payload : el != action.payload)
         },
         productsFiltering: (state, action) => {
             let filteredProducts = []

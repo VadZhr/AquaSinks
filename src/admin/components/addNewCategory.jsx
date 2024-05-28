@@ -22,8 +22,8 @@ export default function AddNewCategory({ addItem }) {
       dispatch(getCategoryPage()).then(data => {
         const singleCategory = data.payload.find(el => el.categoryPath == params.path)
         dispatch(setSingleCategory(singleCategory))
-        setImage(singleCategory.blob)
-        setDisplayPhoto(singleCategory.blob)
+        setImage(singleCategory.blob ? singleCategory.blob : singleCategory.categoryImagePath)
+        setDisplayPhoto(singleCategory.blob ? singleCategory.blob : singleCategory.categoryImagePath)
       })
     } else {
       dispatch(setEmpty())
@@ -40,17 +40,18 @@ export default function AddNewCategory({ addItem }) {
         [...image].map(el => formData.append('image', el))
       }
       formData.append('categoryData', JSON.stringify({ changedImage: photoChanged, categoryName: category.categoryName, id: category.categoryId }))
-      dispatch(editCategory(formData)).then(data => { console.log(data) })
+      console.log(...formData)
+      // dispatch(editCategory(formData)).then(data => { console.log(data) })
     } else {
       [...image].map(el => formData.append('image', el))
       formData.append('categoryData', JSON.stringify({ categoryName: category.categoryName, id: category.categoryId }))
-      dispatch(addCategory(formData)).then(data => { console.log(data) })
+      console.log(...formData)
+      // dispatch(addCategory(formData)).then(data => { console.log(data) })
     }
     setEdit(false)
     setPhotoChanged(false)
 
   }
-  console.log(edit)
 
   const getPicture = (image) => {
     let fReader = new FileReader();
@@ -80,14 +81,14 @@ export default function AddNewCategory({ addItem }) {
         </div>
         <div className="row">
           <label htmlFor="image">Изображение</label>
-          <img src={category.isLoading ? loading : displayPhoto} alt="" width={150} height={150} style={{ objectFit: 'cover' }} />
+          <img src={category.isLoading ? loading : displayPhoto?.includes('data:image') ? displayPhoto : `https://fratelli.kz/uploads/${displayPhoto}`} alt="" width={150} height={150} style={{ objectFit: 'cover' }} />
           <div >
             <div className="input-file-row">
               <label className="input-file">
                 <input className='add-images' type="file" accept=".jpg" id='about-image' onChange={onInputChange} />
                 <span>Выберите файл</span>
               </label>
-              <span className='input-file-list'>{Object.values(image).map(el => el.name).join(" ") ?? 'Выберите файл'}</span>
+              {/* <span className='input-file-list'>{Object.values(image).map(el => el.name).join(" ") ?? 'Выберите файл'}</span> */}
             </div>
           </div>
 
@@ -95,10 +96,10 @@ export default function AddNewCategory({ addItem }) {
 
         <div className="row">
           {location.pathname.includes('add-new') ? 
-          <button>Добавить</button> : 
+          <button className="admin-save-btn" >Добавить</button> : 
           <>
-          <button onClick={onDeleteCategory}>Удалить</button>
-          <button onClick={(e) => { setEdit(true) }}>Обновить</button>
+          <button className="admin-delete-btn" onClick={onDeleteCategory}>Удалить</button>
+          <button className="admin-save-btn" onClick={(e) => { setEdit(true) }}>Обновить</button>
           </>}
 
         </div>

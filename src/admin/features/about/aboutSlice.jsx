@@ -10,6 +10,7 @@ const initialState = {
     aboutTitle: '',
     serverImages: [],
     aboutError: '',
+    aboutImagePath: [],
 }
 
 export const getAboutPage = createAsyncThunk('about/getAboutPage', async()=>{
@@ -57,16 +58,16 @@ const aboutSlice = createSlice({
             state.aboutImages.push(action.payload)
         },
         deleteImages: (state, action) => {
-            state.aboutImages = state.aboutImages.filter(el => el.name != action.payload)
+            state.aboutImages = state.aboutImages.filter(el => el.name ? el.name != action.payload : el != action.payload)
         }
     },
     extraReducers: (builder) => {
         builder.addCase(getAboutPage.fulfilled, (state, action) => {
             state.isLoading = false
-            state.aboutImages = action.payload.aboutImages ?? []       
-            state.aboutTitle = action.payload.aboutTitle ?? ""     
-            state.aboutText = action.payload.aboutText ?? ""     
-            state.serverImages = action.payload.aboutImages ?? [] 
+            state.aboutImages = action.payload[0].aboutImagePath ?? []       
+            state.aboutTitle = action.payload[0].aboutTitle ?? ""     
+            state.aboutText = action.payload[0].aboutText ?? ""     
+            state.serverImages = action.payload[0].aboutImagePath ?? [] 
         }) 
         builder.addCase(getAboutPage.pending, (state, action) => {
             state.isLoading = true  

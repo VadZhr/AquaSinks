@@ -116,7 +116,7 @@ export default function addSingleProduct() {
                 <input type="text" id='discountPrice' onChange={(e) => setProductDiscountPrice(e.target.value)} required/>
             </div>           
 
-            <button>добавить</button>
+            <button className="admin-save-btn">добавить</button>
         </form>
         <UploadedFiles isLoading={isLoading}/>
         </>

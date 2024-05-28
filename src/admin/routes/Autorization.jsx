@@ -15,7 +15,6 @@ export default function Autorization() {
     const clicked = useSelector(state => state.authSlice.clickedToLog)
     const dispatch = useDispatch()
 
-    console.log(errorMessage, 'errrrrrr')
     //ДЛЯ РЕГИСТРАЦИИ
     // const register = async (e) => {
     //     e.preventDefault()
@@ -27,8 +26,6 @@ export default function Autorization() {
         dispatch(setClicked(true))
         dispatch(login({email, password}))            
     }
-
-    console.log(clicked, isLoading)
 
     return (
         <section className='authorization'>

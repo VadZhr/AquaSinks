@@ -13,12 +13,13 @@ export default function submitImages({ multiple, submitTo, dataName, data, setIm
         e.preventDefault();
         Object.keys(e.target.files,).forEach(i => {
             const file = e.target.files[i]
-            const formDataFile = new File([file], suffix + file.name)
+            const date = Date.now()
+            const formDataFile = new File([file], date + file.name)
             forFormDataArray(prev => [...prev, formDataFile])
             const reader = new FileReader();
             reader.readAsDataURL(file)
             reader.onload = (e) => {
-                dispatch(stateOfImages({ blob: e.currentTarget.result, name: Date.now() + file.name }))
+                dispatch(stateOfImages({ blob: e.currentTarget.result, name: date + file.name }))
             }
         })
     }
@@ -30,7 +31,6 @@ export default function submitImages({ multiple, submitTo, dataName, data, setIm
                     <input className='add-images' type="file" accept=".jpg" id='about-image' onChange={(e) => addImages(e, setImages, setFDataImages, SUFFIX)} multiple={multiple} />
                     <span>Выберите файл</span>
                 </label>
-                <span className='input-file-list'>'Выберите файл'</span>
             </div>
         </div>
     )

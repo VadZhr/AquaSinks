@@ -39,11 +39,15 @@ export default function submitProductImages({
             reader.readAsDataURL(file)
             reader.onload = (e) => {
                 let blob = e.currentTarget.result
-                if (blob.includes('pdf;base64')) blob = pdfImage
+                if (blob.includes('pdf;base64')) {
+                    dispatch(stateOfImages({ blob: uniqueString + file.name, name: uniqueString + file.name }))
+                    return
+                }
                 dispatch(stateOfImages({ blob, name: uniqueString + file.name }))
             }
         })
     }
+
 
     return (
         <div className='product-upload-image-form'>

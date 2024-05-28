@@ -133,7 +133,7 @@ export default function Contacts() {
             <label htmlFor="address">WildBerries:</label>
             <input type="text" name="" id="address" value={footerData.wildBerriesLink} onChange={(e) => dispatch(setWildBerriesLink(e.target.value))}/>
         </div>
-        <button onClick={(e) => submitFooterData(e)}>Сохранить</button>
+        <button className="admin-save-btn" onClick={(e) => submitFooterData(e)}>Сохранить</button>
     </section>
     <UploadedFiles isLoading={footerData.isLoading}/>
     

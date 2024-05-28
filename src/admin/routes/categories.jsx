@@ -22,7 +22,7 @@ export default function Categories() {
   const dispatch = useDispatch()
   const data = JSON.stringify({state: 20000})
 
-
+  console.log(allCategories, 'allCategories')
   useEffect(() => { 
     dispatch(getCategoryPage())
   },[])

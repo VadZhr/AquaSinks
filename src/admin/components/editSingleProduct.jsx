@@ -55,7 +55,6 @@ export default function editSingleProduct() {
 
     const onDelete = (e) => {
         dispatch(deleteProduct(product.productId)).then((data) => { navigate('/admin/products'); console.log(data) })
-        console.log(product.productId)
     }
 
     function sendUpdatedProduct(e) {
@@ -76,8 +75,8 @@ export default function editSingleProduct() {
             categoryNameId: product.categoryNameId
         }))
         formData.append('imagesToDelete', JSON.stringify(deleteImageFromServerArray))
-        // console.log(...formData)
-        dispatch(updateProduct({ formData, id: product.productId })).then(data => console.log(data))
+        console.log(...formData)
+        // dispatch(updateProduct({ formData, id: product.productId })).then(data => console.log(data))
     }
 
     function deleteFormDataFile(imageName) {
@@ -87,9 +86,8 @@ export default function editSingleProduct() {
         if (fDataWhiteBGImage.find(el => el.name == imageName)) setFDataWhiteBGImgae(prev => prev.filter(el => el.name != imageName))
         if (fDataDocuments.find(el => el.name == imageName)) setFDataDocuments(prev => prev.filter(el => el.name != imageName))
         if (fDataParametersImage.find(el => el.name == imageName)) setFDataParametersImage(prev => prev.filter(el => el.name != imageName))
+            
     }
-
-
 
     return (
         <>
@@ -142,11 +140,11 @@ export default function editSingleProduct() {
                     <label htmlFor="">Цена по скидке</label>
                     <input type="text" id='category-name' value={product.productDiscountPrice} onChange={(e) => dispatch(setProductDiscountPrice(e.target.value))} />
                 </div>
-                <button>Сохранить</button>
+                <button className="admin-save-btn">Сохранить</button>
                 <div className="row">
                 </div>
             </form>
-            <button onClick={() => onDelete()}>Удалить</button>
+            <button className="admin-delete-btn" onClick={() => onDelete()}>Удалить</button>
             <UploadedFiles isLoading={product.isLoading} />
         </>
     )
