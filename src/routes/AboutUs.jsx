@@ -18,7 +18,7 @@ export default function AboutUs() {
             <div className="about-wrapper">
                 <div className="about-right">
                     {/* <img src={aboutBg_1} alt="background right" /> */}
-               {  aboutData?.aboutImages?.length>0 &&  <AboutSlider aboutImages={aboutData.aboutImages}/>}
+               {  aboutData?.aboutImagePath?.length>0 &&  <AboutSlider aboutImages={aboutData?.aboutImagePath}/>}
                    { aboutData?.aboutTitle && <h3>{aboutData?.aboutTitle}</h3>}
                    
                     {aboutData?.aboutText && <pre>{aboutData?.aboutText}</pre>}

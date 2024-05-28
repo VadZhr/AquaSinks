@@ -32,7 +32,7 @@ export default function Slider3({ item, link,images }) {
         >
           {images.map((el) => (
             <SwiperSlide key={nanoid()}>
-              <img src={el.blob} alt="#" />
+              <img src={`https://fratelli.kz/uploads/${el}`} alt="#" />
             </SwiperSlide>
           ))}
         </Swiper>

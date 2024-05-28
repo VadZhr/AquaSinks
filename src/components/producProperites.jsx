@@ -8,7 +8,7 @@ export default function producProperites({params,productParamsImage}) {
         <div className="inner-container">
             <div className='properties'>
                 <div className="properties-left">
-                    <img src={productParamsImage.blob} alt="приставная раковина" />
+                    <img src={productParamsImage} alt="приставная раковина" />
                 </div>
                 <div className="properties-right">
                     <div className="product-type">

@@ -1,5 +1,5 @@
 import { useSelector } from "react-redux";
-import { useParams, ScrollRestoration, useOutlet, useOutletContext } from "react-router-dom";
+import { useParams, ScrollRestoration, useOutlet, useOutletContext, useRouteError } from "react-router-dom";
 import "./productItem.css";
 import BackLink from "../components/BackLink";
 import Slider1 from "../components/Slider1";
@@ -11,7 +11,13 @@ import { nanoid } from "@reduxjs/toolkit";
 export default function ProductItem() {
   const { productName, id } = useParams();
   const product=useOutletContext()[1].find(el=>el._id===id)
-  
+ const categoryName =useOutletContext()[0].find(el=>el.categoryPath==productName)?.id
+ console.log(categoryName,'categoryName');
+ console.log(product?.categoryNameId,'product?.categoryNameId');
+ const error =useRouteError()
+ if(product?.categoryNameId!==categoryName){
+    return <p>Не найдено</p> 
+ }
   console.log(product,'product');
   // const item = useSelector((state) => state.categories.list)
   //   .filter((el) => el.path == productName)[0]
@@ -30,7 +36,7 @@ export default function ProductItem() {
         <ScrollRestoration />
         <div className="product-item-img">
         {/* Основное фото товара */}
-          <img src={product?.productMainImage[0].blob} alt="" />
+          <img src={`https://fratelli.kz/uploads/${product?.productMainImage[0]}`} alt="" />
           <div className="product-item-name">
             <span className="">{product.productName}</span>
           </div>
@@ -73,14 +79,14 @@ export default function ProductItem() {
         {/* ВОТ СЮДА НУЖНО ВСТАВИТЬ СВАЙПЕР */}
 
         <div className="container">
-          <ProducProperites productParamsImage={product.productParamsImage[0]} params={product.productParams} />
+          <ProducProperites productParamsImage={`https://fratelli.kz/uploads/${product.productParamsImage[0]}`} params={product.productParams} />
           <div className="inner-container">
             <div className="documets-download">
               <div className="documets-download-description">
                 <p>Материалы для скачивания</p>
               </div>
               <div className="documentation">
-                {product.productDocuments.map(el=> <DocumentationDownload key={nanoid()} linkToFile={el.blob} />)}
+                {product.productDocuments.map(el=> <DocumentationDownload key={nanoid()} linkToFile={`https://fratelli.kz/files/${el.blob}`} />)}
               {/* <DocumentationDownload /> */}
 
               </div>

@@ -50,7 +50,7 @@ export default function Sinks({categories}) {
         {tile == false && <div className="sinks-wrapper wall">
 
           <div className="sinks-wrapper">
-            {allCategoryProducts?.map(el => <Item key={el._id} image={el.productMainImage[0].blob} name={el.productName} id={el._id} />)}</div>
+            {allCategoryProducts?.map(el => <Item key={el._id} image={`https://fratelli.kz/uploads/${el.productMainImage[0]}`} name={el.productName} id={el._id} />)}</div>
         </div>}
       </div>
 

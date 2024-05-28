@@ -11,7 +11,7 @@ import { Navigation } from "swiper/modules";
 import { nanoid } from "@reduxjs/toolkit";
 
 export default function AboutSlider({ aboutImages }) {
-    console.log(aboutImages);
+    console.log(aboutImages,'aboutImages' );
     const imagesToDisplay= aboutImages
   return (
     <Swiper
@@ -23,7 +23,7 @@ export default function AboutSlider({ aboutImages }) {
     >
       {imagesToDisplay.map((el, index) => (
         <SwiperSlide key={nanoid()}>
-          <img src={el.blob} alt="#" />
+          <img src={`https://fratelli.kz/uploads/${el}`} alt="#" />
           {/* {index == 0 && (
             <div className="product-item-name">
               <span className="">{item.name}</span>

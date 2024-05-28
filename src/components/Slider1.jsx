@@ -23,7 +23,7 @@ export default function Slider1({ item, link,images }) {
     >
       {images.map((el, index) => (
         <SwiperSlide key={nanoid()}>
-          <img src={el.blob} alt="#" />
+          <img src={`https://fratelli.kz/uploads/${el}`} alt="#" />
           {index == 0 && (
             <div className="product-item-name">
               <span className="">{item.name}</span>

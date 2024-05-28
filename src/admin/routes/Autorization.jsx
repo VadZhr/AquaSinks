@@ -3,7 +3,7 @@ import './authorization.css'
 import { useDispatch, useSelector } from 'react-redux'
 import { login, registration, setClicked } from '../features/authorization/authSlice'
 
-
+import loadingGif from '../assets/loading.gif'
 
 export default function Autorization() {
     // const {store} = useContext(Context)
@@ -46,7 +46,7 @@ export default function Autorization() {
                     <button onClick={(e) => logIn(e)}>Войти</button>
                 </div>
                 <button href="">забыл пароль</button>
-                {clicked && <div style={{margin: '0 auto'}}><img src='/src/admin/assets/loading.gif' width={100}/></div>}
+                {clicked && <div style={{margin: '0 auto'}}><img src={loadingGif} width={100}/></div>}
                 {errorMessage && <p style={{color: 'red', textAlign: 'center'}}>{errorMessage}</p>}
             </form>
         </section>

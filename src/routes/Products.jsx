@@ -9,7 +9,7 @@ export default function Products() {
   const data = useSelector((state) => state.categories.list);
   const [categories,setCategories]=useState([]);
   const allCategoryProducts = useOutletContext()[0]
-  console.log(categories);
+  console.log(allCategoryProducts,1234);
   return (
     <>
       <section className="categories">

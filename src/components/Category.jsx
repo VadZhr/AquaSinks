@@ -20,14 +20,14 @@ export default function Product({ category, productName, product }) {
     //     </div>
     //   </div>
     // </div>
-    <div className="category" style={{background:`url('${category.blob?? product?.productMainImage[0].blob}') center/cover no-repeat`}}>
+    <div className="category" style={{background:`url('https://fratelli.kz/uploads/${category?.categoryImagePath ?? product?.productMainImage[0]}') center/cover no-repeat`}}>
     <div className="category-filter"></div>
     <div className="category-content">
       <div className="link">
         <p className="category-text">{category?.categoryName ?? product?.productName}</p>
         <ScrollRestoration/>
         {product?.productName && <Link to={`${location.pathname}/${product._id}`} className=''>{"Узнать больше"}</Link>}         
-        {category?.categoryName && <Link to={`${fratelli}products/${category?.categoryPath}`} className=''>{'Узнать больше'}</Link>}    
+        {category?.categoryName && <Link to={`/products/${category?.categoryPath}`} className=''>{'Узнать больше'}</Link>}    
       </div>
     </div>
   </div>
