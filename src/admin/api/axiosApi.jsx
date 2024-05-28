@@ -1,7 +1,6 @@
 import axios from "axios";
 
-// export const API_URL = "https://fratelli.kz/api"
-export const API_URL = "http://26.162.108.48:5000/api"
+export const API_URL = "https://fratelli.kz/api"
 const $api = axios.create({
     baseURL: API_URL,
     withCredentials: true
