@@ -106,6 +106,36 @@
     flex-basis: 50%;
 }
 
+.product-price {
+    margin-bottom: 50px;
+    max-width: 50%;
+    margin-left: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.product-price .left{
+    flex-basis: 110px;
+}
+
+.product-price h3{
+    font-family: "Oswald", sans-serif;
+    font-weight: 300;
+    font-size: clamp(20px, 1.2vw + 1rem, 10rem);
+    /* line-height: 0.5; */
+}
+
+.product-price .right{
+    font-family: "Oswald", sans-serif;
+    font-weight: 300;
+    font-size: clamp(20px, 2.2vw + 1rem, 10rem);
+}
+
+.product-price .product-price_discount{
+    font-size: clamp(20px, 2.9vw + 1rem, 10rem);
+}
+
+
 @media (max-width: 1623px) {.product-item-decription {max-width: 1200px;}}
 
 @media (max-width: 1453px) {
@@ -129,6 +159,8 @@
 }
 
 @media (max-width: 750px) {
+    .product-price {max-width: 100%;}
+
     .product-item-name span {font-size: 30px;}
     .product-item-decription {
         flex-wrap: wrap;
