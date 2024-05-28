@@ -15,6 +15,7 @@ const initialState = {
 
 export const getAboutPage = createAsyncThunk('about/getAboutPage', async()=>{
     const response = await AdminService.getAboutPage()
+    console.log(response, 'response')
     return response.data
 })
 export const sendAboutText = createAsyncThunk('about/sendAboutText', async(payload, thunkAPI)=>{
@@ -64,10 +65,10 @@ const aboutSlice = createSlice({
     extraReducers: (builder) => {
         builder.addCase(getAboutPage.fulfilled, (state, action) => {
             state.isLoading = false
-            state.aboutImages = action.payload[0].aboutImagePath ?? []       
-            state.aboutTitle = action.payload[0].aboutTitle ?? ""     
-            state.aboutText = action.payload[0].aboutText ?? ""     
-            state.serverImages = action.payload[0].aboutImagePath ?? [] 
+            state.aboutImages = action.payload.aboutImagePath ?? []       
+            state.aboutTitle = action.payload.aboutTitle ?? ""     
+            state.aboutText = action.payload.aboutText ?? ""     
+            state.serverImages = action.payload.aboutImagePath ?? [] 
         }) 
         builder.addCase(getAboutPage.pending, (state, action) => {
             state.isLoading = true  
