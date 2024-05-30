@@ -132,17 +132,9 @@ export default function Footer({contacts, headerFooterImage, headerFooterTextCol
             </div>
             <div className="footer-wrapper-right">
               <div className="footer_numbers">
-             
-                  <a  href={`tel:${contacts?.phoneOne}`}>
-                    +{contacts?.phoneOne}
-                  </a>
-                  <a  href={`tel:${contacts?.phoneTwo}`}>
-                    +{contacts?.phoneTwo}
-                  </a>
-                  <a  href={`tel:${contacts?.phoneThree}`}>
-                    +{contacts?.phoneThree}
-                  </a>
-               
+                {contacts?.phoneOne && <a  href={`tel:${contacts.phoneOne}`}>{'+' + contacts?.phoneOne}</a>}
+                {contacts?.phoneTwo && <a  href={`tel:${contacts.phoneTwo}`}>{'+' + contacts?.phoneTwo}</a>}
+                {contacts?.phoneThree && <a  href={`tel:${contacts.phoneThree}`}>{'+' + contacts?.phoneThree}</a>}
               </div>
               <div className="footer-emails">
            
