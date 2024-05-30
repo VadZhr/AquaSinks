@@ -8,16 +8,24 @@ import satu from '../assets/white-icons/satu.png'
 import kaspi from '../assets/white-icons/kaspi-logo2.png'
 import ozon from '../assets/white-icons/ozon.png'
 import wb from '../assets/white-icons/wildberries.svg'
-export default function Footer({contacts}) {
+export default function Footer({contacts, headerFooterImage, headerFooterTextColor}) {
   const icons = useSelector((state) => state.icons.whiteIcons);
   const link = useSelector((state) => state.path.pathForImagesPC);
   // const contacts = useSelector((state) => state.contacts.numbers);
   const emails = useSelector((state) => state.contacts.emails);
   const address = useSelector((state) => state.contacts.address);
-  console.log(contacts,'contacts.phoneOne');
+
+
+  const allElements = document.querySelectorAll('footer *')
+
+  allElements.forEach(el => {
+    el.style.color = headerFooterTextColor 
+  })
+
+
   return (
     <>
-      <footer className="footer" id="footerAnchor">
+      <footer className="footer" id="footerAnchor" style={{ background: `#000 url(https://fratelli.kz/uploads/${headerFooterImage}) center/cover no-repeat` }}>
         <div className="container">
           <div className="footer-wrapper">
             <div className="footer-wrapper-left">

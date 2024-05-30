@@ -11,7 +11,18 @@ export default function Home() {
   const [products, setProducts] = useState([]);
   const [categories, setCategories] = useState([]);
   const [contacts, setContacts] = useState([]);
+  const [headerFooterImage, setHeaderFooterImage] = useState([])
+  const [headerFooterTextColor, setHeaderFooterTextColor] = useState('#fff')
+
   useEffect(() => {
+    axios
+      .get('https://fratelli.kz/api/headerfooter/getdata')
+      .then(data => {
+        console.log(data)
+        setHeaderFooterImage(data.data.headerFooterImage)
+        setHeaderFooterTextColor(data.data.headerFooterTextColor)
+      });
+
     axios
       .get("https://fratelli.kz/api/categories/getallcategories")
       .then((data) => {
@@ -33,11 +44,11 @@ export default function Home() {
   return (
     <section className="home">
       <ScrollRestoration />
-      <Header categories={categories} contacts={contacts}></Header>
+      <Header categories={categories} contacts={contacts} headerFooterImage={headerFooterImage} headerFooterTextColor={headerFooterTextColor}></Header>
       <main className="main">
         <Outlet context={[categories, products]}></Outlet>
       </main>
-      <Footer contacts={contacts}></Footer>
+      <Footer contacts={contacts} headerFooterImage={headerFooterImage} headerFooterTextColor={headerFooterTextColor}></Footer>
     </section>
   );
 }

@@ -30,7 +30,8 @@ import ProductsCollections from "./admin/routes/ProductsCollections.jsx";
 import SingleProduct from './admin/routes/SingleProduct.jsx'
 import AddSingleProduct from "./admin/routes/addSingleProduct.jsx";
 import Footer from './admin/routes/Footer.jsx'
-import Headerfooter from "./routes/headerfooter.jsx";
+import Headerfooter from "./admin/routes/headerfooter.jsx";
+
 
 
 

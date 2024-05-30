@@ -1,11 +1,14 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { addHeaderFooterData, getHeaderFooterData, setHeaderFooterImage, setHeaderFooterTextColor } from '../admin/features/headerfooter/headerfooter'
+import { addHeaderFooterData, getHeaderFooterData, setHeaderFooterImage, setHeaderFooterTextColor } from '../features/headerfooter/headerfooter'
+import UploadFiles from '../components/uploadedFiles'
+
 
 export default function headerfooter() {
     const headerFooter = useSelector(state => state.headerfooter)
     const imageForServer = useRef("")
     const dispatch = useDispatch()
+    const isLoading = useSelector(state => state.headerfooter.isLoading)
 
     useEffect(() => {
         dispatch(getHeaderFooterData()).then(data => console.log(data))
@@ -36,6 +39,7 @@ export default function headerfooter() {
 
 
     return (
+        <>
         <form onSubmit={submitHeaderFooter}>
             <div className="row">
                 <label>Меню</label>
@@ -57,5 +61,7 @@ export default function headerfooter() {
             </div>
             <button className='admin-save-btn'>Отправить</button>
         </form>
+        <UploadFiles isLoading={isLoading} />
+        </>
     )
 }

@@ -55,6 +55,7 @@ const headerFooter = createSlice({
         }) 
         builder.addCase(addHeaderFooterData.rejected, (state, action) => {
             state.aboutError = action.payload
+            state.isLoading = true  
         }) 
     }
 })
