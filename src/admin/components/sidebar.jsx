@@ -39,6 +39,11 @@ export default function sidebar() {
                         <div>Контакты</div>
                     </Link>
                 </li>
+                <li className={location.pathname.split("/").includes('headerfooter') ? 'nav-link active' : 'nav-link'}>
+                    <Link to={'/admin/headerfooter'}>
+                        <div>Меню и Футер</div>
+                    </Link>
+                </li>
                 <li className='button-exit'>
                     <button onClick={(e) => logOut(e)}>Выйти</button>
                 </li>

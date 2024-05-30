@@ -30,6 +30,7 @@ import ProductsCollections from "./admin/routes/ProductsCollections.jsx";
 import SingleProduct from './admin/routes/SingleProduct.jsx'
 import AddSingleProduct from "./admin/routes/addSingleProduct.jsx";
 import Footer from './admin/routes/Footer.jsx'
+import Headerfooter from "./routes/headerfooter.jsx";
 
 
 
@@ -101,9 +102,14 @@ const router = createBrowserRouter([
         element: <AddSingleProduct/>
       },
       {
+        //это контакты
         path: '/admin/footer',
         element: <Footer/>
       },
+      {
+        path: '/admin/headerfooter',
+        element: <Headerfooter/>
+      }
 
   ]
   }

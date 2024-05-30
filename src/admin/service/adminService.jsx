@@ -67,5 +67,12 @@ export default class AdminService{
         return $api.get(`/contacts/getcontacts`).then(response => response)
     }
 
+    static getHeaderFooterData(){
+        return $api.get(`/headerfooter/getdata`).then(response => response)
+    }
+    static addHeaderFooterData(payload){
+        return $api.put(`/headerfooter/adddata`, payload).then(response => response)
+    }
+
 
 }

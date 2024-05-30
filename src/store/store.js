@@ -8,7 +8,7 @@ import aboutSlice from '../admin/features/about/aboutSlice';
 import categorySlice from '../admin/features/category/categorySlice';
 import productSlice from '../admin/features/product/product.Slice';
 import footerSlice from '../admin/features/footer/footerSlice';
-
+import headerfooter from '../admin/features/headerfooter/headerfooter';
 
 export default configureStore({
     reducer:{
@@ -20,6 +20,7 @@ export default configureStore({
         aboutSlice,
         categorySlice,
         productSlice,
-        footerSlice
+        footerSlice,
+        headerfooter
     }
 })
