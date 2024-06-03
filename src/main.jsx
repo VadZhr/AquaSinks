@@ -45,19 +45,19 @@ const router = createBrowserRouter([
         element: <AboutUs/>
       },
       { 
-        path: "/products",
+        path: "products",
         element: <Products />,
       },
       {
-        path: "/products/:categoryName",
+        path: "products/:categoryName",
         element: <Items />,
       },
       {
-        path: "/products/:productName/:id",
+        path: "products/:productName/:id",
         element: <ProductItem />,
       },
       {
-        path:"/swiper",
+        path:"swiper",
         element:<Slider1/>
       }
 
@@ -68,7 +68,8 @@ const router = createBrowserRouter([
     element: <AdminHome/>,
     children: [
       {
-        index: <AboutPage/>,
+        index: true,
+        element: <AboutPage/>,
       },
       {
       path: '/admin/about',
