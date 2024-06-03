@@ -1,4 +1,4 @@
-import React from "react";
+
 import ReactDOM from "react-dom/client";
 import Home from "./routes/Home.jsx";
 import Items from "./routes/Items.jsx";
@@ -32,8 +32,8 @@ import AddSingleProduct from "./admin/routes/addSingleProduct.jsx";
 import Footer from './admin/routes/Footer.jsx'
 import Headerfooter from "./admin/routes/headerfooter.jsx";
 
-
-
+import { createBrowserHistory } from 'history';
+const history = createBrowserHistory();
 
 const router = createBrowserRouter([
   {
@@ -117,9 +117,9 @@ const router = createBrowserRouter([
 ])
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-
+  
     <Provider store={store}>
-      <RouterProvider router={router} />
+      <RouterProvider router={router}  history={history}/>
     </Provider>
 
 );
