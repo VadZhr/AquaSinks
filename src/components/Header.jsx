@@ -83,8 +83,7 @@ export default function Header({ categories, contacts, headerFooterImage, header
                 {/* <Link style={active ? { visibility: "hidden" } : { visibility: "visible" }} to={'/'}><h3>Fratelli</h3></Link> */}
                 <Link to={'/'}><h3>Fratelli</h3></Link>
               </div>
-              <button className={`dropdown-menu-btn ${active ? "active" : ""}`} onClick={() => {setActive(prev => !prev);
-                 document.querySelector('.header-dropdown-lower').scrollTo(0,0) }}>Меню</button>
+              <button className={`dropdown-menu-btn ${active ? "active" : ""}`} onClick={() => {setActive(prev => !prev)}}>Меню</button>
             </div>
 
           </div>
