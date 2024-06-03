@@ -25,7 +25,7 @@ export default function ProductItem() {
   //   .products.filter((product) => product.id == id)[0];
   const link = useSelector((state) => state.path.pathForImagesPC);
   const phoneNumber = "77714604710";
-  const watsAppText = `как сделать у вас заказ на ${product?.productName}`.replaceAll(" ", "%20");
+  const watsAppText = `как сделать у вас заказ на ${product?.productName}`.split(' ').join("%20");
   const centerPositionDot = product?.productDescription.indexOf('.', product?.productDescription.length / 2 | 0) + 1
   console.log(centerPositionDot);
   console.log(product);
