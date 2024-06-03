@@ -1,5 +1,5 @@
 .header {
-    width: 100svw;
+    width: 100%;
     background-color: white;
     position: fixed;
     z-index: 1000;
@@ -107,8 +107,9 @@
     /* overflow: scroll; */
 }
 
-body:has(.header-dropdown-lower.active) {
-    overflow-y: hidden;
+body:has(.header-dropdown-lower.active)::-webkit-scrollbar-track {
+    /* overflow-y: hidden; */
+    background: black;
 }
 
 .dropdown-left {

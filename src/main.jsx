@@ -1,4 +1,4 @@
-
+import React, { StrictMode } from "react";
 import ReactDOM from "react-dom/client";
 import Home from "./routes/Home.jsx";
 import Items from "./routes/Items.jsx";
@@ -44,24 +44,20 @@ const router = createBrowserRouter([
         index: true,
         element: <AboutUs/>
       },
-      {
-        path: "/",
-        element: <AboutUs />,
-      },
       { 
-        path: "/products",
+        path: "products",
         element: <Products />,
       },
       {
-        path: "/products/:categoryName",
+        path: "products/:categoryName",
         element: <Items />,
       },
       {
-        path: "/products/:productName/:id",
+        path: "products/:productName/:id",
         element: <ProductItem />,
       },
       {
-        path:"/swiper",
+        path:"swiper",
         element:<Slider1/>
       }
 
@@ -72,7 +68,8 @@ const router = createBrowserRouter([
     element: <AdminHome/>,
     children: [
       {
-        index: <AboutPage/>,
+        index: true,
+        element: <AboutPage/>,
       },
       {
       path: '/admin/about',
@@ -117,9 +114,10 @@ const router = createBrowserRouter([
 ])
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  
+  <React.StrictMode>
     <Provider store={store}>
       <RouterProvider router={router}  history={history}/>
     </Provider>
+  </React.StrictMode>
 
 );

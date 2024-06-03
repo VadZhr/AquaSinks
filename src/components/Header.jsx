@@ -1,18 +1,20 @@
 import { useEffect, useState } from "react";
-import { Link, useLocation } from 'react-router-dom'
+import { Link, ScrollRestoration, useLocation, useNavigate } from 'react-router-dom'
 import './header.css'
 import dropdown from '../assets/images/dropdown-removebg-preview.png'
 import { nanoid } from "@reduxjs/toolkit";
 import axios from "axios";
 
+
 export default function Header({ categories, contacts, headerFooterImage, headerFooterTextColor }) {
   const [active, setActive] = useState(false)
   const phoneNumber = '+77777777777'
+  const navigate = useNavigate()
 
   console.log(headerFooterImage, 'headerFooterImage')
   const phoneNumberText = `+${phoneNumber[1]} ${phoneNumber.substring(2, 5)} ${phoneNumber.substring(5, 8)} ${phoneNumber.substring(8, 10)} ${phoneNumber.substring(10)}`
   const scrollToContact = () => {
-    setActive(prev => !prev)
+    setActive(prev => !prev)    
     window.scrollTo(0, document.querySelector('footer').offsetTop)
   }
 
@@ -58,8 +60,8 @@ export default function Header({ categories, contacts, headerFooterImage, header
               </div>
               <div className="dropdown-right">
                 <div className="right-links">
-                  <Link key={nanoid()} className="right-nav-title" style={{color: headerFooterTextColor}} to={'/products'} onClick={() => setActive(prev => !prev)}>Продукты</Link>
-                  {categories?.length && categories.map(el => <Link key={nanoid()} style={{color: headerFooterTextColor}} className="link-about" to={`/products/${el.categoryPath}`} onClick={() => setActive(prev => !prev)}>{el.categoryName}</Link>)}
+                  <Link key={nanoid()} className="right-nav-title" style={{color: headerFooterTextColor}} to={'products'} onClick={() => setActive(prev => !prev)}>Продукты</Link>
+                  {categories?.length && categories.map(el => <Link key={nanoid()} style={{color: headerFooterTextColor}} className="link-about" to={`products/${el.categoryPath}`} onClick={() => setActive(prev => !prev)}>{el.categoryName}</Link>)}
                   {/* <Link className="right-nav-title" to={'/products'}  onClick={() => setActive(prev => !prev)}>Продукты</Link>
                     <Link className="link-about" to={'/products/bath'} onClick={() => setActive(prev => !prev)}>Ванны</Link>
                     <Link className="link-about" to={'/products/sinks'} onClick={() => setActive(prev => !prev)}>Раковины</Link>
@@ -82,7 +84,7 @@ export default function Header({ categories, contacts, headerFooterImage, header
                 {/* <Link style={active ? { visibility: "hidden" } : { visibility: "visible" }} to={'/'}><h3>Fratelli</h3></Link> */}
                 <Link to={'/'}><h3>Fratelli</h3></Link>
               </div>
-              <button className={`dropdown-menu-btn ${active ? "active" : ""}`} onClick={() => setActive(prev => !prev)}>Меню</button>
+              <button className={`dropdown-menu-btn ${active ? "active" : ""}`} onClick={() => {setActive(prev => !prev)}}>Меню</button>
             </div>
 
           </div>
