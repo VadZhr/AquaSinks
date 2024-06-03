@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
-import { Link, useLocation } from 'react-router-dom'
+import { Link, ScrollRestoration, useLocation } from 'react-router-dom'
 import './header.css'
 import dropdown from '../assets/images/dropdown-removebg-preview.png'
 import { nanoid } from "@reduxjs/toolkit";
 import axios from "axios";
+
 
 export default function Header({ categories, contacts, headerFooterImage, headerFooterTextColor }) {
   const [active, setActive] = useState(false)
@@ -12,7 +13,7 @@ export default function Header({ categories, contacts, headerFooterImage, header
   console.log(headerFooterImage, 'headerFooterImage')
   const phoneNumberText = `+${phoneNumber[1]} ${phoneNumber.substring(2, 5)} ${phoneNumber.substring(5, 8)} ${phoneNumber.substring(8, 10)} ${phoneNumber.substring(10)}`
   const scrollToContact = () => {
-    setActive(prev => !prev)
+    setActive(prev => !prev)    
     window.scrollTo(0, document.querySelector('footer').offsetTop)
   }
 
@@ -82,7 +83,8 @@ export default function Header({ categories, contacts, headerFooterImage, header
                 {/* <Link style={active ? { visibility: "hidden" } : { visibility: "visible" }} to={'/'}><h3>Fratelli</h3></Link> */}
                 <Link to={'/'}><h3>Fratelli</h3></Link>
               </div>
-              <button className={`dropdown-menu-btn ${active ? "active" : ""}`} onClick={() => setActive(prev => !prev)}>Меню</button>
+              <button className={`dropdown-menu-btn ${active ? "active" : ""}`} onClick={() => {setActive(prev => !prev);
+                 document.querySelector('.header-dropdown-lower').scrollTo(0,0) }}>Меню</button>
             </div>
 
           </div>

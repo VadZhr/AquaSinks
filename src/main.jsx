@@ -1,4 +1,4 @@
-import React from "react";
+import React, { StrictMode } from "react";
 import ReactDOM from "react-dom/client";
 import Home from "./routes/Home.jsx";
 import Items from "./routes/Items.jsx";
@@ -117,9 +117,10 @@ const router = createBrowserRouter([
 ])
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-
+  <React.StrictMode>
     <Provider store={store}>
       <RouterProvider router={router} />
     </Provider>
+  </React.StrictMode>
 
 );
