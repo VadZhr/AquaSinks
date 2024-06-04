@@ -3,7 +3,10 @@
     height: 100%;
   }
  .swiper.about{
-    height: 400px;
+    
+    width: 100%;
+    aspect-ratio: 4 / 3;
+ 
  }
   .swiper-slide {
     text-align: center;

@@ -11,7 +11,7 @@
 .media {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+   
     justify-content: center;
 }
 
@@ -43,15 +43,21 @@
 .footer-wrapper-right {
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    /* gap: 40px; */
     padding: 50px 0;
+}
+.footer-wrapper-right>div:not(:last-child){
+    margin-bottom: 40px;
 }
 
 .footer_numbers {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    /* gap: 20px; */
 
+}
+.footer_numbers>a:not(:last-child){
+    margin-right: 20px;
 }
 
 .footer-emails {
@@ -67,11 +73,17 @@
 .footer-address {
     font-size:18px ;
 }
-
+.media-link:not(:last-child){
+    margin-bottom: 20px;
+}
 .media-link >div {
    display: flex;
-   gap: 10px;
+ 
 }
+.media-link >div>div {
+    
+    margin-right: 10px;
+ }
 
 .footer .adress {
     text-align: center;
