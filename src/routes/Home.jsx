@@ -14,6 +14,11 @@ export default function Home() {
   const [headerFooterImage, setHeaderFooterImage] = useState([])
   const [headerFooterTextColor, setHeaderFooterTextColor] = useState('#fff')
 
+  // document.body.style.setProperty('font-family', 'Times New Roman, serif', 'important')
+
+  const allElementsOnSite = document.querySelectorAll('*')
+  // allElementsOnSite.forEach(el => el.style.fontFamily = 'Times New Roman')
+
   useEffect(() => {
     axios
       .get('https://fratelli.kz/api/headerfooter/getdata')

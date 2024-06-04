@@ -12,6 +12,7 @@ export default function AboutUs() {
       setAboutData(data.data)
     })
   }, [])
+
   console.log(aboutData);
   return (
     <section className="about">

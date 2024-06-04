@@ -75,6 +75,7 @@
     flex-grow: 1;
     align-self: center;
     flex-basis: 50%;
+    font-family: 'Times New Roman', Times, serif;
     font-size: clamp(18px, 1.4vw, 200%);
 }
 
@@ -119,5 +120,9 @@
 @media (max-width: 510px) {
     .about-right.about-slider-container{
         flex-direction: column;
+    }
+
+    .about-right.about-slider-container p{
+        flex-basis: auto;
     }
 }
