@@ -166,8 +166,8 @@ body:has(.header-dropdown-lower.active)::-webkit-scrollbar-track {
 
 .right-nav-title {
     text-decoration: underline;
-    font-family: "Arapey", serif;
     font-size: 35px;
+    font-family: "Oswald", sans-serif;
 }
 
 .right-contacts a {
