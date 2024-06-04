@@ -63,11 +63,13 @@
     font-size: clamp(1px, 2vw, 200%);
     color: white;
   }
+  .mySwiper.about .swiper-pagination-bullet-active{
+    background: black;
+  }
 
   @media (max-width: 510px) {
     .swiper.about{
       flex-basis: auto;
-      /* aspect-ratio: 9/9; */
     }
     
   }
