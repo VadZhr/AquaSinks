@@ -11,7 +11,6 @@ export default function Header({ categories, contacts, headerFooterImage, header
   const phoneNumber = '+77777777777'
   const navigate = useNavigate()
 
-  console.log(headerFooterImage, 'headerFooterImage')
   const phoneNumberText = `+${phoneNumber[1]} ${phoneNumber.substring(2, 5)} ${phoneNumber.substring(5, 8)} ${phoneNumber.substring(8, 10)} ${phoneNumber.substring(10)}`
   const scrollToContact = () => {
     setActive(prev => !prev)    
@@ -24,6 +23,14 @@ export default function Header({ categories, contacts, headerFooterImage, header
     el.style.color = headerFooterTextColor 
   })
 
+
+  const menuBtn = () => {
+    setActive(prev => !prev)    
+    const dropDown = document.querySelector('.header-dropdown-lower')
+    if(!dropDown.classList.contains('active')){
+      dropDown.scrollTo(0,0)
+    }
+  }
 
 
 
@@ -84,7 +91,7 @@ export default function Header({ categories, contacts, headerFooterImage, header
                 {/* <Link style={active ? { visibility: "hidden" } : { visibility: "visible" }} to={'/'}><h3>Fratelli</h3></Link> */}
                 <Link to={'/'}><h3>Fratelli</h3></Link>
               </div>
-              <button className={`dropdown-menu-btn ${active ? "active" : ""}`} onClick={() => {setActive(prev => !prev)}}>Меню</button>
+              <button className={`dropdown-menu-btn ${active ? "active" : ""}`} onClick={() => menuBtn()}>Меню</button>
             </div>
 
           </div>
