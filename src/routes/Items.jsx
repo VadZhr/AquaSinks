@@ -11,14 +11,11 @@ import axios from 'axios'
 export default function Sinks({categories}) {
   const { categoryName} = useParams();
 
-  console.log(useOutletContext(),'useOutletContext()');
   // const data = useSelector((state) => state.categories.list).filter(el => el.path == productName);
   // const [allCategoryProducts, setAllCategoryProducts]=useState([])
   const categoryId= useOutletContext()[0].find(el=>el.categoryPath===categoryName)?.id
   const allCategoryProducts = useOutletContext()[1].filter(el=>el.categoryNameId===categoryId)
-  console.log(allCategoryProducts);
   //нужно сделать глобальной, чтобы при возвращении на страницу сохранялся вид плитки
-  console.log(categories,'from props'); 
   const [tile, setTile] = useState(false)
 
   return (

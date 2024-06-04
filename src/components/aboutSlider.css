@@ -3,7 +3,11 @@
     height: 100%;
   }
  .swiper.about{
-    height: 400px;
+    /* height: 400px; */
+    /* width: 50%; */
+    flex-basis: 50%;
+    /* margin: 0; */
+    aspect-ratio: 16/9;
  }
   .swiper-slide {
     text-align: center;
@@ -58,4 +62,11 @@
   .swiper-button-next::after {
     font-size: clamp(1px, 2vw, 200%);
     color: white;
+  }
+
+  @media (max-width: 510px) {
+    .swiper.about{
+      flex-basis: auto;
+    }
+    
   }
