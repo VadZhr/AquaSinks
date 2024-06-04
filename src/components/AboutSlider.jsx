@@ -10,9 +10,13 @@ import "./aboutSlider.css";
 import { Navigation } from "swiper/modules";
 import { nanoid } from "@reduxjs/toolkit";
 
-export default function AboutSlider({ aboutImages }) {
+
+export default function 
+AboutSlider({ aboutImages }) {
     console.log(aboutImages,'aboutImages' );
     const imagesToDisplay= aboutImages
+  
+
   return (
     <Swiper
       loop={true}
