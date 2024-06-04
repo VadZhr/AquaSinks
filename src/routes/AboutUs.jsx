@@ -22,7 +22,7 @@ export default function AboutUs() {
             {/* <img src={aboutBg_1} alt="background right" /> */}
             <div className="about-right about-slider-container">
               {aboutData?.aboutImagePath?.length > 0 && <AboutSlider aboutImages={aboutData?.aboutImagePath} />}
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam deleniti adipisci nulla consectetur asperiores vero odit quasi ex recusandae optio.</p>
+              <p>{aboutData.aboutSliderText}</p>
             </div>
             {aboutData?.aboutTitle && <h3>{aboutData?.aboutTitle}</h3>}
 

@@ -75,8 +75,9 @@
     flex-grow: 1;
     align-self: center;
     flex-basis: 50%;
-    font-family: 'Times New Roman', Times, serif;
     font-size: clamp(18px, 1.4vw, 200%);
+    font-family: "Oswald", sans-serif;
+
 }
 
 .about-right .home-link {

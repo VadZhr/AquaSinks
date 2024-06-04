@@ -10,6 +10,7 @@ const initialState = {
     aboutTitle: '',
     serverImages: [],
     aboutError: '',
+    aboutSliderText: '',
     aboutImagePath: [],
 }
 
@@ -57,6 +58,9 @@ const aboutSlice = createSlice({
         },
         setImages: (state, action)=> {
             state.aboutImages.push(action.payload)
+        },  
+        setAboutSliderText: (state, action) => {
+            state.aboutSliderText = action.payload
         },
         deleteImages: (state, action) => {
             state.aboutImages = state.aboutImages.filter(el => el.name ? el.name != action.payload : el != action.payload)
@@ -69,6 +73,7 @@ const aboutSlice = createSlice({
             state.aboutTitle = action.payload.aboutTitle ?? ""     
             state.aboutText = action.payload.aboutText ?? ""     
             state.serverImages = action.payload.aboutImagePath ?? [] 
+            state.aboutSliderText = action.payload.aboutSliderText ?? ''
         }) 
         builder.addCase(getAboutPage.pending, (state, action) => {
             state.isLoading = true  
@@ -129,4 +134,4 @@ const aboutSlice = createSlice({
 
 export default aboutSlice.reducer
 
-export const {setAboutText, setAboutTitle, setSelectedImages, setImages, deleteImages} = aboutSlice.actions
+export const {setAboutText, setAboutTitle, setSelectedImages, setImages, deleteImages, setAboutSliderText} = aboutSlice.actions

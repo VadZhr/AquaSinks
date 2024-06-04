@@ -4,7 +4,8 @@ import AdminService from "../../service/adminService";
 const initialState = {
     isLoading: false,
     headerFooterTextColor: "#ffffff",
-    headerFooterImage: ""
+    headerFooterImage: "",
+    mediaColor: ""
 }
 
 export const getHeaderFooterData= createAsyncThunk('headerfooter/getHeaderFooterData', async()=>{
@@ -30,12 +31,16 @@ const headerFooter = createSlice({
         setHeaderFooterImage: (state, action) => {
             state.headerFooterImage = action.payload
         },
+        setMediaColoe: (state, action) => {
+            state.mediaColor = action.payload
+        }
     },
     extraReducers: (builder) => {
         builder.addCase(getHeaderFooterData.fulfilled, (state, action) => {
             state.isLoading = false
             state.headerFooterTextColor = action.payload.headerFooterTextColor ?? '#ffffff'      
             state.headerFooterImage = action.payload.headerFooterImage ?? ""
+            state.mediaColor = action.payload.mediaColor ?? ""
 
         }) 
         builder.addCase(getHeaderFooterData.pending, (state, action) => {
@@ -62,4 +67,4 @@ const headerFooter = createSlice({
 
 export default headerFooter.reducer
 
-export const {setHeaderFooterTextColor, setHeaderFooterImage} = headerFooter.actions
+export const {setHeaderFooterTextColor, setHeaderFooterImage, setMediaColoe} = headerFooter.actions

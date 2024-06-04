@@ -13,6 +13,8 @@ export default function Home() {
   const [contacts, setContacts] = useState([]);
   const [headerFooterImage, setHeaderFooterImage] = useState([])
   const [headerFooterTextColor, setHeaderFooterTextColor] = useState('#fff')
+  const [headerFooterMediaColor, setHeaderFooterMediaColor] = useState('white')
+  
 
   // document.body.style.setProperty('font-family', 'Times New Roman, serif', 'important')
 
@@ -26,6 +28,7 @@ export default function Home() {
         console.log(data)
         setHeaderFooterImage(data.data.headerFooterImage)
         setHeaderFooterTextColor(data.data.headerFooterTextColor)
+        setHeaderFooterMediaColor(data.data.mediaColor)
       });
 
     axios
@@ -53,7 +56,7 @@ export default function Home() {
       <main className="main">
         <Outlet context={[categories, products]}></Outlet>
       </main>
-      <Footer contacts={contacts} headerFooterImage={headerFooterImage} headerFooterTextColor={headerFooterTextColor}></Footer>
+      <Footer contacts={contacts} headerFooterImage={headerFooterImage} headerFooterTextColor={headerFooterTextColor} headerFooterMediaColor={headerFooterMediaColor}></Footer>
     </section>
   );
 }

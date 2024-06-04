@@ -8,7 +8,7 @@ import satu from '../assets/white-icons/satu.png'
 import kaspi from '../assets/white-icons/kaspi-logo2.png'
 import ozon from '../assets/white-icons/ozon.png'
 import wb from '../assets/white-icons/wildberries.svg'
-export default function Footer({contacts, headerFooterImage, headerFooterTextColor}) {
+export default function Footer({contacts, headerFooterImage, headerFooterTextColor, headerFooterMediaColor}) {
   const icons = useSelector((state) => state.icons.whiteIcons);
   const link = useSelector((state) => state.path.pathForImagesPC);
   // const contacts = useSelector((state) => state.contacts.numbers);
@@ -58,9 +58,8 @@ export default function Footer({contacts, headerFooterImage, headerFooterTextCol
                     >
                       <div>
                         <div
-                          style={{
-                            backgroundImage: `url('${instagram}')`,
-                          }}
+                          style={headerFooterMediaColor == 'black' ? {backgroundImage: `url('${instagram}')`, filter: 'invert(1)'} : {backgroundImage: `url('${instagram}')`}}
+                          
                           className="footer-icon"
                           
                         ></div>{" "}
@@ -75,9 +74,7 @@ export default function Footer({contacts, headerFooterImage, headerFooterTextCol
                     >
                       <div>
                         <div
-                          style={{
-                            backgroundImage: `url(${ozon})`,
-                          }}
+                          style={headerFooterMediaColor == 'black' ? {backgroundImage: `url(${ozon})`, filter: 'invert(1)'} : {backgroundImage: `url(${ozon})`}}
                           className="footer-icon"
                         ></div>{" "}
                         <span>Ozon</span>
@@ -90,9 +87,7 @@ export default function Footer({contacts, headerFooterImage, headerFooterTextCol
                     >
                       <div>
                         <div
-                          style={{
-                            backgroundImage: `url(${kaspi})`,
-                          }}
+                          style={headerFooterMediaColor == 'black' ? {backgroundImage: `url(${kaspi})`, filter: 'invert(1)'} : {backgroundImage: `url(${kaspi})`}}
                           className="footer-icon"
                         ></div>{" "}
                         <span>Kaspi</span>
@@ -105,9 +100,7 @@ export default function Footer({contacts, headerFooterImage, headerFooterTextCol
                     >
                       <div>
                         <div
-                          style={{
-                            backgroundImage: `url(${satu})`,
-                          }}
+                          style={headerFooterMediaColor == 'black' ? {backgroundImage: `url(${satu})`, filter: 'invert(1)'} : {backgroundImage: `url(${satu})`}}
                           className="footer-icon"
                         ></div>{" "}
                         <span>Satu</span>
@@ -120,9 +113,7 @@ export default function Footer({contacts, headerFooterImage, headerFooterTextCol
                     >
                       <div>
                         <div
-                          style={{
-                            backgroundImage: `url(${wb})`,
-                          }}
+                          style={headerFooterMediaColor == 'black' ? {backgroundImage: `url(${wb})`, filter: 'invert(1)'} : {backgroundImage: `url(${wb})`}}
                           className="footer-icon"
                         ></div>{" "}
                         <span>WildBerries</span>

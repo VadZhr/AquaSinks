@@ -91,7 +91,7 @@
 .footer-icon{   
     width:calc(1vw + 1rem);
     height:calc(1vw + 1rem);
-    background-size: cover;
+    background-size: contain;
     background-position: center;
     display: flex;
     margin:auto 0;

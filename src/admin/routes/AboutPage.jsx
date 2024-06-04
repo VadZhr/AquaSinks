@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import AdminService from '../service/adminService'
 import DisplayImagesContainer from '../components/displayImagesContainer'
-import { getAboutPage, setAboutText, setAboutTitle, uploadImages, deleteImages, setSelectedImages, sendAboutText, setImages, sendAboutData } from '../features/about/aboutSlice';
+import { getAboutPage, setAboutText, setAboutTitle, uploadImages, deleteImages, setAboutSliderText, sendAboutText, setImages, sendAboutData } from '../features/about/aboutSlice';
 import { useDispatch, useSelector } from 'react-redux';
 import './aboutPage.css'
 import SubmitImages from '../components/submitImages';
@@ -14,6 +14,7 @@ export default function AboutPage() {
   const [deleteAboutServerImages, setDeleteAboutServerImages] = useState([]);
   const aboutTitle = useSelector(state => state.aboutSlice.aboutTitle)
   const aboutText = useSelector(state => state.aboutSlice.aboutText)
+  const aboutSliderText = useSelector(state => state.aboutSlice.aboutSliderText)
   const aboutImages = useSelector(state => state.aboutSlice.aboutImages)
   const serverImages = useSelector(state => state.aboutSlice.serverImages)
   const isLoading = useSelector(state => state.aboutSlice.isLoading)
@@ -37,21 +38,14 @@ export default function AboutPage() {
     formData.append('aboutTitle', aboutTitle);
     formData.append('aboutText', aboutText);
     formData.append('aboutImagesToDelete', JSON.stringify(deleteAboutServerImages));
+    formData.append('aboutSliderText', aboutSliderText)
     fDataImages.map(el => formData.append('image', el))
     // console.log(...formData)
     dispatch(sendAboutData(formData)).then(data => console.log(data))
   };
 
-  console.log(aboutImages, 'aboutImages')
-
-
-  // const onInputChange = (e) => {
-  //   setImage(e.target.files);
-  // };
-
 
   function deleteFdataImages(imageName) {
-    // console.log(imageName, 'imageName')
     setFDataImages(prev => prev.filter(el => el.name != imageName))
   }
 
@@ -72,12 +66,11 @@ export default function AboutPage() {
             <div className="row-sub-container">
               <DisplayImagesContainer aboutServerImages={serverImages} setDeleteAboutServerImages={setDeleteAboutServerImages} deleteFDataImages={deleteFdataImages} deleteDisplayedImages={deleteImages} setSelectedImages={deleteAboutServerImages} images={aboutImages} multiple={true} />
               <SubmitImages multiple={true} submitTo={uploadImages} setImages={setImages} setFDataImages={setFDataImages} />
-              {/* <form onSubmit={submitImage}>
-              <label htmlFor="about-image" className='about-image'></label>
-              <input className='add-images' type="file" accept=".jpg" id='about-image' onChange={onInputChange} multiple />
-              <button type="submit" ref={sendButton}>Отправить</button>
-            </form> */}
             </div>
+          </div>
+          <div className="row">
+            <label htmlFor="">Текст для изображений</label>
+            <textarea name="" cols="40" rows="5" onChange={(e) => dispatch(setAboutSliderText(e.target.value))} value={aboutSliderText}></textarea>
           </div>
           <button className='admin-save-btn' type="submit">Сохранить</button>
         </div>

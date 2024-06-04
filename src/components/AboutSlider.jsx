@@ -28,11 +28,6 @@ AboutSlider({ aboutImages }) {
       {imagesToDisplay.map((el, index) => (
         <SwiperSlide key={nanoid()}>
           <img src={`https://fratelli.kz/uploads/${el}`} alt="#" />
-          {/* {index == 0 && (
-            <div className="product-item-name">
-              <span className="">{item.name}</span>
-            </div>
-          )} */}
         </SwiperSlide>
       ))}
     </Swiper>
