@@ -74,12 +74,6 @@
     margin-bottom: 70px;
 
 }
-/* Тут сделал */
-/* .product-item-img.slider.small{
-    margin-bottom: 40px;
-  
-   
-} */
 
 @media (max-width: 1623px) {
     .product-item-decription {
@@ -122,7 +116,6 @@
     font-family: "Oswald", sans-serif;
     font-weight: 300;
     font-size: clamp(20px, 1.2vw + 1rem, 10rem);
-    /* line-height: 0.5; */
 }
 
 .product-price .right{

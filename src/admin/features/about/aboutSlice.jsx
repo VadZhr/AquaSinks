@@ -16,7 +16,6 @@ const initialState = {
 
 export const getAboutPage = createAsyncThunk('about/getAboutPage', async()=>{
     const response = await AdminService.getAboutPage()
-    console.log(response, 'response')
     return response.data
 })
 export const sendAboutText = createAsyncThunk('about/sendAboutText', async(payload, thunkAPI)=>{

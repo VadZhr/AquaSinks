@@ -14,23 +14,15 @@ export default function Home() {
   const [headerFooterImage, setHeaderFooterImage] = useState([])
   const [headerFooterTextColor, setHeaderFooterTextColor] = useState('#fff')
   const [headerFooterMediaColor, setHeaderFooterMediaColor] = useState('white')
-  
-
-  // document.body.style.setProperty('font-family', 'Times New Roman, serif', 'important')
-
-  const allElementsOnSite = document.querySelectorAll('*')
-  // allElementsOnSite.forEach(el => el.style.fontFamily = 'Times New Roman')
 
   useEffect(() => {
     axios
       .get('https://fratelli.kz/api/headerfooter/getdata')
       .then(data => {
-        console.log(data)
         setHeaderFooterImage(data.data.headerFooterImage)
         setHeaderFooterTextColor(data.data.headerFooterTextColor)
         setHeaderFooterMediaColor(data.data.mediaColor)
       });
-
     axios
       .get("https://fratelli.kz/api/categories/getallcategories")
       .then((data) => {
@@ -47,8 +39,7 @@ export default function Home() {
         setContacts(data.data);
       });
   }, []);
-  //   /products/getallproducts
-  // /categories/getallcategories
+
   return (
     <section className="home">
       <ScrollRestoration />

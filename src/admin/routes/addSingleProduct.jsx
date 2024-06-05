@@ -35,6 +35,7 @@ export default function addSingleProduct() {
     const [productHeight, setProductHeight] = useState('')
     const [productColor, setProductColor] = useState('')
     const [productCoating, setProductCoating] = useState('')
+    const [productColoredImageText, setProductColoredImageText] = useState('')
 
     const [productRealPrice, setProductActualPrice] = useState('')
     const [productDiscountPrice, setProductDiscountPrice] = useState('')
@@ -68,11 +69,13 @@ export default function addSingleProduct() {
                 },
                 productRealPrice,
                 productDiscountPrice,
-                categoryNameId
+                categoryNameId,
+                coloredSliderText: productColoredImageText
             }))
         // console.log(...formData)
         dispatch(addProducts(formData)).then(data => { console.log(data) })
     }
+
 
     return (
         <>
@@ -88,6 +91,10 @@ export default function addSingleProduct() {
             <div className="product-images">
                 <SubmitProductImages productPropertiesImage={productPropertiesImage} setProductPropertiesImage={setProductPropertiesImage} productDocuments={productDocuments} productDocumentsToDisplay={productDocumentsToDisplay} setProductDocumentsToDisplay={setProductDocumentsToDisplay} setProductDocuments={setProductDocuments} required={true} productMainImage={productMainImage} setProductMainImage={setProductMainImage} productImageWhiteBG={productImageWhiteBG} setProductImageWhiteBG={setProductImageWhiteBG} productImageInterior={productImageInterior} setProductImageInterior={setProductImageInterior} productImageColored={productImageColored} setProductImageColored={setProductImageColored} />
             </div>
+            <div className="row">
+                <label htmlFor="">Текст для слайдера продуктов в цвете</label>
+                <textarea name="" id="" cols={40} onChange={(e) => setProductColoredImageText(e.target.value)} value={productColoredImageText}></textarea>
+            </div>   
             <div className="row">
                 <label>Характеристики</label>
                 <div className="row product-charachteristics">
@@ -114,8 +121,7 @@ export default function addSingleProduct() {
             <div className="row">
                 <label htmlFor="discountPrice">Цена по скидке</label>
                 <input type="text" id='discountPrice' onChange={(e) => setProductDiscountPrice(e.target.value)} required/>
-            </div>           
-
+            </div> 
             <button className="admin-save-btn">добавить</button>
         </form>
         <UploadedFiles isLoading={isLoading}/>

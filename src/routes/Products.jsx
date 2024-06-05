@@ -3,11 +3,8 @@ import Category from "../components/Category";
 import "./products.css";
 import { useSelector } from "react-redux";
 import { ScrollRestoration, Link, useOutletContext } from 'react-router-dom'
-import axios from "axios";
 
 export default function Products() {
-  const data = useSelector((state) => state.categories.list);
-  const [categories,setCategories]=useState([]);
   const allCategoryProducts = useOutletContext()[0]
   console.log(allCategoryProducts,1234);
   return (

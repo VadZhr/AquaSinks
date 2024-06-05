@@ -1,21 +1,15 @@
 import Item from '../components/Product'
 import './items.css'
 import { useOutletContext, useParams } from 'react-router-dom'
-import { useSelector } from 'react-redux'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import Category from '../components/Category'
 import BackLink from '../components/BackLink'
 import { ScrollRestoration } from 'react-router-dom'
-import axios from 'axios'
 
 export default function Sinks({categories}) {
   const { categoryName} = useParams();
-
-  // const data = useSelector((state) => state.categories.list).filter(el => el.path == productName);
-  // const [allCategoryProducts, setAllCategoryProducts]=useState([])
   const categoryId= useOutletContext()[0].find(el=>el.categoryPath===categoryName)?.id
   const allCategoryProducts = useOutletContext()[1].filter(el=>el.categoryNameId===categoryId)
-  //нужно сделать глобальной, чтобы при возвращении на страницу сохранялся вид плитки
   const [tile, setTile] = useState(false)
 
   return (

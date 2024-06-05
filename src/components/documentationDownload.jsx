@@ -9,7 +9,6 @@ export default function DocumentationDownload({linkToFile}) {
         <a className="document" href={linkToFile}  target='_blank'>
             <p>Паспорт изделия</p>
             <div className="images">
-                
                 <img src={openfile} alt="" className="download" width={30} />
             </div>
         </a>

@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import './about.css'
-import aboutBg_1 from '../assets/images/aboutus_1.jpg'
 import axios from 'axios'
 import AboutSlider from '../components/AboutSlider'
 
@@ -13,19 +12,16 @@ export default function AboutUs() {
     })
   }, [])
 
-  console.log(aboutData);
   return (
     <section className="about">
       <div className="container">
         <div className="about-wrapper">
           <div className="about-right">
-            {/* <img src={aboutBg_1} alt="background right" /> */}
             <div className="about-right about-slider-container">
               {aboutData?.aboutImagePath?.length > 0 && <AboutSlider aboutImages={aboutData?.aboutImagePath} />}
               <p>{aboutData.aboutSliderText}</p>
             </div>
             {aboutData?.aboutTitle && <h3>{aboutData?.aboutTitle}</h3>}
-
             {aboutData?.aboutText && <pre>{aboutData?.aboutText}</pre>}
           </div>
         </div>
