@@ -12,7 +12,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* flex-wrap: wrap; */
 }
 
 .slider-3 .mySwiper:nth-child(1) {
@@ -41,6 +40,10 @@
 .slider-3 .swiper-button-prev{
   width: 8%;
   left: 77%;
+}
+
+.slider-3 .mySwiper:nth-child(2) .text-slider-3{
+  width: 50%;
 }
 
 

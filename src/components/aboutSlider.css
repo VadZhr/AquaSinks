@@ -4,8 +4,7 @@
 }
 
 .swiper.about {
-  flex-basis: 50%;
-
+  max-width: 50%;
   /*не работает на старых браузерах*/
   aspect-ratio: 16/9;
 }
@@ -70,6 +69,6 @@
 
 @media (max-width: 510px) {
   .swiper.about {
-    flex-basis: auto;
+    max-width: 100%;
   }
 }
