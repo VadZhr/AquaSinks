@@ -7,7 +7,7 @@ export default function DocumentationDownload({linkToFile}) {
   const link = useSelector((state) => state.path.pathForImagesPC);
     return (
         <a className="document" href={linkToFile}  target='_blank'>
-            <p>Пасспорт изделия</p>
+            <p>Паспорт изделия</p>
             <div className="images">
                 
                 <img src={openfile} alt="" className="download" width={30} />

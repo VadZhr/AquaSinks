@@ -78,11 +78,12 @@
 }
 .media-link >div {
    display: flex;
- 
+    align-items: center;
 }
 .media-link >div>div {
     
     margin-right: 10px;
+    
  }
 
 .footer .adress {
