@@ -8,27 +8,21 @@ import Slider3 from "../components/Slider3";
 import DocumentationDownload from '../components/documentationDownload'
 import whatsapp from '../assets/images/WhatsAppButtonWhiteMedium.svg'
 import { nanoid } from "@reduxjs/toolkit";
+
 export default function ProductItem() {
   const { productName, id } = useParams();
   const product = useOutletContext()[1].find(el => el._id === id)
   const categoryName = useOutletContext()[0].find(el => el.categoryPath == productName)?.id
 
-  //productRealPrice
-  //productDiscountPrice
-
   if (product?.categoryNameId !== categoryName) {
     return <p>Не найдено</p>
   }
-  console.log(product, 'product');
-  // const item = useSelector((state) => state.categories.list)
-  //   .filter((el) => el.path == productName)[0]
-  //   .products.filter((product) => product.id == id)[0];
+
   const link = useSelector((state) => state.path.pathForImagesPC);
   const phoneNumber = "77714604710";
   const watsAppText = `как сделать у вас заказ на ${product?.productName}`.split(' ').join("%20");
   const centerPositionDot = product?.productDescription.indexOf('.', product?.productDescription.length / 2 | 0) + 1
-  console.log(centerPositionDot);
-  console.log(product);
+
   // Сделать, чтобы работало при перезагрузке
   return (
     <>
@@ -73,7 +67,7 @@ export default function ProductItem() {
           <div className="container">
             <div className="product-item-img slider small">
               {/* 3 набор фото в цвете */}
-              <Slider3 item={product} link={link} images={product.productImageColored} ></Slider3>
+              <Slider3 images={product.productImageColored} coloredSliderText={product.coloredSliderText}></Slider3>
             </div>
           </div>
 

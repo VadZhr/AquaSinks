@@ -11,7 +11,7 @@ import "./slider3.css";
 // import required modules
 import { Navigation} from "swiper/modules";
 import { nanoid } from "@reduxjs/toolkit";
-export default function Slider3({ item, link,images }) {
+export default function Slider3({ images, coloredSliderText }) {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
   const [thumbsSwiperFirst, setThumbsSwiperFirst] = useState(null);
 
@@ -52,7 +52,7 @@ export default function Slider3({ item, link,images }) {
           {images.map(() => (
             <SwiperSlide key={nanoid()}>
               <div className="text-slider-3">
-                Like a classic element, it conveys an ideal of absolute beauty.
+                {coloredSliderText}
               </div>
             </SwiperSlide>
           ))}

@@ -11,13 +11,10 @@ export default function headerfooter() {
     const isLoading = useSelector(state => state.headerfooter.isLoading)
     const mediaColor = useSelector(state => state.headerfooter.mediaColor)
 
-
     useEffect(() => {
-        dispatch(getHeaderFooterData()).then(data => console.log(data))
+        dispatch(getHeaderFooterData())
     }, [])
 
-
-    console.log(mediaColor)
     async function addImages(e, stateOfImages, forFormDataArray) {
         e.preventDefault();
         Object.keys(e.target.files,).forEach(i => {
@@ -38,7 +35,6 @@ export default function headerfooter() {
         formData.append('headerFooterImage', imageForServer.current)
         formData.append('mediaColor', mediaColor)
         formData.append('headerFooterTextColor', JSON.stringify(headerFooter.headerFooterTextColor))    
-        console.log(...formData)        
         dispatch(addHeaderFooterData(formData)).then(data => console.log(data))
     }
 

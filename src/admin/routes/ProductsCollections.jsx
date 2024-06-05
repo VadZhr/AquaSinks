@@ -16,8 +16,8 @@ export default function ProductsCollections() {
     const [filter, setFilter] = useState('')
     
     useEffect(() => {
-        dispatch(getAllProducts()).then(data => console.log(data))
-        dispatch(getCategoryPage()).then(data => console.log(data))        
+        dispatch(getAllProducts())
+        dispatch(getCategoryPage())      
     }, [])
 
     function filterProducts(filterName){

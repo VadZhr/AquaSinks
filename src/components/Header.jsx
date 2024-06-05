@@ -1,10 +1,7 @@
-import { useEffect, useState } from "react";
-import { Link, ScrollRestoration, useLocation, useNavigate } from 'react-router-dom'
+import { useState } from "react";
+import { Link, useNavigate } from 'react-router-dom'
 import './header.css'
-import dropdown from '../assets/images/dropdown-removebg-preview.png'
 import { nanoid } from "@reduxjs/toolkit";
-import axios from "axios";
-
 
 export default function Header({ categories, contacts, headerFooterImage, headerFooterTextColor }) {
   const [active, setActive] = useState(false)
@@ -13,27 +10,24 @@ export default function Header({ categories, contacts, headerFooterImage, header
 
   const phoneNumberText = `+${phoneNumber[1]} ${phoneNumber.substring(2, 5)} ${phoneNumber.substring(5, 8)} ${phoneNumber.substring(8, 10)} ${phoneNumber.substring(10)}`
   const scrollToContact = () => {
-    setActive(prev => !prev)    
+    setActive(prev => !prev)
     window.scrollTo(0, document.querySelector('footer').offsetTop)
   }
 
   const allElements = document.querySelectorAll('.header *')
 
   allElements.forEach(el => {
-    el.style.color = headerFooterTextColor 
+    el.style.color = headerFooterTextColor
   })
 
 
   const menuBtn = () => {
-    setActive(prev => !prev)    
+    setActive(prev => !prev)
     const dropDown = document.querySelector('.header-dropdown-lower')
-    if(!dropDown.classList.contains('active')){
-      dropDown.scrollTo(0,0)
+    if (!dropDown.classList.contains('active')) {
+      dropDown.scrollTo(0, 0)
     }
   }
-
-
-
 
 
   return (
@@ -50,8 +44,8 @@ export default function Header({ categories, contacts, headerFooterImage, header
               </div>
               <div className="dropdown-right">
                 <div className="right-links">
-                  <Link key={nanoid()} className="right-nav-title" style={{color: headerFooterTextColor}} to={'products'} onClick={() => setActive(prev => !prev)}>Продукты</Link>
-                  {categories?.length && categories.map(el => <Link key={nanoid()} style={{color: headerFooterTextColor}} className="link-about" to={`products/${el.categoryPath}`} onClick={() => setActive(prev => !prev)}>{el.categoryName}</Link>)}
+                  <Link key={nanoid()} className="right-nav-title" style={{ color: headerFooterTextColor }} to={'products'} onClick={() => setActive(prev => !prev)}>Продукты</Link>
+                  {categories?.length && categories.map(el => <Link key={nanoid()} style={{ color: headerFooterTextColor }} className="link-about" to={`products/${el.categoryPath}`} onClick={() => setActive(prev => !prev)}>{el.categoryName}</Link>)}
                 </div>
 
                 <div className="right-navigation">

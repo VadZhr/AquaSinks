@@ -14,6 +14,7 @@ import {
     setProductcategoryNameId,
     deleteProduct,
     updateProduct,
+    setProductColoredImageText,
 } from '../features/product/product.Slice'
 import { getCategoryPage } from '../features/category/categorySlice'
 import UploadedFiles from '../components/uploadedFiles'
@@ -72,7 +73,8 @@ export default function editSingleProduct() {
             productName: product.productName,
             productRealPrice: product.productRealPrice,
             productDiscountPrice: product.productDiscountPrice,
-            categoryNameId: product.categoryNameId
+            categoryNameId: product.categoryNameId,
+            coloredSliderText: product.productColoredImageText
         }))
         formData.append('imagesToDelete', JSON.stringify(deleteImageFromServerArray))
         // console.log(...formData)
@@ -86,7 +88,6 @@ export default function editSingleProduct() {
         if (fDataWhiteBGImage.find(el => el.name == imageName)) setFDataWhiteBGImgae(prev => prev.filter(el => el.name != imageName))
         if (fDataDocuments.find(el => el.name == imageName)) setFDataDocuments(prev => prev.filter(el => el.name != imageName))
         if (fDataParametersImage.find(el => el.name == imageName)) setFDataParametersImage(prev => prev.filter(el => el.name != imageName))
-            
     }
 
     return (
@@ -112,6 +113,10 @@ export default function editSingleProduct() {
                         setFDataColoredImgae={setFDataColoredImgae}
                         required={false}
                     />
+                </div>
+                <div className="row">
+                    <label htmlFor="">Текст для слайдера продуктов в цвете</label>
+                    <textarea name="" id="" cols={40} onChange={(e) => dispatch(setProductColoredImageText(e.target.value))} value={product.productColoredImageText}></textarea>
                 </div>
                 <div className="row">
                     <label htmlFor="">Характеристики</label>

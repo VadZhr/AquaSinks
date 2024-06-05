@@ -21,6 +21,7 @@ const initialState = {
     errorMessage: '',
     allProducts: [],
     productsForFitlering: [],
+    productColoredImageText: '',
 }
 
 // const getAllProducts = createAsyncThunk()
@@ -62,7 +63,7 @@ const productSlice = createSlice({
             state.productDocuments = product.productDocuments ?? []
             state.productId = product._id ?? ''
             state.categoryNameId = product.categoryNameId ?? ''
-            
+            state.productColoredImageText = product.coloredSliderText ?? ''
         },
         setProductName: (state, action) => {
             state.productName = action.payload
@@ -99,6 +100,9 @@ const productSlice = createSlice({
         },
         setProductParamsImage: (state, action) => {
             state.productParamsImage = [action.payload]
+        },
+        setProductColoredImageText: (state, action) => {
+            state.productColoredImageText = action.payload
         },
 
         deleteDocuments: (state, action) => {
@@ -209,4 +213,5 @@ export const {
     deleteColoredImage,
     deleteDocuments,
     deleteProductParamsImage,
-    productsFiltering} = productSlice.actions
+    productsFiltering,
+    setProductColoredImageText} = productSlice.actions

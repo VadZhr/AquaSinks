@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react'
 import './product.css'
 import { Link, useLocation } from 'react-router-dom'
 import { useSelector } from 'react-redux'

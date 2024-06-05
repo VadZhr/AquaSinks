@@ -10,7 +10,6 @@ const initialState = {
 
 export const getHeaderFooterData= createAsyncThunk('headerfooter/getHeaderFooterData', async()=>{
     const response = await AdminService.getHeaderFooterData()
-    console.log(response, 'response')
     return response.data
 })
 export const addHeaderFooterData = createAsyncThunk('headerfooter/addHeaderFooterData', async(payload, thunkAPI)=>{

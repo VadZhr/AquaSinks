@@ -78,16 +78,16 @@
 }
 .media-link >div {
    display: flex;
- 
 }
+
 .media-link >div>div {
-    
     margin-right: 10px;
  }
 
 .footer .adress {
     text-align: center;
 }
+
 .footer-icon{   
     width:calc(1vw + 1rem);
     height:calc(1vw + 1rem);
@@ -96,6 +96,7 @@
     display: flex;
     margin:auto 0;
 }   
+
 @media (max-width: 750px) {
     .footer-wrapper {
         flex-direction: column;
@@ -117,6 +118,7 @@
         width: 100%;
     }
 }
+
 @media (max-width:600px){
     .footer_numbers {
         flex-direction: column;
