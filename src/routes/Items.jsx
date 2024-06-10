@@ -8,7 +8,8 @@ import { ScrollRestoration } from 'react-router-dom'
 
 export default function Sinks({categories}) {
   const { categoryName} = useParams();
-  const categoryId= useOutletContext()[0].find(el=>el.categoryPath===categoryName)?.id
+  const categoryId= useOutletContext()[0].find(el=>el.categoryPath===categoryName&& !el.hidden)?.id;
+
   const allCategoryProducts = useOutletContext()[1].filter(el=>el.categoryNameId===categoryId && el.hidden == false)
   const [tile, setTile] = useState(false)
 
@@ -38,7 +39,7 @@ export default function Sinks({categories}) {
         </div>}
 
         {/* СТЕНА */}
-        {tile == false && <div className="sinks-wrapper wall">
+        {categoryId && tile == false && <div className="sinks-wrapper wall">
 
           <div className="sinks-wrapper">
             {allCategoryProducts?.map(el => <Item key={el._id} image={`https://fratelli.kz/uploads/${el.productMainImage[0]}`} name={el.productName} id={el._id} />)}</div>
