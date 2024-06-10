@@ -12,7 +12,7 @@ import { nanoid } from "@reduxjs/toolkit";
 export default function ProductItem() {
   const { productName, id } = useParams();
   const product = useOutletContext()[1].find(el => el._id === id)
-  const categoryName = useOutletContext()[0].find(el => el.categoryPath == productName)?.id
+  const categoryName = useOutletContext()[0].find(el => el.categoryPath == productName && !el.hidden)?.id
 
   if (product?.categoryNameId !== categoryName) {
     return <p>Не найдено</p>
