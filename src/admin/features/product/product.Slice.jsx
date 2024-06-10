@@ -21,6 +21,7 @@ const initialState = {
     errorMessage: '',
     allProducts: [],
     productsForFitlering: [],
+    productHidden: false,
     productColoredImageText: '',
 }
 
@@ -64,6 +65,7 @@ const productSlice = createSlice({
             state.productId = product._id ?? ''
             state.categoryNameId = product.categoryNameId ?? ''
             state.productColoredImageText = product.coloredSliderText ?? ''
+            state.productHidden = product.hidden ?? false
         },
         setProductName: (state, action) => {
             state.productName = action.payload
@@ -103,6 +105,9 @@ const productSlice = createSlice({
         },
         setProductColoredImageText: (state, action) => {
             state.productColoredImageText = action.payload
+        },
+        setProductHidden : (state, action) => {
+            state.productHidden = action.payload
         },
 
         deleteDocuments: (state, action) => {
@@ -214,4 +219,5 @@ export const {
     deleteDocuments,
     deleteProductParamsImage,
     productsFiltering,
-    setProductColoredImageText} = productSlice.actions
+    setProductColoredImageText,
+    setProductHidden} = productSlice.actions

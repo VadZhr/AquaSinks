@@ -5,7 +5,7 @@ import { useSelector } from "react-redux";
 import { ScrollRestoration, Link, useOutletContext } from 'react-router-dom'
 
 export default function Products() {
-  const allCategoryProducts = useOutletContext()[0]
+  const allCategoryProducts = useOutletContext()[0].filter(el => !el.hidden)
   console.log(allCategoryProducts,1234);
   return (
     <>

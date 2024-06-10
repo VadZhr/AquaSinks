@@ -36,7 +36,7 @@ export default function ProductsCollections() {
                     </select>
                     <div className="products">
                         {allProducts.length > 0 && allProducts?.map((element, i) => (
-                            <Link key={i} className="products-card" to={`/admin/products/${element._id}`}>
+                            <Link key={i} className="products-card" style={element.hidden ? {boxShadow: 'inset 0 0 88px 0px rgba(123, 123, 123, 1)', borderColor: 'rgba(123, 123, 123, 1)'} : {boxShadow: 'inset 0 0 88px 0px rgba(73, 163, 241, .5)', borderColor: 'rgba(73, 163, 241, .5)'}} to={`/admin/products/${element._id}`}>
                                 <h1>{element.productName}</h1>
                             </Link>
                         ))}

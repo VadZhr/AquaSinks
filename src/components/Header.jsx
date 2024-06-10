@@ -45,7 +45,7 @@ export default function Header({ categories, contacts, headerFooterImage, header
               <div className="dropdown-right">
                 <div className="right-links">
                   <Link key={nanoid()} className="right-nav-title" style={{ color: headerFooterTextColor }} to={'products'} onClick={() => setActive(prev => !prev)}>Продукты</Link>
-                  {categories?.length && categories.map(el => <Link key={nanoid()} style={{ color: headerFooterTextColor }} className="link-about" to={`products/${el.categoryPath}`} onClick={() => setActive(prev => !prev)}>{el.categoryName}</Link>)}
+                  {categories?.length && categories.filter(el => !el.hidden).map(el => <Link key={nanoid()} style={{ color: headerFooterTextColor }} className="link-about" to={`products/${el.categoryPath}`} onClick={() => setActive(prev => !prev)}>{el.categoryName}</Link>)}
                 </div>
 
                 <div className="right-navigation">

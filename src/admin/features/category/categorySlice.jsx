@@ -9,6 +9,7 @@ const initialState = {
     categoryError: '',
     categoryBlob: '',
     categoryId: '',
+    hidden: false,
     allCategories: []
 }
 
@@ -50,6 +51,7 @@ const categorySlice = createSlice({
             state.categoryName = action.payload.categoryName
             state.categoryBlob = action.payload.blob
             state.categoryId = action.payload.id
+            state.hidden = action.payload.hidden ?? false
         },
         setEmpty: (state) => {
             state.isLoading = false
@@ -60,6 +62,10 @@ const categorySlice = createSlice({
             state.categoryBlob = ''
             state.categoryId = ''
             state.allCategories = []
+        },
+        setHidden: (state, action) => {
+            console.log(action.payload, 'pa')
+            state.hidden = action.payload
         }
       
     },
@@ -114,4 +120,4 @@ const categorySlice = createSlice({
 
 export default categorySlice.reducer
 
-export const {setCategoryName, setSingleCategory, setEmpty} = categorySlice.actions
+export const {setCategoryName, setSingleCategory, setEmpty, setHidden} = categorySlice.actions

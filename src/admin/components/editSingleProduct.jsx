@@ -15,6 +15,7 @@ import {
     deleteProduct,
     updateProduct,
     setProductColoredImageText,
+    setProductHidden
 } from '../features/product/product.Slice'
 import { getCategoryPage } from '../features/category/categorySlice'
 import UploadedFiles from '../components/uploadedFiles'
@@ -28,7 +29,10 @@ export default function editSingleProduct() {
 
     const dispatch = useDispatch()
     const navigate = useNavigate()
+    
+    const params = useParams()
 
+    console.log(params)
 
     //ЛОКАЛЬНЫЕ ДАННЫЕ КОТОРЫЕ БУДУТ ЛЕТЕТЬ НА СЕРВРЕ В ФОРМАТЕ FORMDATA
     const [fDataMainImage, setFDataMainImgae] = useState([])
@@ -74,12 +78,17 @@ export default function editSingleProduct() {
             productRealPrice: product.productRealPrice,
             productDiscountPrice: product.productDiscountPrice,
             categoryNameId: product.categoryNameId,
-            coloredSliderText: product.productColoredImageText
+            coloredSliderText: product.productColoredImageText,
+            hidden: product.productHidden
         }))
         formData.append('imagesToDelete', JSON.stringify(deleteImageFromServerArray))
         // console.log(...formData)
         dispatch(updateProduct({ formData, id: product.productId })).then(data => console.log(data))
     }
+
+
+    console.log(path, 'path')
+    console.log(product.categoryNameId.toString(), 'categoryNameId')
 
     function deleteFormDataFile(imageName) {
         if (fDataMainImage.find(el => el.name == imageName)) setFDataMainImgae(prev => prev.filter(el => el.name != imageName))
@@ -134,17 +143,27 @@ export default function editSingleProduct() {
                     <label htmlFor="">Фактическая цена</label>
                     <input type="text" id='category-name' value={product.productRealPrice} onChange={(e) => dispatch(setProductRealPrice(e.target.value))} />
                 </div>
-                <div className="row">
-                    <label htmlFor="">Категория</label>
+                <div className="row" >
+                    <label htmlFor="" style={!path.every(el => el.id != product.categoryNameId) ? {color: 'black'} : {color: 'red'}}  >Категория</label>
                     <select name="" id="" onChange={(e) => dispatch(setProductcategoryNameId(e.target.value))}>
-                        <option disabled hidden>Выберите Категорию</option>
+                        <option selected={path.includes(product.categoryNameId) ? false : true}>Выберите Категорию</option>
                         {path?.length && path.map(el => <option value={el.id} selected={product.categoryNameId == el.id ? true : false} key={el.id}>{el.categoryName}</option>)}
                     </select>
+                    {path.every(el => el.id != product.categoryNameId) && <span style={{color: 'red', marginLeft: '30px'}}>добавьте категорию</span>}
                 </div>
                 <div className="row">
                     <label htmlFor="">Цена по скидке</label>
                     <input type="text" id='category-name' value={product.productDiscountPrice} onChange={(e) => dispatch(setProductDiscountPrice(e.target.value))} />
                 </div>
+                {params.singleproduct && <div className="row">
+                <label htmlFor="">Отображать</label>
+                <div>
+                    <label htmlFor="radio-display1" style={{marginRight: '5px'}}>да</label>
+                    <input type="radio" id="radio-display1" name='display' style={{marginRight: '20px'}} checked={!product.productHidden} onClick={(e) => dispatch(setProductHidden(!e.target.checked))}/>
+                    <label htmlFor="radio-display2" style={{marginRight: '5px'}}>нет</label>
+                    <input type="radio" id="radio-display2" name='display' checked={product.productHidden} onClick={(e) => dispatch(setProductHidden(e.target.checked))}/>
+                </div>
+                </div>}
                 <button className="admin-save-btn">Сохранить</button>
                 <div className="row">
                 </div>

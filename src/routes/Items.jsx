@@ -9,7 +9,7 @@ import { ScrollRestoration } from 'react-router-dom'
 export default function Sinks({categories}) {
   const { categoryName} = useParams();
   const categoryId= useOutletContext()[0].find(el=>el.categoryPath===categoryName)?.id
-  const allCategoryProducts = useOutletContext()[1].filter(el=>el.categoryNameId===categoryId)
+  const allCategoryProducts = useOutletContext()[1].filter(el=>el.categoryNameId===categoryId && el.hidden == false)
   const [tile, setTile] = useState(false)
 
   return (

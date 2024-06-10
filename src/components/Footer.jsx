@@ -23,6 +23,7 @@ export default function Footer({ contacts, headerFooterImage, headerFooterTextCo
           <div className="footer-wrapper">
             <div className="footer-wrapper-left">
               <div className="media">
+                {contacts?.instagramLink && 
                 <a
                   href={contacts?.instagramLink}
                   target="_blank"
@@ -39,7 +40,9 @@ export default function Footer({ contacts, headerFooterImage, headerFooterTextCo
                     <span>Instagram</span>
                   </div>
                 </a>
-                <a
+                }
+                {contacts?.ozonLink && 
+                <a 
                   href={contacts?.ozonLink}
                   target="_blank"
                   className="media-link"
@@ -51,7 +54,8 @@ export default function Footer({ contacts, headerFooterImage, headerFooterTextCo
                     ></div>{" "}
                     <span>Ozon</span>
                   </div>
-                </a>
+                </a>}
+                {contacts?.kaspiLink && 
                 <a
                   href={contacts?.kaspiLink}
                   target="_blank"
@@ -64,7 +68,8 @@ export default function Footer({ contacts, headerFooterImage, headerFooterTextCo
                     ></div>{" "}
                     <span>Kaspi</span>
                   </div>
-                </a>
+                </a>}
+                {contacts?.satuLink && 
                 <a
                   href={contacts?.satuLink}
                   target="_blank"
@@ -77,7 +82,8 @@ export default function Footer({ contacts, headerFooterImage, headerFooterTextCo
                     ></div>{" "}
                     <span>Satu</span>
                   </div>
-                </a>
+                </a>}
+                {contacts?.wildBerriesLink && 
                 <a
                   href={contacts?.wildBerriesLink}
                   target="_blank"
@@ -90,7 +96,7 @@ export default function Footer({ contacts, headerFooterImage, headerFooterTextCo
                     ></div>{" "}
                     <span>WildBerries</span>
                   </div>
-                </a>
+                </a>}
               </div>
             </div>
             <div className="footer-wrapper-right">

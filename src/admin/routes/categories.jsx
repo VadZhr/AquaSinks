@@ -33,7 +33,7 @@ export default function Categories() {
   return (
     <section className="admin-categories">
       {allCategories.map((element, i) => (
-        <Link key={i} className="category-card" to={`/admin/categories/${element.categoryPath}`}>
+        <Link key={i} className="category-card" style={element.hidden ? {boxShadow: 'inset 0 0 88px 0px rgba(123, 123, 123, 1)', borderColor: 'rgba(123, 123, 123, 1)'} : {boxShadow: 'inset 0 0 88px 0px rgba(73, 163, 241, .5)', borderColor: 'rgba(73, 163, 241, .5)'}}  to={`/admin/categories/${element.categoryPath}`}>
           <h1>{element.categoryName}</h1>
         </Link>
       ))}
