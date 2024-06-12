@@ -8,5 +8,6 @@
     flex-grow: 1;
     width: 100svw;
     padding-top: 42px;
+    position: relative;
 }
 

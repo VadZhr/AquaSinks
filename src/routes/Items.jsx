@@ -12,7 +12,10 @@ export default function Sinks({categories}) {
 
   const allCategoryProducts = useOutletContext()[1].filter(el=>el.categoryNameId===categoryId && el.hidden == false)
   const [tile, setTile] = useState(false)
-
+  if (!categoryId ) {
+    // style={{position:'relative', transform:'translate(-50%,-50%)'}}
+    return <div style={{width:'100%',minHeight:'100%', position:'absolute',top:'0',left:'0',bottom:'0', display:'flex', alignItems:'center',justifyContent:'center' }}><p style={{fontSize:26, fontWeight:'bold'}} >Не найдено</p></div>
+  }
   return (
     <section className="sinks">
       <ScrollRestoration />

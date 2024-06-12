@@ -11,11 +11,12 @@ import { nanoid } from "@reduxjs/toolkit";
 
 export default function ProductItem() {
   const { productName, id } = useParams();
-  const product = useOutletContext()[1].find(el => el._id === id)
+  const product = useOutletContext()[1].find(el => el._id === id && !el.hidden)
   const categoryName = useOutletContext()[0].find(el => el.categoryPath == productName && !el.hidden)?.id
-
-  if (product?.categoryNameId !== categoryName) {
-    return <p>Не найдено</p>
+  // product?.categoryNameId !== categoryName
+  if (!product || !categoryName ) {
+    // style={{position:'relative', transform:'translate(-50%,-50%)'}}
+    return <div style={{width:'100%',minHeight:'100%', position:'absolute',top:'0',left:'0',bottom:'0', display:'flex', alignItems:'center',justifyContent:'center' }}><p style={{fontSize:26, fontWeight:'bold'}} >Не найдено</p></div>
   }
 
   const link = useSelector((state) => state.path.pathForImagesPC);
